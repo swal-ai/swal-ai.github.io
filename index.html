@@ -1,48 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #86FFD9, #dcedc1);
-            color: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
-        }
-        h1 {
-            font-size: 3rem;
-            margin: 0;
-            animation: fadeIn 2s ease-in-out;
-        }
-        p {
-            font-size: 1.5rem;
-            margin-top: 1rem;
-            animation: fadeIn 3s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Swal</title>
+        <link rel="stylesheet" href="/styles/global.css" />
+        <link rel="stylesheet" href="/styles/output.css" />
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <style>
+            .arrow-button {
+                transition: all 0.3s;
+                font-size: 14px;
+                min-height: 46px;
+                max-height: 46px;
+                font-family: 'Suisse-Book';
+                padding: 0 60px 0 17px;
+                border-radius: 9999px;
+                border: 1px solid #002424;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: fit-content;
+                flex-shrink: 0;
+                background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.627 12.75H4.5V11.25H16.627L10.9308 5.55375L12 4.5L19.5 12L12 19.5L10.9308 18.4462L16.627 12.75Z' fill='%23002424'/%3E%3C/svg%3E") no-repeat;
+                background-position: right 12px center;
             }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+
+            .arrow-button:hover {
+                background-color: #002424;
+                color: white;
+                background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.627 12.75H4.5V11.25H16.627L10.9308 5.55375L12 4.5L19.5 12L12 19.5L10.9308 18.4462L16.627 12.75Z' fill='white'/%3E%3C/svg%3E");
             }
-        }
-    </style>
-</head>
-<body>
-    <div>
-        <h1>Coming Soon</h1>
-        <p>Stay tuned! Something awesome is on its way.</p>
-    </div>
-</body>
+        </style>
+    </head>
+    <body class="flex flex-col items-center bg-black">
+        <nav
+            class="w-full fixed top-0 left-0 right-0 z-[100] transition-all duration-300"
+            id="mainNav"
+        >
+            <div
+                class="flex justify-between items-center max-w-[1440px] mx-auto h-[70px] px-[10px] text-[14px] font-suisse-medium"
+            >
+                <div class="flex gap-[60px] uppercase items-center">
+                    <a href="/">
+                        <img
+                            src="/img/logo_w.png"
+                            alt="Swal"
+                            class="min-w-[76px] min-h-[26px] max-w-[76px] max-h-[26px] block"
+                            id="logoImg"
+                        />
+                    </a>
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">Ecosystem</a>
+                    <a href="#" class="nav-link">Use Cases</a>
+                </div>
+                <a
+                    href="#"
+                    class="bg-secondary w-[122px] h-[46px] rounded-full text-[#081511] flex items-center justify-center font-suisse-regular"
+                    id="startBtn"
+                >Get started</a>
+            </div>
+        </nav>
+        <main class="w-full min-w-[1440px]">
+        <!-- <main class="w-full"> -->
+            <section class="w-full h-screen relative z-10" id="heroSection">
+                <video
+                    src="/video/bg.mp4"
+                    autoplay
+                    muted
+                    loop
+                    class="w-full h-full object-cover absolute top-0 left-0"
+                >
+                </video>
+                <div class="absolute w-full bottom-0 left-0 py-[80px] z-10">
+                    <div class="max-w-[1440px] mx-auto px-[10px]">
+                        <h1 class="text-[32px] leading-[38px] text-[#86FFD9]">
+                            Meet Swal,<br />Intelligent Action API
+                        </h1>
+                        <p class="text-[#478874] text-[16px] mt-[8px]">
+                            Create a more efficient work environment<br />with
+                            your personal AI agents
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section class="w-full bg-white pt-[155px] pb-[176px] z-10 relative">
+                <div class="max-w-[1440px] mx-auto px-[10px] text-primary font-suisse-regular flex flex-col">
+                    <p class="text-[16px]">How it works</p>
+                    <p class="text-[32px] leading-[38px] mt-[16px]">
+                        Unchain your potential<br />with Swal
+                    </p>
+                    <p class="text-[16px] mt-[24px]">
+                        Using Swal Studio Pro, you can easily create and share
+                        your own AI apps and agents<br />through natural
+                        language input and a no-code interface, even without any
+                        knowledge of development.
+                    </p>
+                    <a href="#" class="arrow-button mt-[24px]">Our Products</a>
+
+                    <div class="overflow-hidden rounded-[20px] mt-[60px]">
+                        <img src="/img/main_1.png" alt="Main image" class="w-full h-auto transform scale-110 transition-all duration-700 hover:scale-100">
+                    </div>
+                    
+                </div>
+            </section>
+            <section class="w-full bg-white py-[140px] flex flex-col items-center  z-10 relative">
+                <h1 class="text-[60px] text-[#071414] font-oceanic-book leading-normal">
+                    Tool for Everyone
+                </h1>
+                <p class="text-[18px] text-[#767676] font-suisse-regular mt-[16px] leading-[27px] text-center">
+                    Swal enables all to be free from repetitive tasks and work<br />
+                    efficiently across different jobs and environments
+                </p>
+
+                <a href="#" class="arrow-button mt-[24px]">More Use Cases</a>
+
+                <div class="flex pt-[87px] overflow-hidden">
+                    <div class="flex gap-[20px]" id="scrollContainer">
+                        <img src="/img/tool1.png" alt="Main image" class="w-[470px] h-auto rounded-[40px] shrink-0">
+                        <img src="/img/tool2.png" alt="Main image" class="w-[470px] h-auto rounded-[40px] shrink-0">
+                        <img src="/img/tool3.png" alt="Main image" class="w-[470px] h-auto rounded-[40px] shrink-0">
+                        <img src="/img/tool4.png" alt="Main image" class="w-[470px] h-auto rounded-[40px] shrink-0">
+                        <img src="/img/tool5.png" alt="Main image" class="w-[470px] h-auto rounded-[40px] shrink-0">
+                        <img src="/img/tool6.png" alt="Main image" class="w-[470px] h-auto rounded-[40px] shrink-0">
+                        <img src="/img/tool1.png" alt="Main image" class="w-[470px] h-auto rounded-[40px] shrink-0">
+                        <img src="/img/tool2.png" alt="Main image" class="w-[470px] h-auto rounded-[40px] shrink-0">
+                        <img src="/img/tool3.png" alt="Main image" class="w-[470px] h-auto rounded-[40px] shrink-0">
+                        <img src="/img/tool4.png" alt="Main image" class="w-[470px] h-auto rounded-[40px] shrink-0">
+                        <img src="/img/tool5.png" alt="Main image" class="w-[470px] h-auto rounded-[40px] shrink-0">
+                        <img src="/img/tool6.png" alt="Main image" class="w-[470px] h-auto rounded-[40px] shrink-0">
+                    </div>
+                </div>
+                <script>
+                    gsap.to("#scrollContainer", {
+                        x: -(470 * 6 + 20 * 6),
+                        duration: 60,
+                        repeat: -1,
+                        ease: "none"
+                    });
+                </script>
+            </section>
+            <section class="w-full bg-white pt-[170px] pb-[74px] z-10 relative px-[10px]">
+                <div class="max-w-[1440px] mx-auto text-primary font-suisse-regular flex items-center gap-[40px] bg-[#E6FDFC] px-[80px] h-[348px]">
+                    <div class="flex flex-col flex-1">
+                        <p class="text-[28px] text-[#071414]">Simplify Workflow, Boost Creativity</p>
+                        <p class="text-[16px] mt-[8px]">
+                            Studio Pro empowers individuals and organizations to automate tasks,<br />streamline operations, and focus on what matters most.
+                        </p>
+                        <a href="#" class="text-[16px] pt-[40px] underline underline-offset-auto">Learn about Swal Studio</a>
+                    </div>
+                    <div class="flex-1">
+                        <video class="w-[658px] h-[371px] rounded-[20px]" autoplay loop muted playsinline style="mix-blend-mode: exclusion;">
+                            <source src="/video/wave.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+            </section>
+            <div class="w-full relative z-10">
+                <section class="w-full bg-white py-[195px] font-suisse-regular text-primary">
+                    <div class="max-w-[1440px] mx-auto px-[10px]">
+                        <p class="text-[32px]">Lastest articles</p>
+                        <div class="flex gap-[20px] pt-[40px]">
+                            <article class="w-full bg-white flex flex-col gap-[24px] min-h-[395px] max-h-[395px] justify-between">
+                                <a href="#" class="flex flex-col gap-[24px]">
+                                    <div class="overflow-hidden">
+                                        <img src="/img/article1.png" alt="Article image" class="w-full h-auto transform scale-110 transition-transform duration-300 hover:scale-100">
+                                    </div>
+                                    <p class="w-fit text-[14px] text-primary opacity-60 px-[12px] py-[7px] bg-[#E3F7F5] inline-flex rounded-[4px]">Article</p>
+                                    <p class="text-[18px] line-clamp-2">Introducing: Swal Ai, Discover how Swal AI is revolutionizing workflow automation with cutting-edge artificial intelligence technology.</p>
+                                </a>
+                                <p class="date font-suisse-medium text-[12px] uppercase border-b border-[#E3E3E3] pb-[10px] tracking-[1.2px]">
+                                    <span class="text-[#8B8B8B]">
+                                        28 Nov, 2024 |
+                                    </span>
+                                    <span>
+                                        7 days ago
+                                    </span>
+                                </p>
+                            </article>
+                            <article class="w-full bg-white flex flex-col gap-[24px] min-h-[395px] max-h-[395px] justify-between">
+                                <a href="#" class="flex flex-col gap-[24px]">
+                                    <div class="overflow-hidden">
+                                        <img src="/img/article2.png" alt="Article image" class="w-full h-auto transform scale-110 transition-transform duration-300 hover:scale-100">
+                                    </div>
+                                    <p class="w-fit text-[14px] text-primary opacity-60 px-[12px] py-[7px] bg-[#E6F3FD] inline-flex rounded-[4px]">Interview</p>
+                                    <p class="text-[18px] line-clamp-2">Saved two hours every day, 14 hours a week, just checking my email.</p>
+                                </a>
+                                <p class="date font-suisse-medium text-[12px] uppercase border-b border-[#E3E3E3] pb-[10px] tracking-[1.2px]">
+                                    <span class="text-[#8B8B8B]">
+                                        1 dec, 2024 |
+                                    </span>
+                                    <span>
+                                        18 days ago
+                                    </span>
+                                </p>
+                            </article>
+                            <article class="w-full bg-white flex flex-col gap-[24px] min-h-[395px] max-h-[395px] justify-between">
+                                <a href="#" class="flex flex-col gap-[24px]">
+                                    <div class="overflow-hidden">
+                                        <img src="/img/article3.png" alt="Article image" class="w-full h-auto transform scale-110 transition-transform duration-300 hover:scale-100">
+                                    </div>
+                                    <p class="w-fit text-[14px] text-primary opacity-60 px-[12px] py-[7px] bg-[#E3F7F5] inline-flex rounded-[4px]">Article</p>
+                                    <p class="text-[18px] line-clamp-2">Introducing: Swal Ecosystem</p>
+                                </a>
+                                <p class="date font-suisse-medium text-[12px] uppercase border-b border-[#E3E3E3] pb-[10px] tracking-[1.2px]">
+                                    <span class="text-[#8B8B8B]">
+                                        6 dec, 2024 |
+                                    </span>
+                                    <span>
+                                        25 days ago
+                                    </span>
+                                </p>
+                            </article>
+                            <article class="w-full bg-white flex flex-col gap-[24px] min-h-[395px] max-h-[395px] justify-between">
+                                <a href="#" class="flex flex-col gap-[24px]">
+                                    <div class="overflow-hidden">
+                                        <img src="/img/article4.png" alt="Article image" class="w-full h-auto transform scale-110 transition-transform duration-300 hover:scale-100">
+                                    </div>
+                                    <p class="w-fit text-[14px] text-primary opacity-60 px-[12px] py-[7px] bg-[#F5EFE1] inline-flex rounded-[4px]">News</p>
+                                    <p class="text-[18px] line-clamp-2">Swal, 2024 App of the Year in Google Play</p>
+                                </a>
+                                <p class="date font-suisse-medium text-[12px] uppercase border-b border-[#E3E3E3] pb-[10px] tracking-[1.2px]">
+                                    <span class="text-[#8B8B8B]">
+                                        13 jan, 2025 |
+                                    </span>
+                                    <span>
+                                        34 days ago
+                                    </span>
+                                </p>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="bg-[#E8E8DC] h-[800px] sticky bottom-0 left-0 flex w-full overflow-hidden z-0">
+                <div class="bg-[#E8E8DC] w-full max-w-[1440px] mx-auto relative flex justify-between text-primary" style="z-index: 1;">
+                    <div class="flex flex-col px-[10px] py-[155px]" style="z-index: 2;">
+                        <p class="text-[16px]">Next Contents</p>
+                        <p class="text-[60px] font-oceanic-book mt-[110px]">Ecosystem</p>
+                        <a href="#" class="arrow-button mt-[40px]">Read More</a>
+                    </div>
+                    <div class="absolute inset-0 bg-[#E8E8DC] pointer-events-none" style="mix-blend-mode: color; z-index: 1;"></div>
+                    <video src="/video/horse.mp4" autoplay loop muted playsinline class="w-[864px] h-[960px] mt-[-72px] flex-shrink-0 relative mix-blend-darken" style="z-index: 0; transform: scaleX(-1);"></video>
+                </div>
+            </div>
+        </main>
+        <footer
+            class="w-full bottom-0 left-0 right-0 z-[100] h-[485px] bg-[#071511]"
+        >
+            <div class="h-full max-w-[1440px] mx-auto">
+                <div class="h-full grid grid-cols-4 gap-[40px] font-suisse-regular">
+                    <div class="flex flex-col justify-between gap-[24px] border-l border-[#273131] pl-[10px] pt-[92px] pb-[37px]">
+                        <a href="/">
+                            <img src="/img/logo_w.png" alt="Swal" class="w-[76px] h-[26px]">
+                        </a>
+                        <p class="text-[#6D8786] text-[14px] leading-[27px] font-suisse-book">
+                            © 2024 Swal Ai Studio
+                        </p>
+                    </div>
+                    <div class="flex border-l border-[#273131] pl-[10px]"></div>
+                    <div class="flex flex-col gap-[12px] text-[18px] pt-[92px] pb-[37px] border-l border-[#273131] pl-[10px]">
+                        <p class="text-[#E6FDFC] leading-[27px]">Company</p>
+                        <ul class="flex flex-col text-[#6D8786] leading-[40px]">
+                            <li><a href="#" class="hover:text-[#E6FDFC]">About us</a></li>
+                            <li><a href="#" class="hover:text-[#E6FDFC]">Blog</a></li>
+                            <li><a href="#" class="hover:text-[#E6FDFC]">Documentation</a></li>
+                            <li><a href="https://wrtn.io" target="_blank" class="hover:text-[#E6FDFC]">wrtn.io</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col gap-[12px] text-[18px] pt-[92px] pb-[37px] border-l border-[#273131] pl-[10px]">
+                        <p class="text-[#E6FDFC] leading-[27px]">Social</p>
+                        <ul class="flex flex-col text-[#6D8786] leading-[40px]">
+                            <li><a href="#" class="hover:text-[#E6FDFC]">Instagram</a></li>
+                            <li><a href="#" class="hover:text-[#E6FDFC]">GitHub</a></li>
+                            <li><a href="#" class="hover:text-[#E6FDFC]">Discord</a></li>
+                            <li><a href="#" class="hover:text-[#E6FDFC]">X</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            $(document).ready(function () {
+                const $nav = $("#mainNav");
+                const $heroSection = $("#heroSection");
+                const $startBtn = $("#startBtn");
+                const $logoImg = $("#logoImg");
+                const navHeight = $nav.outerHeight();
+
+                $(window).scroll(function () {
+                    const heroBottom = $heroSection.offset().top +
+                        $heroSection.height() - navHeight;
+                    const scrollPosition = $(window).scrollTop();
+
+                    if (scrollPosition < heroBottom) {
+                        $nav.addClass("!bg-transparent !text-[#E6FDFC]").removeClass(
+                            "!bg-white !text-black",
+                        );
+                        $startBtn.removeClass("!bg-primary !text-white").addClass(
+                            "!bg-secondary !text-[#081511]",
+                        );
+                        $logoImg.attr("src", "/img/logo_w.png");
+                    } else {
+                        $nav.removeClass("!bg-transparent !text-[#E6FDFC]").addClass(
+                            "!bg-white !text-black",
+                        );
+                        $startBtn.addClass("!bg-primary !text-white").removeClass(
+                            "!bg-secondary !text-[#081511]",
+                        );
+                        $logoImg.attr("src", "/img/logo.png");
+                    }
+                });
+                $(window).trigger("scroll");
+            });
+        </script>
+    </body>
 </html>

@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'SuisseIntl-Regular';
+    src: url('../font/SuisseIntl-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SuisseIntl-Medium';
+    src: url('../font/SuisseIntl-Medium.woff') format('woff');
+    font-weight: normal; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SuisseIntl-Book';
+    src: url('../font/SuisseIntl-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OceanicText-Book';
+    src: url('../font/OceanicText-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
