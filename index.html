@@ -118,12 +118,12 @@
                 </div>
             </section>
             <section class="w-full bg-white pt-[155px] pb-[176px] z-10 relative">
-                <div class="max-w-[1440px] mx-auto px-[10px] text-primary font-suisse-regular flex flex-col">
+                <div class="max-w-[1440px] mx-auto px-[10px] text-primary font-suisse-regular flex flex-col animate-section">
                     <p class="text-[16px]">How it works</p>
-                    <p class="text-[32px] leading-[38px] mt-[16px] splitting animate-section" data-splitting>
+                    <p class="text-[32px] leading-[38px] mt-[16px] splitting">
                         Unchain your potential<br />with Swal
                     </p>
-                    <div class="animate-section">
+                    <div>
                         <p class="text-[16px] mt-[24px]">
                         Using Swal Studio Pro, you can easily create and share
                         your own AI apps and agents<br />through natural
@@ -184,13 +184,12 @@
                                     gsap.fromTo(entry.target, 
                                         {
                                             opacity: 0,
-                                            y: 20
+                                            y: 50
                                         },
                                         {
                                             opacity: 1,
                                             y: 0,
-                                            duration: 0.6,
-                                            delay: 0.6
+                                            duration: 0.8,
                                         }
                                     );
                                     observer.unobserve(entry.target);
