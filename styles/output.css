@@ -955,6 +955,18 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity, 1));
 }
 
+.bg-opacity-85 {
+  --tw-bg-opacity: 0.85;
+}
+
+.bg-opacity-5 {
+  --tw-bg-opacity: 0.05;
+}
+
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1112,6 +1124,10 @@ video {
   letter-spacing: 1.2px;
 }
 
+.tracking-\[1\.4px\] {
+  letter-spacing: 1.4px;
+}
+
 .\!text-\[\#081511\] {
   --tw-text-opacity: 1 !important;
   color: rgb(8 21 17 / var(--tw-text-opacity, 1)) !important;
@@ -1231,7 +1247,15 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.hover\:bg-opacity-85:hover {
+  --tw-bg-opacity: 0.85;
+}
+
 .hover\:text-\[\#E6FDFC\]:hover {
   --tw-text-opacity: 1;
   color: rgb(230 253 252 / var(--tw-text-opacity, 1));
+}
+
+.hover\:opacity-85:hover {
+  opacity: 0.85;
 }
