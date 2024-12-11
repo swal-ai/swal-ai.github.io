@@ -8,13 +8,15 @@
         <link rel="stylesheet" href="/styles/output.css" />
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+        <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+        <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+        <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
         <style>
             .arrow-button {
                 transition: all 0.3s;
                 font-size: 14px;
                 min-height: 46px;
                 max-height: 46px;
-                font-family: 'Suisse-Book';
                 padding: 0 60px 0 17px;
                 border-radius: 9999px;
                 border: 1px solid #002424;
@@ -32,6 +34,30 @@
                 color: white;
                 background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.627 12.75H4.5V11.25H16.627L10.9308 5.55375L12 4.5L19.5 12L12 19.5L10.9308 18.4462L16.627 12.75Z' fill='white'/%3E%3C/svg%3E");
             }
+            .splitting .word {
+                display: inline-block;
+                animation: slide-up 1.15s;
+                animation-fill-mode: both;
+                animation-delay: calc(.1s + (.04s * var(--word-index)));
+                position: relative;
+                overflow: hidden;
+                opacity: 0.3;
+            }
+            .splitting .word.visible {
+                opacity: 1;
+            }
+
+            @keyframes slide-up {
+                from { 
+                    transform: translateY(125%);
+                    opacity: 0;
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
         </style>
     </head>
     <body class="flex flex-col items-center bg-black">
@@ -88,16 +114,18 @@
             <section class="w-full bg-white pt-[155px] pb-[176px] z-10 relative">
                 <div class="max-w-[1440px] mx-auto px-[10px] text-primary font-suisse-regular flex flex-col">
                     <p class="text-[16px]">How it works</p>
-                    <p class="text-[32px] leading-[38px] mt-[16px]">
+                    <p class="text-[32px] leading-[38px] mt-[16px] splitting animate-section" data-splitting>
                         Unchain your potential<br />with Swal
                     </p>
-                    <p class="text-[16px] mt-[24px]">
+                    <div class="animate-section">
+                        <p class="text-[16px] mt-[24px]">
                         Using Swal Studio Pro, you can easily create and share
                         your own AI apps and agents<br />through natural
                         language input and a no-code interface, even without any
                         knowledge of development.
-                    </p>
-                    <a href="#" class="arrow-button mt-[24px]">Our Products</a>
+                        </p>
+                        <a href="#" class="arrow-button mt-[24px] font-suisse-regular">Our Products</a>
+                    </div>
 
                     <div class="overflow-hidden rounded-[20px] mt-[60px]">
                         <img src="/img/main_1.png" alt="Main image" class="w-full h-auto transform scale-110 transition-all duration-700 hover:scale-100">
@@ -114,7 +142,7 @@
                     efficiently across different jobs and environments
                 </p>
 
-                <a href="#" class="arrow-button mt-[24px]">More Use Cases</a>
+                <a href="#" class="arrow-button mt-[24px] font-suisse-regular">More Use Cases</a>
 
                 <div class="flex pt-[87px] overflow-hidden">
                     <div class="flex gap-[20px]" id="scrollContainer">
@@ -138,6 +166,39 @@
                         duration: 60,
                         repeat: -1,
                         ease: "none"
+                    });
+                    Splitting();
+                    const observer = new IntersectionObserver((entries) => {
+                        entries.forEach(entry => {
+                            if (entry.isIntersecting) {
+                                if ($(entry.target).hasClass('animation-title')) {
+                                    // $(entry.target).find('.word').addClass('visible');
+                                    // observer.unobserve(entry.target);
+                                } else if ($(entry.target).hasClass('animate-section')) {
+                                    gsap.fromTo(entry.target, 
+                                        {
+                                            opacity: 0,
+                                            y: 20
+                                        },
+                                        {
+                                            opacity: 1,
+                                            y: 0,
+                                            duration: 0.6,
+                                            delay: 0.6
+                                        }
+                                    );
+                                    observer.unobserve(entry.target);
+                                }
+                            }
+                        });
+                    }, {
+                        threshold: 0.1,
+                    });
+
+                    $(document).ready(() => {
+                        $('.animate-section').each(function() {
+                            observer.observe(this);
+                        });
                     });
                 </script>
             </section>
@@ -239,7 +300,7 @@
                     <div class="flex flex-col px-[10px] py-[155px]" style="z-index: 2;">
                         <p class="text-[16px]">Next Contents</p>
                         <p class="text-[60px] font-oceanic-book mt-[110px]">Ecosystem</p>
-                        <a href="#" class="arrow-button mt-[40px]">Read More</a>
+                        <a href="#" class="arrow-button mt-[40px] font-suisse-regular">Read More</a>
                     </div>
                     <div class="absolute inset-0 bg-[#E8E8DC] pointer-events-none" style="mix-blend-mode: color; z-index: 1;"></div>
                     <video src="/video/horse.mp4" autoplay loop muted playsinline class="w-[864px] h-[960px] mt-[-72px] flex-shrink-0 relative mix-blend-darken" style="z-index: 0; transform: scaleX(-1);"></video>
