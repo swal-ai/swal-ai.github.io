@@ -10,7 +10,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
         <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
         <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+        <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
         <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+        <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script> 
         <style>
             .arrow-button {
                 transition: all 0.3s;
@@ -354,6 +356,9 @@
                 const $startBtn = $("#startBtn");
                 const $logoImg = $("#logoImg");
                 const navHeight = $nav.outerHeight();
+                const lenis = new Lenis({
+                    autoRaf: true,
+                });
 
                 $(window).scroll(function () {
                     const heroBottom = $heroSection.offset().top +
