@@ -37,6 +37,7 @@
                 color: white;
                 background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.627 12.75H4.5V11.25H16.627L10.9308 5.55375L12 4.5L19.5 12L12 19.5L10.9308 18.4462L16.627 12.75Z' fill='white'/%3E%3C/svg%3E");
             }
+
             .splitting .word {
                 display: inline-block;
                 animation: slide-up 1.15s;
@@ -66,11 +67,34 @@
 
             #mainNav {
                 transform: translateY(0);
-                transition: transform 0.3s ease-in-out;
+                transition: transform 0.3s ease-in-out, background-color 0.3s;
             }
-
             #mainNav.nav-hidden {
                 transform: translateY(-100%);
+            }
+            #mainNav.nav-white {
+                background-color: rgba(255, 255, 255, 0.8);
+                backdrop-filter: blur(25px);
+                -webkit-backdrop-filter: blur(25px);
+                color: black;
+            }
+            #mainNav.nav-transparent {
+                background-color: transparent;
+                color: #E6FDFC;
+            }
+            .nav-white #startBtn {
+                background-color: #002424;
+                color: white;
+            }
+            .nav-white #startBtn:hover {
+                background-color: #1F4545;
+            }
+            .nav-transparent #startBtn {
+                background-color: #86FFD9;
+                color: #081511;
+            }
+            .nav-transparent #startBtn:hover {
+                background-color: #72D9B8;
             }
 
         </style>
@@ -98,7 +122,7 @@
                 </div>
                 <a
                     href="#"
-                    class="bg-secondary w-[122px] h-[46px] rounded-full text-[#081511] flex items-center justify-center font-suisse-regular hover:opacity-85"
+                    class="bg-secondary w-[122px] h-[46px] rounded-full text-[#081511] flex items-center justify-center font-suisse-regular"
                     id="startBtn"
                 >Get started</a>
             </div>
@@ -379,20 +403,12 @@
 
                     // Handle nav background color change
                     if (scrollPosition < heroBottom) {
-                        $nav.addClass("!bg-transparent !text-[#E6FDFC]").removeClass(
-                            "!bg-white !text-black",
-                        );
-                        $startBtn.removeClass("!bg-primary !text-white").addClass(
-                            "!bg-secondary !text-[#081511]",
-                        );
+                        $nav.addClass("nav-transparent")
+                           .removeClass("nav-white");
                         $logoImg.attr("src", "/img/logo_w.png");
                     } else {
-                        $nav.removeClass("!bg-transparent !text-[#E6FDFC]").addClass(
-                            "!bg-white !text-black",
-                        );
-                        $startBtn.addClass("!bg-primary !text-white").removeClass(
-                            "!bg-secondary !text-[#081511]",
-                        );
+                        $nav.addClass("nav-white")
+                           .removeClass("nav-transparent");
                         $logoImg.attr("src", "/img/logo.png");
                     }
 
