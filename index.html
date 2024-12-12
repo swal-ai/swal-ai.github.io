@@ -412,15 +412,12 @@
                         $logoImg.attr("src", "/img/logo.png");
                     }
 
-                    // Handle nav show/hide on scroll
-                    if (st > lastScrollTop && st > navHeight) {
-                        // Scrolling down
-                        $nav.addClass('nav-hidden');
-                    } else {
-                        // Scrolling up
-                        $nav.removeClass('nav-hidden');
-                    }
-                    lastScrollTop = st;
+                    // if (st > lastScrollTop && st > navHeight) {
+                    //     $nav.addClass('nav-hidden');
+                    // } else {
+                    //     $nav.removeClass('nav-hidden');
+                    // }
+                    // lastScrollTop = st;
                 });
                 
                 $(window).trigger("scroll");
