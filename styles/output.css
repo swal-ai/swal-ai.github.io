@@ -863,6 +863,10 @@ video {
   overflow: hidden;
 }
 
+.overflow-x-auto {
+  overflow-x: auto;
+}
+
 .rounded-\[20px\] {
   border-radius: 20px;
 }
@@ -889,6 +893,10 @@ video {
 
 .border-l {
   border-left-width: 1px;
+}
+
+.border-r {
+  border-right-width: 1px;
 }
 
 .border-\[\#273131\] {
@@ -1043,6 +1051,10 @@ video {
 
 .pt-\[92px\] {
   padding-top: 92px;
+}
+
+.pl-\[62px\] {
+  padding-left: 62px;
 }
 
 .text-center {
