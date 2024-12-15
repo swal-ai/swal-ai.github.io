@@ -15,6 +15,9 @@
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/keen-slider@latest/keen-slider.js"></script>
+
     <style>
         .arrow-button {
             transition: all 0.3s;
@@ -108,6 +111,9 @@
         .nav-transparent #startBtn:hover {
             background-color: #72D9B8;
         }
+        .keen-slider__slide {
+            min-width: 470px;
+        }
     </style>
 </head>
 
@@ -183,287 +189,303 @@
             <a href="/use-cases" class="arrow-button mt-[24px] font-suisse-regular">More Use Cases</a>
 
             <div class="w-full flex pt-[87px] overflow-hidden">
-                <div class="flex gap-[20px]" id="scrollContainer">
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool1.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Usecase 01</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Your
-                                    agent delivers delightful and personalized conversations. Always available,
-                                    endlessly patient, and able to reason, predict, and act in real-time.</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Henrry<br />31 years | USA</p>
+                <div id="keen-slider" class="keen-slider">
+                    <div class="keen-slider__slide">
+                        <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
+                            <img src="/img/tool1.png" alt="Main image" class="w-full h-full rounded-[40px]">
+                            <div
+                                class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
+                                <div class="flex flex-col items-center gap-[16px]">
+                                    <p
+                                        class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Usecase 01</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Your agent delivers delightful and personalized conversations. Always available,
+                                        endlessly patient, and able to reason, predict, and act in real-time.</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
+                                        Henrry<br />31 years | USA</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool2.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Usecase 02</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Your
-                                    agent delivers delightful and personalized conversations. Always available,
-                                    endlessly patient, and able to reason, predict, and act in real-time.</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Henrry<br />31 years | USA</p>
+                    <div class="keen-slider__slide">
+                        <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
+                            <img src="/img/tool2.png" alt="Main image" class="w-full h-full rounded-[40px]">
+                            <div
+                                class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
+                                <div class="flex flex-col items-center gap-[16px]">
+                                    <p
+                                        class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Usecase 02</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Your agent delivers delightful and personalized conversations. Always available,
+                                        endlessly patient, and able to reason, predict, and act in real-time.</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
+                                        Henrry<br />31 years | USA</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool3.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Usecase 03</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Your
-                                    agent delivers delightful and personalized conversations. Always available,
-                                    endlessly patient, and able to reason, predict, and act in real-time.</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Henrry<br />31 years | USA</p>
+                    <div class="keen-slider__slide">
+                        <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
+                            <img src="/img/tool3.png" alt="Main image" class="w-full h-full rounded-[40px]">
+                            <div
+                                class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
+                                <div class="flex flex-col items-center gap-[16px]">
+                                    <p
+                                        class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Usecase 03</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Your agent delivers delightful and personalized conversations. Always available,
+                                        endlessly patient, and able to reason, predict, and act in real-time.</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
+                                        Henrry<br />31 years | USA</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool4.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Usecase 04</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Your
-                                    agent delivers delightful and personalized conversations. Always available,
-                                    endlessly patient, and able to reason, predict, and act in real-time.</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Henrry<br />31 years | USA</p>
+                    <div class="keen-slider__slide">
+                        <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
+                            <img src="/img/tool4.png" alt="Main image" class="w-full h-full rounded-[40px]">
+                            <div
+                                class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
+                                <div class="flex flex-col items-center gap-[16px]">
+                                    <p
+                                        class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Usecase 04</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Your agent delivers delightful and personalized conversations. Always available,
+                                        endlessly patient, and able to reason, predict, and act in real-time.</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
+                                        Henrry<br />31 years | USA</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool5.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Usecase 05</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Your
-                                    agent delivers delightful and personalized conversations. Always available,
-                                    endlessly patient, and able to reason, predict, and act in real-time.</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Henrry<br />31 years | USA</p>
+                    <div class="keen-slider__slide">
+                        <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
+                            <img src="/img/tool5.png" alt="Main image" class="w-full h-full rounded-[40px]">
+                            <div
+                                class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
+                                <div class="flex flex-col items-center gap-[16px]">
+                                    <p
+                                        class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Usecase 05</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Your agent delivers delightful and personalized conversations. Always available,
+                                        endlessly patient, and able to reason, predict, and act in real-time.</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
+                                        Henrry<br />31 years | USA</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool6.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Usecase 06</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Your
-                                    agent delivers delightful and personalized conversations. Always available,
-                                    endlessly patient, and able to reason, predict, and act in real-time.</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Henrry<br />31 years | USA</p>
+                    <div class="keen-slider__slide">
+                        <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
+                            <img src="/img/tool6.png" alt="Main image" class="w-full h-full rounded-[40px]">
+                            <div
+                                class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
+                                <div class="flex flex-col items-center gap-[16px]">
+                                    <p
+                                        class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Usecase 06</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Your agent delivers delightful and personalized conversations. Always available,
+                                        endlessly patient, and able to reason, predict, and act in real-time.</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
+                                        Henrry<br />31 years | USA</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!-- 반복 -->
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool1.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Usecase 01</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Your
-                                    agent delivers delightful and personalized conversations. Always available,
-                                    endlessly patient, and able to reason, predict, and act in real-time.</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Henrry<br />31 years | USA</p>
+
+                    <div class="keen-slider__slide">
+                        <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
+                            <img src="/img/tool1.png" alt="Main image" class="w-full h-full rounded-[40px]">
+                            <div
+                                class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
+                                <div class="flex flex-col items-center gap-[16px]">
+                                    <p
+                                        class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Usecase 01</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Your agent delivers delightful and personalized conversations. Always available,
+                                        endlessly patient, and able to reason, predict, and act in real-time.</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
+                                        Henrry<br />31 years | USA</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool2.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Usecase 02</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Your
-                                    agent delivers delightful and personalized conversations. Always available,
-                                    endlessly patient, and able to reason, predict, and act in real-time.</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Henrry<br />31 years | USA</p>
+                    <div class="keen-slider__slide">
+                        <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
+                            <img src="/img/tool2.png" alt="Main image" class="w-full h-full rounded-[40px]">
+                            <div
+                                class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
+                                <div class="flex flex-col items-center gap-[16px]">
+                                    <p
+                                        class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Usecase 02</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Your agent delivers delightful and personalized conversations. Always available,
+                                        endlessly patient, and able to reason, predict, and act in real-time.</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
+                                        Henrry<br />31 years | USA</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool3.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Usecase 03</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Your
-                                    agent delivers delightful and personalized conversations. Always available,
-                                    endlessly patient, and able to reason, predict, and act in real-time.</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Henrry<br />31 years | USA</p>
+                    <div class="keen-slider__slide">
+                        <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
+                            <img src="/img/tool3.png" alt="Main image" class="w-full h-full rounded-[40px]">
+                            <div
+                                class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
+                                <div class="flex flex-col items-center gap-[16px]">
+                                    <p
+                                        class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Usecase 03</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Your agent delivers delightful and personalized conversations. Always available,
+                                        endlessly patient, and able to reason, predict, and act in real-time.</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
+                                        Henrry<br />31 years | USA</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool4.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Usecase 04</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Your
-                                    agent delivers delightful and personalized conversations. Always available,
-                                    endlessly patient, and able to reason, predict, and act in real-time.</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Henrry<br />31 years | USA</p>
+                    <div class="keen-slider__slide">
+                        <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
+                            <img src="/img/tool4.png" alt="Main image" class="w-full h-full rounded-[40px]">
+                            <div
+                                class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
+                                <div class="flex flex-col items-center gap-[16px]">
+                                    <p
+                                        class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Usecase 04</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Your agent delivers delightful and personalized conversations. Always available,
+                                        endlessly patient, and able to reason, predict, and act in real-time.</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
+                                        Henrry<br />31 years | USA</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool5.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Usecase 05</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Your
-                                    agent delivers delightful and personalized conversations. Always available,
-                                    endlessly patient, and able to reason, predict, and act in real-time.</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Henrry<br />31 years | USA</p>
+                    <div class="keen-slider__slide">
+                        <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
+                            <img src="/img/tool5.png" alt="Main image" class="w-full h-full rounded-[40px]">
+                            <div
+                                class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
+                                <div class="flex flex-col items-center gap-[16px]">
+                                    <p
+                                        class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Usecase 05</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Your agent delivers delightful and personalized conversations. Always available,
+                                        endlessly patient, and able to reason, predict, and act in real-time.</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
+                                        Henrry<br />31 years | USA</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool6.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Usecase 06</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Your
-                                    agent delivers delightful and personalized conversations. Always available,
-                                    endlessly patient, and able to reason, predict, and act in real-time.</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Henrry<br />31 years | USA</p>
+                    <div class="keen-slider__slide">
+                        <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
+                            <img src="/img/tool6.png" alt="Main image" class="w-full h-full rounded-[40px]">
+                            <div
+                                class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
+                                <div class="flex flex-col items-center gap-[16px]">
+                                    <p
+                                        class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Usecase 06</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                        Your agent delivers delightful and personalized conversations. Always available,
+                                        endlessly patient, and able to reason, predict, and act in real-time.</p>
+                                    <p
+                                        class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
+                                        Henrry<br />31 years | USA</p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
             <script>
-                gsap.registerPlugin(Draggable);
-                const scrollContainer = document.getElementById('scrollContainer');
-                const cycleWidth = (470 * 6) + (20 * 6);
-                let currentX = 0;
+                var slider = new KeenSlider("#keen-slider", {
+                    loop: true,
+                    mode: "snap",
+                    slides: {
+                        perView: "auto", 
+                        spacing: 20,
+                        origin: "center",
+                    },
+                    drag: true,
+                    dragSpeed: 1.5,
+                    rubberband: true,
+                    created(s) {
+                        let interval = null;
 
-                let scrollAnimation = gsap.to(scrollContainer, {
-                    x: -cycleWidth,
-                    duration: 60,
-                    ease: "none",
-                    repeat: -1,
-                    modifiers: {
-                        x: (xValue) => {
-                            let x = parseFloat(xValue);
-                            return (x % -cycleWidth) + "px";
+                        const startInterval = () => {
+                            if (interval) clearInterval(interval);
+                            interval = setInterval(() => {
+                                s.next()
+                            }, 2600)
                         }
-                    }
-                });
 
-                document.getElementById('scrollContainer').addEventListener('mouseenter', () => {
-                    scrollAnimation.pause();
-                });
+                        const stopInterval = () => {
+                            if (interval) {
+                                clearInterval(interval);
+                                interval = null;
+                            }
+                        }
 
-                document.getElementById('scrollContainer').addEventListener('mouseleave', () => {
-                    scrollAnimation.play();
-                });
+                        startInterval();
 
-                Draggable.create(scrollContainer, {
-                    type: "x",
-                    onDragStart: function () {
-                        scrollAnimation.pause();
+                        s.container.addEventListener("mouseenter", stopInterval)
+                        s.container.addEventListener("mouseleave", startInterval)
+
+                        document.addEventListener("visibilitychange", () => {
+                            if (document.hidden) {
+                                stopInterval();
+                            } else {
+                                startInterval();
+                            }
+                        })
                     },
-                    onDrag: function () {
-                        currentX = this.x % -cycleWidth;
-                        if (currentX > 0) currentX -= cycleWidth;
-                        gsap.set(scrollContainer, { x: currentX });
-                    },
-                    onDragEnd: function () {
-                        let progress = (-currentX) / cycleWidth;
-                        scrollAnimation.progress(progress);
+                    defaultAnimation: {
+                        duration: 1600
                     }
-                });
+                })
+
                 const observer = new IntersectionObserver((entries) => {
                     entries.forEach(entry => {
                         if (entry.isIntersecting) {
-                            if ($(entry.target).hasClass('animation-title')) {
-                                // $(entry.target).find('.word').addClass('visible');
-                                // observer.unobserve(entry.target);
-                            } else if ($(entry.target).hasClass('animate-section')) {
+                            if ($(entry.target).hasClass('animate-section')) {
                                 gsap.fromTo(entry.target,
                                     {
                                         opacity: 0,
