@@ -441,9 +441,10 @@
                 document.getElementById('scrollContainer').addEventListener('mouseleave', () => {
                     scrollAnimation.play();
                 });
-
                 Draggable.create(scrollContainer, {
                     type: "x",
+                    inertia: true,
+                    dragResistance: 0.2,
                     onDragStart: function () {
                         scrollAnimation.pause();
                     },
