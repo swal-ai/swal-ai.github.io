@@ -16,30 +16,6 @@
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <style>
-        .arrow-button {
-            transition: all 0.3s;
-            font-size: 14px;
-            line-height: 46px;
-            min-height: 46px;
-            max-height: 46px;
-            padding: 0 60px 0 17px;
-            border-radius: 9999px;
-            border: 1px solid #002424;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: fit-content;
-            flex-shrink: 0;
-            background: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.627 12.75H4.5V11.25H16.627L10.9308 5.55375L12 4.5L19.5 12L12 19.5L10.9308 18.4462L16.627 12.75Z' fill='%23002424'/%3E%3C/svg%3E") no-repeat;
-            background-position: right 12px center;
-        }
-
-        .arrow-button:hover {
-            background-color: #002424;
-            color: white;
-            background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.627 12.75H4.5V11.25H16.627L10.9308 5.55375L12 4.5L19.5 12L12 19.5L10.9308 18.4462L16.627 12.75Z' fill='white'/%3E%3C/svg%3E");
-        }
-
         .splitting .word {
             display: inline-block;
             animation: slide-up 1.15s;
@@ -68,45 +44,6 @@
                 opacity: 1;
                 transform: translateY(0);
             }
-        }
-
-        #mainNav {
-            transform: translateY(0);
-            transition: transform 0.3s ease-in-out, background-color 0.3s;
-        }
-
-        #mainNav.nav-hidden {
-            transform: translateY(-100%);
-        }
-
-        #mainNav.nav-white {
-            background-color: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(25px);
-            -webkit-backdrop-filter: blur(25px);
-            color: black;
-        }
-
-        #mainNav.nav-transparent {
-            background-color: transparent;
-            color: #E6FDFC;
-        }
-
-        .nav-white #startBtn {
-            background-color: #002424;
-            color: white;
-        }
-
-        .nav-white #startBtn:hover {
-            background-color: #1F4545;
-        }
-
-        .nav-transparent #startBtn {
-            background-color: #86FFD9;
-            color: #081511;
-        }
-
-        .nav-transparent #startBtn:hover {
-            background-color: #72D9B8;
         }
     </style>
 </head>
@@ -601,7 +538,7 @@
             </div>
         </div>
     </main>
-    <footer class="w-full bottom-0 left-0 right-0 z-[100] h-[485px] bg-[#071511]">
+    <footer class="w-full bottom-0 left-0 right-0 z-[100] h-[485px] bg-[#071511] min-w-[1440px]">
         <div class="h-full max-w-[1440px] mx-auto">
             <div class="h-full grid grid-cols-4 gap-[40px] font-suisse-regular">
                 <div
