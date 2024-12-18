@@ -544,72 +544,51 @@
                     });
                 });
             });
-
             $(window).scroll(function () {
                 const section2Top = $('#section2').offset().top;
                 const section3Top = $('#section3').offset().top - 200;
                 const scrollTop = $(window).scrollTop();
+                
                 if (scrollTop >= section2Top && scrollTop < section3Top) {
-                    const delay = 0;
-                    const duration = 3;
+                    // progress 값을 더 빠르게 증가시키기 위해 제곱근 사용
+                    let progress = Math.pow((scrollTop - section2Top) / (section3Top - section2Top), 0.5);
+                    
+                    const finalStates = [
+                        {width: "124px", marginLeft: "0px", marginTop: "0px", borderRadius: "20px"},
+                        {width: "190px", marginLeft: "960px", marginTop: "-1100px", borderRadius: "11px"},
+                        {width: "344px", marginLeft: "-1100px", marginTop: "190px", borderRadius: "20px"},
+                        {width: "344px", marginLeft: "980px", marginTop: "1030px", borderRadius: "20px"},
+                        {width: "576px", marginLeft: "2200px", marginTop: "-200px", borderRadius: "33px"},
+                        {width: "400px", marginLeft: "-1500px", marginTop: "-1500px", borderRadius: "26.4px"}
+                    ];
 
-                    const tl = gsap.timeline({
-                        defaults: {
-                            ease: "power2.out",
-                            duration: duration
-                        }
+                    $("#section2 img").each((index, element) => {
+                        const finalState = finalStates[index];
+                        const currentValues = {};
+                        
+                        Object.keys(finalState).forEach(prop => {
+                            const finalValue = parseInt(finalState[prop]);
+                            currentValues[prop] = `${finalValue * progress}px`;
+                        });
+
+                        gsap.to(element, {
+                            ...currentValues,
+                            duration: 0.1,
+                            ease: "none",
+                            overwrite: true
+                        });
                     });
 
-                    tl.to("#section2 img:nth-child(1)", {
-                        width: "124px",
-                        marginLeft: "0px",
-                        marginTop: "0px",
-                        borderRadius: "20px"
-                    }, delay)
-                        .to("#section2 img:nth-child(2)", {
-                            width: "190px",
-                            marginLeft: "960px",
-                            marginTop: "-1100px",
-                            borderRadius: "11px"
-                        }, delay)
-                        .to("#section2 img:nth-child(3)", {
-                            width: "344px",
-                            marginLeft: "-1100px",
-                            marginTop: "190px",
-                            borderRadius: "20px"
-                        }, delay)
-                        .to("#section2 img:nth-child(4)", {
-                            width: "344px",
-                            marginLeft: "980px",
-                            marginTop: "1030px",
-                            borderRadius: "20px"
-                        }, delay)
-                        .to("#section2 img:nth-child(5)", {
-                            width: "576px",
-                            marginLeft: "2200px",
-                            marginTop: "-200px",
-                            borderRadius: "33px"
-                        }, delay)
-                        .to("#section2 img:nth-child(6)", {
-                            width: "400px",
-                            marginLeft: "-1500px",
-                            marginTop: "-1500px",
-                            borderRadius: "26.4px"
-                        }, delay);
-                    setTimeout(() => {
-                        $('body').css({
-                            'backgroundColor': darkColor,
-                            'transition': 'background-color 0.5s ease'
-                        }).addClass('dark-mode');
-                    }, 400);
+                    $('body').css({
+                        'backgroundColor': darkColor,
+                        'transition': 'background-color 0.5s ease'
+                    }).addClass('dark-mode');
 
                 } else {
-                    setTimeout(() => {
-                        $('body').css({
-                            'backgroundColor': whiteColor,
-                            'transition': 'background-color 0.5s ease'
-                        }).removeClass('dark-mode');
-                    }, 400);
+                    $('body').css({
+                        'backgroundColor': whiteColor,
+                        'transition': 'background-color 0.5s ease'
+                    }).removeClass('dark-mode');
                 }
             });
         });
