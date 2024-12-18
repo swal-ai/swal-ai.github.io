@@ -66,7 +66,7 @@
             </div>
         </section>
 
-        <section class="w-full flex flex-col items-center z-10 relative h-[1674px] pt-[500px] mx-auto overflow-x-clip"
+        <section class="w-full flex flex-col items-center z-10 relative h-[1674px] pt-[400px] mx-auto overflow-x-clip"
             id="section2">
             <h2
                 class="text-[#071511] text-center font-oceanic-book text-[60px] leading-[76px] tracking-[-0.6px] primary">
@@ -545,13 +545,13 @@
                 });
             });
             $(window).scroll(function () {
-                const section2Top = $('#section2').offset().top;
-                const section3Top = $('#section3').offset().top - 200;
+                const section2Top = $('#section2').offset().top - 80;
+                const section3Top = $('#section3').offset().top - 180;
                 const scrollTop = $(window).scrollTop();
-                
-                if (scrollTop >= section2Top && scrollTop < section3Top) {
-                    // progress 값을 더 빠르게 증가시키기 위해 제곱근 사용
-                    let progress = Math.pow((scrollTop - section2Top) / (section3Top - section2Top), 0.5);
+                const offset = 140;
+                if (scrollTop >= section2Top - offset && scrollTop < section3Top - offset) {
+                    
+                    let progress = Math.pow((scrollTop - (section2Top - offset)) / ((section3Top - offset) - (section2Top - offset)), 0.5);
                     
                     const finalStates = [
                         {width: "124px", marginLeft: "0px", marginTop: "0px", borderRadius: "20px"},
@@ -578,12 +578,13 @@
                             overwrite: true
                         });
                     });
+                }
 
+                if (scrollTop >= section2Top && scrollTop < section3Top) {
                     $('body').css({
                         'backgroundColor': darkColor,
                         'transition': 'background-color 0.5s ease'
                     }).addClass('dark-mode');
-
                 } else {
                     $('body').css({
                         'backgroundColor': whiteColor,
