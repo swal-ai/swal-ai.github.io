@@ -81,7 +81,8 @@
         <section class="w-full z-10 relative" id="section2">
             <div class="relative">
                 <img src="/img/ecosystem-bg.png" alt="Swal" class="w-full h-auto">
-                <div class="absolute top-0 pt-[120px] left-0 right-0 flex flex-col gap-[16px] text-center text-white animate-section">
+                <div
+                    class="absolute top-0 pt-[120px] left-0 right-0 flex flex-col gap-[16px] text-center text-white animate-section">
                     <p class="text-[60px] font-oceanic-book text-[#071511] text-center tracking-[-0.6px]">An
                         Ever-Growing Ecosystem<br />
                         to Make the Impossible Possible</p>
@@ -91,9 +92,72 @@
                 </div>
             </div>
         </section>
-        <section class="w-full z-10 relative py-[220px] px-[10px] text-center bg-white" id="section3">
-            {CARD}
+        <section class="w-full z-10 relative py-[140px] px-[10px] text-center bg-white" id="section3">
+            <div class="w-full justify-center flex">
+                <div class="group p-[8px] flex overflow-hidden rounded-full border border-forest/5 font-heading leading-none relative">
+                    <div class="tab-hover absolute bg-gray-100 rounded-full transition-all duration-300 opacity-0 translate-x-0 translate-y-0" style="width: 0; height: 49px;"></div>
+                    <div class="tab-background absolute bg-forest rounded-full transition-all duration-300 translate-x-0 translate-y-0" style="width: 0; height: 49px;"></div>
+                    <button type="button" aria-label="Tab 0" data-tab="0"
+                        class="tab-btn relative rounded-full px-[24px] py-[16px] transition-colors duration-300">
+                        <div class="relative z-10">Swal Studio Pro</div>
+                    </button>
+                    <button type="button" aria-label="Tab 1" data-tab="1"
+                        class="tab-btn relative rounded-full px-[24px] py-[16px] transition-colors duration-300">
+                        <div class="relative z-10">Swal Store</div>
+                    </button>
+                    <button type="button" aria-label="Tab 2" data-tab="2"
+                        class="tab-btn relative rounded-full px-[24px] py-[16px] transition-colors duration-300">
+                        <div class="relative z-10">Swal Connecter</div>
+                    </button>
+                </div>
+            </div>
+            <p class="text-[#071511] text-[16px] font-suisse-regular mt-[40px]">WIP</p>
         </section>
+        <script>
+        $(document).ready(function() {
+            const $tabBtns = $('.tab-btn');
+            const $background = $('.tab-background');
+            const $hoverBg = $('.tab-hover');
+            
+            // 초기 활성 탭 설정
+            setActiveTab($tabBtns.first());
+
+            $tabBtns.hover(
+                function() {
+                    if (!$(this).hasClass('active')) {
+                        const width = $(this).outerWidth();
+                        const left = $(this).position().left - 8;
+                        $hoverBg.css({
+                            width: width + 'px',
+                            transform: `translateX(${left}px)`,
+                            opacity: 1
+                        });
+                    }
+                },
+                function() {
+                    $hoverBg.css('opacity', 0);
+                }
+            );
+
+            $tabBtns.click(function() {
+                $hoverBg.css('opacity', 0);
+                setActiveTab($(this));
+            });
+
+            function setActiveTab($btn) {
+                $tabBtns.removeClass('active text-[#E6FDFC]');
+                $btn.addClass('active text-[#E6FDFC]');
+                
+                const width = $btn.outerWidth();
+                const left = $btn.position().left - 8;
+                
+                $background.css({
+                    width: width + 'px',
+                    transform: `translateX(${left}px)`
+                });
+            }
+        });
+        </script>
         <section class="w-full bg-white pt-[56px] pb-[150px] z-10 relative px-[10px]">
             <div
                 class="max-w-[1440px] mx-auto text-primary font-suisse-regular flex items-center gap-[40px] bg-[#F5DFF5] px-[80px] h-[348px]">
@@ -139,7 +203,7 @@
                         <img src="/img/logo_w.png" alt="Swal" class="w-[76px] h-[26px]">
                     </a>
                     <p class="text-[#6D8786] text-[14px] leading-[27px] font-suisse-book">
-                        © 2024 Swal Ai Studio
+                        © 2024 Swal AI Studio
                     </p>
                 </div>
                 <div class="flex border-l border-[#273131] pl-[10px]"></div>
