@@ -1,48 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swal</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/output.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Draggable.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #86FFD9, #dcedc1);
-            color: #000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            text-align: center;
+        .primary,
+        .secondary {
+            transition: all 0.5s ease;
         }
-        h1 {
-            font-size: 3rem;
-            margin: 0;
-            animation: fadeIn 2s ease-in-out;
+
+        .dark-mode .primary {
+            color: #E6FDFC;
         }
-        p {
-            font-size: 1.5rem;
-            margin-top: 1rem;
-            animation: fadeIn 3s ease-in-out;
+
+        .dark-mode .secondary {
+            color: #6D8786;
+            opacity: 1;
         }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+
+        #section2 img {
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        #section2.visible img {
+            opacity: 1;
         }
     </style>
 </head>
-<body>
-    <div>
-        <h1>Coming Soon</h1>
-        <p>Stay tuned! Something awesome is on its way.</p>
-    </div>
+
+<body class="flex flex-col items-center">
+    <nav class="w-full fixed top-0 left-0 right-0 z-[100] transition-all duration-300 nav-white" id="mainNav">
+        <div
+            class="flex justify-between items-center max-w-[1440px] mx-auto h-[70px] px-[10px] text-[14px] font-suisse-medium">
+            <div class="flex gap-[60px] uppercase items-center tracking-[1.4px]">
+                <a href="/">
+                    <img src="/img/logo.png" alt="Swal"
+                        class="min-w-[76px] min-h-[26px] max-w-[76px] max-h-[26px] block" id="logoImg" />
+                </a>
+                <a href="/" class="nav-link">Home</a>
+                <a href="/ecosystem" class="nav-link">AI Ecosystem</a>
+                <a href="/use-cases" class="nav-link">Use Cases</a>
+            </div>
+            <a href="#"
+                class="bg-primary w-[122px] h-[46px] rounded-full text-white flex items-center justify-center font-suisse-regular"
+                id="startBtn">Get started</a>
+        </div>
+    </nav>
+    <main class="w-full min-w-[1440px]">
+        <!-- <main class="w-full"> -->
+        <section class="w-full mt-[70px] pt-[80px] pb-[120px] text-center z-20 relative" id="section1">
+            <div class="flex flex-col gap-[20px]">
+                <h1 class="text-[60px] font-oceanic-book text-primary leading-[60px] tracking-[-0.6px]">AI Ecosystem
+                </h1>
+                <p class="font-suisse-regular text-[16px] text-primary opacity-60">By integrating AI action agents
+                    directly into the workflow creation process,<br />
+                    Studio Pro empowers individuals and organizations to automate tasks, streamline operations, and
+                    focus on what matters most.</p>
+            </div>
+            <div class="w-full max-w-[1440px] mx-auto">
+                <div class="h-[800px] bg-[#081511] rounded-[20px] mt-[80px] mx-[10px] flex items-center justify-center">
+                    <video src="/video/circle_pattern.mp4" autoplay loop muted playsinline
+                        class="w-auto h-full"></video>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full z-10 relative" id="section2">
+            <div class="relative">
+                <img src="/img/ecosystem-bg.png" alt="Swal" class="w-full h-auto">
+                <div class="absolute top-0 pt-[120px] left-0 right-0 flex flex-col gap-[16px] text-center text-white animate-section">
+                    <p class="text-[60px] font-oceanic-book text-[#071511] text-center tracking-[-0.6px]">An
+                        Ever-Growing Ecosystem<br />
+                        to Make the Impossible Possible</p>
+                    <p class="text-[#071511] text-center font-suisse-regular text-[18px] leading-[27px] opacity-40">The
+                        ecosystem is built on swal studio pro, store, and connector, each of which<br />
+                        will significantly improve your productivity and change your lifecycle.</p>
+                </div>
+            </div>
+        </section>
+        <section class="w-full z-10 relative py-[220px] px-[10px] text-center bg-white" id="section3">
+            {CARD}
+        </section>
+        <section class="w-full bg-white pt-[56px] pb-[150px] z-10 relative px-[10px]">
+            <div
+                class="max-w-[1440px] mx-auto text-primary font-suisse-regular flex items-center gap-[40px] bg-[#F5DFF5] px-[80px] h-[348px]">
+                <div class="flex flex-col flex-1">
+                    <p class="text-[28px] text-[#071414]">Simplify Workflow, Boost Creativity</p>
+                    <p class="text-[16px] mt-[8px]">
+                        Studio Pro empowers individuals and organizations to automate tasks,<br />streamline operations,
+                        and focus on what matters most.
+                    </p>
+                    <a href="#" class="text-[16px] pt-[40px] underline underline-offset-auto">Learn about Swal
+                        Studio</a>
+                </div>
+                <div class="flex-1">
+                    <video class="w-[658px] h-[371px] rounded-[20px]" autoplay loop muted playsinline
+                        style="mix-blend-mode: exclusion;">
+                        <source src="/video/wave.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+        <div class="bg-[#E6FDFC] h-[800px] bottom-0 left-0 flex w-full overflow-hidden">
+            <div class="bg-[#E6FDFC] w-full max-w-[1440px] mx-auto relative flex justify-between text-primary"
+                style="z-index: 1;">
+                <div class="flex flex-col px-[10px] py-[155px]" style="z-index: 2;">
+                    <p class="text-[16px]">Next Contents</p>
+                    <p class="text-[60px] font-oceanic-book mt-[110px]">Use Cases</p>
+                    <a href="/use-cases" class="arrow-button mt-[40px] font-suisse-regular">Read More</a>
+                </div>
+                <div class="absolute inset-0 bg-[#E6FDFC] pointer-events-none"
+                    style="mix-blend-mode: color; z-index: 1;"></div>
+                <video src="/video/face_w.mp4" autoplay loop muted playsinline
+                    class="w-[858px] h-[800px] pr-[200px] flex-shrink-0 relative mix-blend-darken"
+                    style="z-index: 0; transform: scale(1) scaleX(-1);"></video>
+            </div>
+        </div>
+    </main>
+    <footer class="w-full bottom-0 left-0 right-0 z-[100] h-[485px] bg-[#071511] min-w-[1440px]">
+        <div class="h-full max-w-[1440px] mx-auto">
+            <div class="h-full grid grid-cols-4 gap-[40px] font-suisse-regular">
+                <div
+                    class="flex flex-col justify-between gap-[24px] border-l border-[#273131] pl-[10px] pt-[92px] pb-[37px]">
+                    <a href="/">
+                        <img src="/img/logo_w.png" alt="Swal" class="w-[76px] h-[26px]">
+                    </a>
+                    <p class="text-[#6D8786] text-[14px] leading-[27px] font-suisse-book">
+                        © 2024 Swal Ai Studio
+                    </p>
+                </div>
+                <div class="flex border-l border-[#273131] pl-[10px]"></div>
+                <div
+                    class="flex flex-col gap-[12px] text-[18px] pt-[92px] pb-[37px] border-l border-[#273131] pl-[10px]">
+                    <p class="text-[#E6FDFC] leading-[27px]">Company</p>
+                    <ul class="flex flex-col text-[#6D8786] leading-[40px]">
+                        <li><a href="#" class="hover:text-[#E6FDFC]">About us</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">Blog</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">Documentation</a></li>
+                        <li><a href="https://wrtn.io" target="_blank" class="hover:text-[#E6FDFC]">wrtn.io</a></li>
+                    </ul>
+                </div>
+                <div
+                    class="flex flex-col gap-[12px] text-[18px] pt-[92px] pb-[37px] border-l border-r border-[#273131] pl-[10px]">
+                    <p class="text-[#E6FDFC] leading-[27px]">Social</p>
+                    <ul class="flex flex-col text-[#6D8786] leading-[40px]">
+                        <li><a href="#" class="hover:text-[#E6FDFC]">Instagram</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">GitHub</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">Discord</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">X</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            const lenis = new Lenis({
+                autoRaf: true,
+            });
+
+            const changedColor = '#E0E1DE';
+            const defaultColor = '#FFFFFF';
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        $('body').css({
+                            'backgroundColor': changedColor,
+                            'transition': 'background-color 0.5s ease'
+                        }).addClass('dark-mode');
+
+                        setTimeout(() => {
+                            $('#section2').addClass('visible');
+                        }, 400);
+                    } else {
+                        $('body').css({
+                            'backgroundColor': defaultColor,
+                            'transition': 'background-color 0.5s ease'
+                        }).removeClass('dark-mode');
+                    }
+                });
+            }, {
+                threshold: 0
+            });
+
+            observer.observe(document.querySelector('#section2'));
+
+
+            const observer2 = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if ($(entry.target).hasClass('animate-section')) {
+                            gsap.fromTo(entry.target,
+                                {
+                                    opacity: 0,
+                                    y: 50
+                                },
+                                {
+                                    opacity: 1,
+                                    y: 0,
+                                    duration: 0.8,
+                                }
+                            );
+                            observer2.unobserve(entry.target);
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.3,
+            });
+
+            $('.animate-section').each(function () {
+                observer2.observe(this);
+            });
+        });
+    </script>
 </body>
+
 </html>
