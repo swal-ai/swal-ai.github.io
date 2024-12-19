@@ -12,6 +12,7 @@ module.exports = {
       colors: {
         primary: '#002424',
         secondary: '#86FFD9',
+        forest: '#071511',
         // tertiary: '#081511',
         // quaternary: '#478874'
       },
