@@ -1292,6 +1292,15 @@ video {
   background-color: rgb(243 244 246 / var(--tw-bg-opacity, 1));
 }
 
+.bg-\[\#ECF9F3\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(236 249 243 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[rgba\(230\2c 253\2c 252\2c 0\.01\)\] {
+  background-color: rgba(230,253,252,0.01);
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1681,6 +1690,11 @@ video {
 
 .mix-blend-difference {
   mix-blend-mode: difference;
+}
+
+.blur-\[25px\] {
+  --tw-blur: blur(25px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .backdrop-blur-\[75px\] {
