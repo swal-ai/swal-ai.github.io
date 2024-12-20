@@ -389,19 +389,25 @@
 
                 const scrollContainer1 = document.getElementById('scrollContainer1');
                 const scrollContainer2 = document.getElementById('scrollContainer2');
-                const cycleWidth = (window.innerWidth * 0.5 * 4) + (20 * 4);
+                
+                let cycleWidth;
+                function updateCycleWidth() {
+                    cycleWidth = (Math.max(window.innerWidth * 0.5, 870) * 4) + (20 * 4);
+                }
+                updateCycleWidth();
 
                 const initialProgress1 = 0.05;
                 const initialProgress2 = 0.09;
 
                 function createInfiniteScroll(container, initialProgress) {
+                    updateCycleWidth();
                     const initialX = -(cycleWidth * initialProgress);
                     gsap.set(container, { x: initialX });
 
                     let scrollAnimation = gsap.to(container, {
                         x: `-=${cycleWidth}`,
                         duration: 60,
-                        ease: "none",
+                        ease: "none", 
                         repeat: -1,
                         onUpdate: () => {
                             const currentX = gsap.getProperty(container, "x");
@@ -423,14 +429,14 @@
                         onDrag: function () {
                             let currentX = this.x;
                             if (currentX > 0) {
-                                currentX = 10;
+                                currentX = currentX - cycleWidth;
                             }
                             gsap.set(container, { x: currentX });
                         },
                         onDragEnd: function () {
                             const currentX = gsap.getProperty(container, "x");
                             if (currentX > 0) {
-                                currentX = 10;
+                                gsap.set(container, { x: currentX - cycleWidth });
                             }
                             scrollAnimation.progress((-currentX % cycleWidth) / cycleWidth - initialProgress);
                         }
@@ -439,8 +445,16 @@
                     return scrollAnimation;
                 }
 
-                createInfiniteScroll(scrollContainer1, initialProgress1);
-                createInfiniteScroll(scrollContainer2, initialProgress2);
+                let scroll1 = createInfiniteScroll(scrollContainer1, initialProgress1);
+                let scroll2 = createInfiniteScroll(scrollContainer2, initialProgress2);
+
+                window.addEventListener('resize', () => {
+                    updateCycleWidth();
+                    scroll1.kill();
+                    scroll2.kill();
+                    scroll1 = createInfiniteScroll(scrollContainer1, initialProgress1);
+                    scroll2 = createInfiniteScroll(scrollContainer2, initialProgress2);
+                });
             </script>
 
         </section>
