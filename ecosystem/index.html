@@ -12,6 +12,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Draggable.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
     <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <style>
         .primary,
         .secondary {
@@ -35,6 +37,22 @@
         #section2.visible img {
             opacity: 1;
         }
+
+        .swiper-slide {
+            width: 75vw;
+            overflow: hidden;
+            transition: transform 0.6s ease, box-shadow 0.6s ease;
+            transform: translateY(100px) !important;
+        }
+
+        .swiper-slide-active {
+            transform: translateY(0) !important;
+        }
+
+        .tab-hover,
+        .tab-background {
+            transition: all 0.3s ease;
+        }
     </style>
 </head>
 
@@ -44,8 +62,7 @@
             class="flex justify-between items-center max-w-[1440px] mx-auto h-[70px] px-[10px] text-[14px] font-suisse-medium">
             <div class="flex gap-[60px] uppercase items-center tracking-[1.4px]">
                 <a href="/">
-                    <img src="/img/logo.png" alt="Swal"
-                        class="min-w-[95px] max-w-[95px] h-auto block" id="logoImg" />
+                    <img src="/img/logo.png" alt="Swal" class="min-w-[95px] max-w-[95px] h-auto block" id="logoImg" />
                 </a>
                 <a href="/" class="nav-link">Home</a>
                 <a href="/ecosystem" class="nav-link">AI Ecosystem</a>
@@ -89,11 +106,15 @@
                 </div>
             </div>
         </section>
-        <section class="w-full z-10 relative py-[140px] px-[10px] text-center bg-white" id="section3">
+        <section class="w-full z-10 relative py-[140px] px-[10px] text-center bg-white overflow-hidden" id="section3">
             <div class="w-full justify-center flex">
-                <div class="group p-[8px] flex overflow-hidden rounded-full border border-forest/5 font-heading leading-none relative">
-                    <div class="tab-hover absolute bg-gray-100 rounded-full transition-all duration-300 opacity-0 translate-x-0 translate-y-0" style="width: 0; height: 49px;"></div>
-                    <div class="tab-background absolute bg-forest rounded-full transition-all duration-300 translate-x-0 translate-y-0" style="width: 0; height: 49px;"></div>
+                <div
+                    class="group p-[8px] flex overflow-hidden rounded-full border border-forest/5 font-heading leading-none relative">
+                    <div class="tab-hover absolute bg-gray-100 rounded-full transition-all duration-300 opacity-0 translate-x-0 translate-y-0"
+                        style="width: 0; height: 49px;"></div>
+                    <div class="tab-background absolute bg-forest rounded-full transition-all duration-300 translate-x-0 translate-y-0"
+                        style="width: 0; height: 49px;"></div>
+
                     <button type="button" aria-label="Tab 0" data-tab="0"
                         class="tab-btn relative rounded-full px-[24px] py-[16px] transition-colors duration-300">
                         <div class="relative z-10">Swal Studio Pro</div>
@@ -108,52 +129,158 @@
                     </button>
                 </div>
             </div>
-            <p class="text-[#071511] text-[16px] font-suisse-regular mt-[40px]">WIP</p>
+            <div class="cards w-full mt-[40px] flex justify-center relative">
+                <div class="swiper-container w-full">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div
+                                class="w-[75vw] aspect-[1200/680] bg-[#F7F7F4] rounded-[24px] flex-shrink-0 flex flex-row p-[30px] gap-[20px] items-center">
+                                <div class="w-1/2 text-left px-[50px]">
+                                    <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal">Intuitive &
+                                        Engaged</p>
+                                    <p class="text-[#071511] font-suisse-regular text-[32px] leading-normal mt-[16px]">
+                                        Easily
+                                        create AI Apps
+                                        with a conversational
+                                        no-code interface</p>
+                                    <p
+                                        class="text-[#071511] font-suisse-regular text-[16px] leading-normal mt-[20px] opacity-60">
+                                        Even without any development experience, anyone can easily create or execute
+                                        their
+                                        own
+                                        AI
+                                        service with the Studio Autonomous Agent.</p>
+                                    <a href="#" class="arrow-button mt-[100px]">Try Now</a>
+                                </div>
+                                <div class="w-1/2 h-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden">
+                                    <video src="/video/test.mp4" autoplay loop muted playsinline
+                                        class="w-full h-full object-cover"></video>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="w-[75vw] aspect-[1200/680] bg-[#F7F7F4] rounded-[24px] flex-shrink-0 flex flex-row p-[30px] gap-[20px] items-center">
+                                <div class="w-1/2 text-left px-[50px]">
+                                    <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal">Intuitive &
+                                        Engaged</p>
+                                    <p class="text-[#071511] font-suisse-regular text-[32px] leading-normal mt-[16px]">
+                                        Easily
+                                        create AI Apps
+                                        with a conversational
+                                        no-code interface</p>
+                                    <p
+                                        class="text-[#071511] font-suisse-regular text-[16px] leading-normal mt-[20px] opacity-60">
+                                        Even without any development experience, anyone can easily create or execute
+                                        their
+                                        own
+                                        AI
+                                        service with the Studio Autonomous Agent.</p>
+                                    <a href="#" class="arrow-button mt-[100px]">Try Now</a>
+                                </div>
+                                <div class="w-1/2 h-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden">
+                                    <video src="/video/circle_pattern.mp4" autoplay loop muted playsinline
+                                        class="w-full h-full object-cover"></video>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="w-[75vw] aspect-[1200/680] bg-[#F7F7F4] rounded-[24px] flex-shrink-0 flex flex-row p-[30px] gap-[20px] items-center">
+                                <div class="w-1/2 text-left px-[50px]">
+                                    <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal">Intuitive &
+                                        Engaged</p>
+                                    <p class="text-[#071511] font-suisse-regular text-[32px] leading-normal mt-[16px]">
+                                        Easily
+                                        create AI Apps
+                                        with a conversational
+                                        no-code interface</p>
+                                    <p
+                                        class="text-[#071511] font-suisse-regular text-[16px] leading-normal mt-[20px] opacity-60">
+                                        Even without any development experience, anyone can easily create or execute
+                                        their
+                                        own
+                                        AI
+                                        service with the Studio Autonomous Agent.</p>
+                                    <a href="#" class="arrow-button mt-[100px]">Try Now</a>
+                                </div>
+                                <div class="w-1/2 h-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden">
+                                    <video src="/video/wave.mp4" autoplay loop muted playsinline
+                                        class="w-full h-full object-cover"></video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
+
         <script>
-        $(document).ready(function() {
-            const $tabBtns = $('.tab-btn');
-            const $background = $('.tab-background');
-            const $hoverBg = $('.tab-hover');
-            
-            // 초기 활성 탭 설정
-            setActiveTab($tabBtns.first());
+            $(document).ready(function () {
+                const $tabBtns = $('.tab-btn');
+                const $background = $('.tab-background');
+                const $hoverBg = $('.tab-hover');
 
-            $tabBtns.hover(
-                function() {
-                    if (!$(this).hasClass('active')) {
-                        const width = $(this).outerWidth();
-                        const left = $(this).position().left - 8;
-                        $hoverBg.css({
-                            width: width + 'px',
-                            transform: `translateX(${left}px)`,
-                            opacity: 1
-                        });
-                    }
-                },
-                function() {
-                    $hoverBg.css('opacity', 0);
+                let swiper;
+
+                function initSwiper() {
+                    swiper = new Swiper('.swiper-container', {
+                        centeredSlides: true,
+                        slidesPerView: 'auto',
+                        spaceBetween: 40,
+                        loop: false,
+                        mousewheel: {
+                            forceToAxis: true
+                        },
+                        on: {
+                            slideChange: function () {
+                                const realIndex = this.realIndex;
+                                setActiveTab($tabBtns.eq(realIndex));
+                            }
+                        }
+                    });
                 }
-            );
 
-            $tabBtns.click(function() {
-                $hoverBg.css('opacity', 0);
-                setActiveTab($(this));
-            });
+                initSwiper();
+                setActiveTab($tabBtns.first());
 
-            function setActiveTab($btn) {
-                $tabBtns.removeClass('active text-[#E6FDFC]');
-                $btn.addClass('active text-[#E6FDFC]');
-                
-                const width = $btn.outerWidth();
-                const left = $btn.position().left - 8;
-                
-                $background.css({
-                    width: width + 'px',
-                    transform: `translateX(${left}px)`
+                $tabBtns.hover(
+                    function () {
+                        if (!$(this).hasClass('active')) {
+                            const width = $(this).outerWidth();
+                            const left = $(this).position().left - 8;
+                            $hoverBg.css({
+                                width: width + 'px',
+                                transform: `translateX(${left}px)`,
+                                opacity: 1
+                            });
+                        }
+                    },
+                    function () {
+                        $hoverBg.css('opacity', 0);
+                    }
+                );
+
+                // 탭 클릭 시 해당 슬라이드로 이동
+                $tabBtns.click(function () {
+                    $hoverBg.css('opacity', 0);
+                    const index = $(this).data('tab');
+                    swiper.slideToLoop(index, 600);
                 });
-            }
-        });
+
+                function setActiveTab($btn) {
+                    $tabBtns.removeClass('active text-[#E6FDFC]');
+                    $btn.addClass('active text-[#E6FDFC]');
+
+                    const width = $btn.outerWidth();
+                    const left = $btn.position().left - 8;
+
+                    $background.css({
+                        width: width + 'px',
+                        transform: `translateX(${left}px)`
+                    });
+                }
+            });
         </script>
         <section class="w-full bg-white pt-[56px] pb-[150px] z-10 relative px-[10px]">
             <div
