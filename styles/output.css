@@ -857,6 +857,10 @@ video {
   min-height: 500px;
 }
 
+.min-h-\[800px\] {
+  min-height: 800px;
+}
+
 .w-1\/2 {
   width: 50%;
 }
