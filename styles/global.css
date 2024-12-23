@@ -71,6 +71,10 @@
     color: #E6FDFC;
 }
 
+#mainNav.nav-transparent {
+    mix-blend-mode: difference;
+}
+
 .nav-white #startBtn {
     background-color: #002424;
     color: white;
@@ -86,6 +90,25 @@
 }
 
 .nav-transparent #startBtn:hover {
+    background-color: #72D9B8;
+}
+
+
+.nav-white + div #startBtn {
+    background-color: #002424;
+    color: white;
+}
+
+.nav-white + div #startBtn:hover {
+    background-color: #1F4545;
+}
+
+.nav-transparent + div #startBtn {
+    background-color: #86FFD9;
+    color: #081511;
+}
+
+.nav-transparent + div #startBtn:hover {
     background-color: #72D9B8;
 }
 
