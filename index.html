@@ -53,21 +53,15 @@
     <main class="w-full min-w-[1440px]">
         <!-- <main class="w-full"> -->
         <section class="w-full h-screen relative z-10 bg-black" id="heroSection">
-            <video src="/video/main_background.mp4" autoplay muted loop playsinline
-                class="w-full h-full object-cover absolute top-0 left-0">
-            </video>
-            <video src="/video/main_foreground.mp4" autoplay muted playsinline id="heroVideo"
-                class="w-full h-full object-cover absolute top-0 left-0">
+            <video src="/video/main.mp4" autoplay muted loop playsinline
+                class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-[2000ms]">
             </video>
             <script>
-                const heroVideo = document.getElementById('heroVideo');
-                heroVideo.addEventListener('play', () => {
+                document.addEventListener('DOMContentLoaded', () => {
+                    const video = document.querySelector('video');
                     setTimeout(() => {
-                        gsap.to(heroVideo, {
-                            opacity: 0,
-                            duration: 1
-                        });
-                    }, 3000);
+                        video.style.opacity = '1';
+                    }, 500);
                 });
             </script>
             <div class="absolute w-full bottom-0 left-0 py-[80px] z-10 mix-blend-difference">
