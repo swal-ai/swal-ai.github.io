@@ -686,6 +686,11 @@ video {
   margin-right: auto;
 }
 
+.mx-\[24px\] {
+  margin-left: 24px;
+  margin-right: 24px;
+}
+
 .mb-\[114px\] {
   margin-bottom: 114px;
 }
@@ -1463,6 +1468,10 @@ video {
 
 .pt-\[92px\] {
   padding-top: 92px;
+}
+
+.pl-\[24px\] {
+  padding-left: 24px;
 }
 
 .text-left {
