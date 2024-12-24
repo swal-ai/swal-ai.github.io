@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swal</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/output.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Draggable.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <style>
+        .primary,
+        .secondary {
+            transition: all 0.5s ease;
+        }
+
+        .dark-mode .primary {
+            color: #E6FDFC;
+        }
+
+        .dark-mode .secondary {
+            color: #6D8786;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col items-center">
+    <nav class="w-full fixed top-0 left-0 right-0 z-[100] transition-all duration-300 nav-white" id="mainNav">
+        <div
+            class="flex justify-between items-center max-w-[1440px] mx-auto h-[70px] px-[24px] text-[14px] font-suisse-medium">
+            <div class="flex gap-[60px] uppercase items-center tracking-[1.4px]">
+                <a href="/">
+                    <img src="/img/logo.png" alt="Swal"
+                        class="min-w-[95px] max-w-[95px] h-auto block" id="logoImg" />
+                </a>
+                <a href="/" class="nav-link">Home</a>
+                <a href="/ecosystem" class="nav-link">AI Ecosystem</a>
+                <a href="/use-cases" class="nav-link">Use Cases</a>
+            </div>
+            <a href="#"
+                class="bg-primary w-[122px] h-[46px] rounded-full text-white flex items-center justify-center font-suisse-regular"
+                id="startBtn">Get started</a>
+        </div>
+    </nav>
+    <main class="w-full min-w-[1440px]">
+        <!-- <main class="w-full"> -->
+        <section class="w-full mt-[70px] pt-[80px] pb-[170px] text-center z-20 relative" id="section1">
+            <div class="flex flex-col gap-[20px]">
+                <h1 class="text-[60px] font-oceanic-book text-primary leading-[60px] tracking-[-0.6px]">Use Cases</h1>
+                <p class="font-suisse-regular text-[16px] text-primary opacity-60">Let your AI agents handle the hassle
+                    and head home
+                    early.</p>
+            </div>
+            <div class="w-full max-w-[1440px] mx-auto">
+                <div class="h-[800px] bg-[#081511] rounded-[20px] mt-[80px] mx-[24px] flex items-center justify-center">
+                    <video src="/video/face.mp4" autoplay loop muted playsinline class="w-auto h-full"></video>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full flex flex-col items-center z-10 relative h-[1674px] pt-[400px] mx-auto overflow-x-clip"
+            id="section2">
+            <h2 class="text-[#071511] text-center font-oceanic-book text-[60px] leading-[76px] tracking-[-0.6px] primary"
+                style="z-index: 9;">
+                The Future of Work,<br />Meet Swal</h2>
+            <p class="text-[#071511] text-center font-suisse-medium text-[18px] leading-[27px] opacity-40 pt-[24px] secondary"
+                style="z-index: 9;">
+                In a world where time is the most valuable resource,<br />Studio Pro ensures that every minute counts.
+            </p>
+            <div class="w-full relative flex justify-center items-center pt-[240px]">
+                <img src="/img/eco/1.png" alt="Swal" class="w-[42px] h-auto absolute rounded-[6.8px] z-[1]">
+                <img src="/img/eco/2.png" alt="Swal"
+                    class="w-[36px] h-auto absolute ml-[40px] mt-[-40px] rounded-[2px] z-[5]">
+                <img src="/img/eco/3.png" alt="Swal"
+                    class="w-[28px] h-auto absolute ml-[-40px] mt-[60px] rounded-[1.63px] z-[0]">
+                <img src="/img/eco/4.png" alt="Swal"
+                    class="w-[38px] h-auto absolute ml-[60px] mt-[36px] rounded-[2.2px] z-[3]">
+                <img src="/img/eco/5.png" alt="Swal"
+                    class="w-[34px] h-auto absolute ml-[30px] mt-[20px] rounded-[2px] z-[5]">
+                <img src="/img/eco/6.png" alt="Swal"
+                    class="w-[24px] h-auto absolute ml-[-40px] mt-[-70px] rounded-[1.4px] z-[4]">
+            </div>
+        </section>
+
+        <section class="w-full flex flex-col items-center z-10 relative pt-[281px]" id="section3">
+            <h2
+                class="text-[#071511] text-center font-oceanic-book text-[60px] leading-[76px] tracking-[-0.6px] primary">
+                See How People Are Using Swal</h2>
+
+            <p class="text-primary text-center font-suisse-regular text-[16px] opacity-60 pt-[20px] secondary">
+                Whether it's for individuals looking to simplify their daily tasks or businesses seeking to enhance
+                productivity at scale,<br />
+                Studio Pro's AI agentic workflow builder changes lives by giving users the tools to work smarter, not
+                harder.
+            </p>
+            <div class="w-full mt-[128px]">
+                <div class="w-full mx-auto overflow-hidden">
+                    <div>
+                        <div class="w-full flex flex-row gap-[20px]" id="scrollContainer1">
+                            <div class="relative w-[50vw] min-w-[870px] max-w-[50vw] min-h-[500px]">
+                                <img src="/img/eco/card_1.png" alt="Swal" class="w-full h-auto rounded-[20px]">
+                                <div class="absolute bottom-0 left-0 flex flex-col gap-[8px] px-[40px] py-[40px]">
+                                    <p class="text-white font-suisse-regular text-[18px] leading-[27px] opacity-60">
+                                        Kevin | Client Services</p>
+                                    <p
+                                        class="text-white font-suisse-regular text-[28px] leading-normal tracking-[-0.28px] break-words">
+                                        Now I can offer better solutions more easily<br />and faster. Such a huge help.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="relative w-[50vw] min-w-[870px] max-w-[50vw] min-h-[500px] bg-[#E8E8DC] rounded-[20px] px-[40px] py-[40px] flex flex-col justify-between">
+                                <p
+                                    class="text-[#071414] font-suisse-regular text-[28px] leading-normal tracking-[-0.28px] w-3/5">
+                                    Collect tweets about people’s reactions to our content</p>
+                                <div class="flex flex-row items-end justify-between w-full">
+                                    <p
+                                        class="text-[#071414] font-suisse-regular text-[18px] leading-[27px] opacity-60 w-2/3">
+                                        Analyze tweets on X related to our drama #StrangerThings, focusing on viewers’
+                                        favorite scenes or characters. Also, identify the top 10 most frequently used
+                                        keywords alongside the hashtag #StrangerThings. I plan to use this analysis to
+                                        draft a promotional content proposal.
+                                    </p>
+                                    <div class="flex flex-row min-w-[80px] w-1/3 justify-end">
+                                        <div class="grid grid-cols-2 gap-[8px]">
+                                            <img src="/img/google.png" alt="Swal" class="w-[36px] h-[36px]">
+                                            <img src="/img/notion.png" alt="Swal" class="w-[36px] h-[36px]">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative w-[50vw] min-w-[870px] max-w-[50vw] min-h-[500px]">
+                                <img src="/img/eco/card_2.png" alt="Swal" class="w-full h-auto rounded-[20px]">
+                                <div class="absolute bottom-0 left-0 flex flex-col gap-[8px] px-[40px] py-[40px]">
+                                    <p class="text-white font-suisse-regular text-[18px] leading-[27px] opacity-60">
+                                        Kevin | Client Services</p>
+                                    <p
+                                        class="text-white font-suisse-regular text-[28px] leading-normal tracking-[-0.28px] break-words">
+                                        Now I can offer better solutions more easily<br />and faster. Such a huge help.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="relative w-[50vw] min-w-[870px] max-w-[50vw] min-h-[500px] bg-[#F5DFF5] rounded-[20px] px-[40px] py-[40px] flex flex-col justify-between">
+                                <p
+                                    class="text-[#071414] font-suisse-regular text-[28px] leading-normal tracking-[-0.28px] w-3/5">
+                                    YouTube Shopping Review Analysis</p>
+                                <div class="flex flex-row items-end justify-between w-full">
+                                    <p
+                                        class="text-[#071414] font-suisse-regular text-[18px] leading-[27px] opacity-60 w-2/3">
+                                        Analyze trending fashion videos from popular YouTubers with similar body types
+                                        (170cm, slim) to find recommended outfits. Locate the items on shopping
+                                        websites, compare prices, and share purchase links. Include reasons for their
+                                        recommendations to help guide the choices.
+                                    </p>
+                                    <div class="flex flex-row min-w-[80px] w-1/3 justify-end">
+                                        <div class="grid grid-cols-2 gap-[8px]">
+                                            <img src="/img/google.png" alt="Swal" class="w-[36px] h-[36px]">
+                                            <img src="/img/notion.png" alt="Swal" class="w-[36px] h-[36px]">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 반복 -->
+                            <div class="relative w-[50vw] min-w-[870px] max-w-[50vw] min-h-[500px]">
+                                <img src="/img/eco/card_1.png" alt="Swal" class="w-full h-auto rounded-[20px]">
+                                <div class="absolute bottom-0 left-0 flex flex-col gap-[8px] px-[40px] py-[40px]">
+                                    <p class="text-white font-suisse-regular text-[18px] leading-[27px] opacity-60">
+                                        Kevin | Client Services</p>
+                                    <p
+                                        class="text-white font-suisse-regular text-[28px] leading-normal tracking-[-0.28px] break-words">
+                                        Now I can offer better solutions more easily<br />and faster. Such a huge help.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="relative w-[50vw] min-w-[870px] max-w-[50vw] min-h-[500px] bg-[#E8E8DC] rounded-[20px] px-[40px] py-[40px] flex flex-col justify-between">
+                                <p
+                                    class="text-[#071414] font-suisse-regular text-[28px] leading-normal tracking-[-0.28px] w-3/5">
+                                    Collect tweets about people’s reactions to our content</p>
+                                <div class="flex flex-row items-end justify-between w-full">
+                                    <p
+                                        class="text-[#071414] font-suisse-regular text-[18px] leading-[27px] opacity-60 w-2/3">
+                                        Analyze tweets on X related to our drama #StrangerThings, focusing on viewers’
+                                        favorite scenes or characters. Also, identify the top 10 most frequently used
+                                        keywords alongside the hashtag #StrangerThings. I plan to use this analysis to
+                                        draft a promotional content proposal.
+                                    </p>
+                                    <div class="flex flex-row min-w-[80px] w-1/3 justify-end">
+                                        <div class="grid grid-cols-2 gap-[8px]">
+                                            <img src="/img/google.png" alt="Swal" class="w-[36px] h-[36px]">
+                                            <img src="/img/notion.png" alt="Swal" class="w-[36px] h-[36px]">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative w-[50vw] min-w-[870px] max-w-[50vw] min-h-[500px]">
+                                <img src="/img/eco/card_2.png" alt="Swal" class="w-full h-auto rounded-[20px]">
+                                <div class="absolute bottom-0 left-0 flex flex-col gap-[8px] px-[40px] py-[40px]">
+                                    <p class="text-white font-suisse-regular text-[18px] leading-[27px] opacity-60">
+                                        Kevin | Client Services</p>
+                                    <p
+                                        class="text-white font-suisse-regular text-[28px] leading-normal tracking-[-0.28px] break-words">
+                                        Now I can offer better solutions more easily<br />and faster. Such a huge help.
+                                    </p>
+                                </div>
+                            </div>
+                            <div
+                                class="relative w-[50vw] min-w-[870px] max-w-[50vw] min-h-[500px] bg-[#F5DFF5] rounded-[20px] px-[40px] py-[40px] flex flex-col justify-between">
+                                <p
+                                    class="text-[#071414] font-suisse-regular text-[28px] leading-normal tracking-[-0.28px] w-3/5">
+                                    YouTube Shopping Review Analysis</p>
+                                <div class="flex flex-row items-end justify-between w-full">
+                                    <p
+                                        class="text-[#071414] font-suisse-regular text-[18px] leading-[27px] opacity-60 w-2/3">
+                                        Analyze trending fashion videos from popular YouTubers with similar body types
+                                        (170cm, slim) to find recommended outfits. Locate the items on shopping
+                                        websites, compare prices, and share purchase links. Include reasons for their
+                                        recommendations to help guide the choices.
+                                    </p>
+                                    <div class="flex flex-row min-w-[80px] w-1/3 justify-end">
+                                        <div class="grid grid-cols-2 gap-[8px]">
+                                            <img src="/img/google.png" alt="Swal" class="w-[36px] h-[36px]">
+                                            <img src="/img/notion.png" alt="Swal" class="w-[36px] h-[36px]">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full flex flex-row gap-[20px] mt-[20px]" id="scrollContainer2">
+                            <div
+                                class="relative w-[50vw] min-w-[870px] max-w-[50vw] min-h-[500px] bg-[#F2DACC] rounded-[20px] px-[40px] py-[40px] flex flex-col justify-between">
+                                <p
+                                    class="text-[#071414] font-suisse-regular text-[28px] leading-normal tracking-[-0.28px] w-3/5">
+                                    Save unread AI news from Reddit to Notion</p>
+                                <div class="flex flex-row items-end justify-between w-full">
+                                    <p
+                                        class="text-[#071414] font-suisse-regular text-[18px] leading-[27px] opacity-60 w-2/3">
+                                        Find new posts in the AI news subreddit on Reddit and add them to my Notion list
+                                        titled ‘AI Insights.’ Make sure to check for duplicates with the existing
+                                        entries in the list and only add new insights that I need to know.
+                                    </p>
+                                    <div class="flex flex-row min-w-[80px] w-1/3 justify-end">
+                                        <div class="grid grid-cols-2 gap-[8px]">
+                                            <div></div>
+                                            <img src="/img/github.png" alt="Swal" class="w-[36px] h-[36px]">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="relative w-[50vw] min-w-[870px] max-w-[50vw] min-h-[500px]">
+                                <img src="/img/eco/card_3.png" alt="Swal" class="w-full h-auto rounded-[20px]">
+                                <div class="absolute bottom-0 left-0 flex flex-col gap-[8px] px-[40px] py-[40px]">
+                                    <p class="text-white font-suisse-regular text-[18px] leading-[27px] opacity-60">Sara
+                                        | Marketer</p>
+                                    <p
+                                        class="text-white font-suisse-regular text-[28px] leading-normal tracking-[-0.28px] break-words">
+                                        I don't need to browse all day to find a trendy outer.<br />
+                                        Swal does it for me!</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="relative w-[50vw] min-w-[870px] max-w-[50vw] min-h-[500px] bg-[#DCEDFE] rounded-[20px] px-[40px] py-[40px] flex flex-col justify-between">
+                                <p
+                                    class="text-[#071414] font-suisse-regular text-[28px] leading-normal tracking-[-0.28px] w-3/5">
+                                    Personal Statement Drafted Based on My GitHub Projects</p>
+                                <div class="flex flex-row items-end justify-between w-full">
+                                    <p
+                                        class="text-[#071414] font-suisse-regular text-[18px] leading-[27px] opacity-60 w-2/3">
+                                        Find junior backend developer job postings on recruitment websites and create a
+                                        list. Review my GitHub projects based on job descriptions and draft personalized
+                                        cover letters for each position. Highlight the unique aspects of my projects and
+                                        explain their relevance to the respective companies.
+                                    </p>
+                                    <div class="flex flex-row min-w-[80px] w-1/3 justify-end">
+                                        <div class="grid grid-cols-2 gap-[8px]">
+                                            <div></div>
+                                            <img src="/img/github.png" alt="Swal" class="w-[36px] h-[36px]">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="relative w-[50vw] min-w-[870px] max-w-[50vw] min-h-[500px]">
+                                <img src="/img/eco/card_4.png" alt="Swal" class="w-full h-auto rounded-[20px]">
+                                <div class="absolute bottom-0 left-0 flex flex-col gap-[8px] px-[40px] py-[40px]">
+                                    <p class="text-white font-suisse-regular text-[18px] leading-[27px] opacity-60">
+                                        Kevin | Client Services</p>
+                                    <p
+                                        class="text-white font-suisse-regular text-[28px] leading-normal tracking-[-0.28px] break-words">
+                                        Now I can offer better solutions more easily <br />
+                                        and faster. Such a huge help.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- 반복 -->
+                            <div
+                            class="relative w-[50vw] min-w-[870px] max-w-[50vw] min-h-[500px] bg-[#F2DACC] rounded-[20px] px-[40px] py-[40px] flex flex-col justify-between">
+                            <p
+                                class="text-[#071414] font-suisse-regular text-[28px] leading-normal tracking-[-0.28px] w-3/5">
+                                Save unread AI news from Reddit to Notion</p>
+                            <div class="flex flex-row items-end justify-between w-full">
+                                <p
+                                    class="text-[#071414] font-suisse-regular text-[18px] leading-[27px] opacity-60 w-2/3">
+                                    Find new posts in the AI news subreddit on Reddit and add them to my Notion list
+                                    titled ‘AI Insights.’ Make sure to check for duplicates with the existing
+                                    entries in the list and only add new insights that I need to know.
+                                </p>
+                                <div class="flex flex-row min-w-[80px] w-1/3 justify-end">
+                                    <div class="grid grid-cols-2 gap-[8px]">
+                                        <div></div>
+                                        <img src="/img/github.png" alt="Swal" class="w-[36px] h-[36px]">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="relative w-[50vw] min-w-[870px] max-w-[50vw] min-h-[500px]">
+                            <img src="/img/eco/card_3.png" alt="Swal" class="w-full h-auto rounded-[20px]">
+                            <div class="absolute bottom-0 left-0 flex flex-col gap-[8px] px-[40px] py-[40px]">
+                                <p class="text-white font-suisse-regular text-[18px] leading-[27px] opacity-60">Sara
+                                    | Marketer</p>
+                                <p
+                                    class="text-white font-suisse-regular text-[28px] leading-normal tracking-[-0.28px] break-words">
+                                    I don't need to browse all day to find a trendy outer.<br />
+                                    Swal does it for me!</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="relative w-[50vw] min-w-[870px] max-w-[50vw] min-h-[500px] bg-[#DCEDFE] rounded-[20px] px-[40px] py-[40px] flex flex-col justify-between">
+                            <p
+                                class="text-[#071414] font-suisse-regular text-[28px] leading-normal tracking-[-0.28px] w-3/5">
+                                Personal Statement Drafted Based on My GitHub Projects</p>
+                            <div class="flex flex-row items-end justify-between w-full">
+                                <p
+                                    class="text-[#071414] font-suisse-regular text-[18px] leading-[27px] opacity-60 w-2/3">
+                                    Find junior backend developer job postings on recruitment websites and create a
+                                    list. Review my GitHub projects based on job descriptions and draft personalized
+                                    cover letters for each position. Highlight the unique aspects of my projects and
+                                    explain their relevance to the respective companies.
+                                </p>
+                                <div class="flex flex-row min-w-[80px] w-1/3 justify-end">
+                                    <div class="grid grid-cols-2 gap-[8px]">
+                                        <div></div>
+                                        <img src="/img/github.png" alt="Swal" class="w-[36px] h-[36px]">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative w-[50vw] min-w-[870px] max-w-[50vw] min-h-[500px]">
+                            <img src="/img/eco/card_4.png" alt="Swal" class="w-full h-auto rounded-[20px]">
+                            <div class="absolute bottom-0 left-0 flex flex-col gap-[8px] px-[40px] py-[40px]">
+                                <p class="text-white font-suisse-regular text-[18px] leading-[27px] opacity-60">
+                                    Kevin | Client Services</p>
+                                <p
+                                    class="text-white font-suisse-regular text-[28px] leading-normal tracking-[-0.28px] break-words">
+                                    Now I can offer better solutions more easily <br />
+                                    and faster. Such a huge help.
+                                </p>
+                            </div>
+                        </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                gsap.registerPlugin(Draggable);
+
+                const scrollContainer1 = document.getElementById('scrollContainer1');
+                const scrollContainer2 = document.getElementById('scrollContainer2');
+
+                let cycleWidth;
+                function updateCycleWidth() {
+                    cycleWidth = (Math.max(window.innerWidth * 0.5, 870) * 4) + (20 * 4);
+                }
+                updateCycleWidth();
+
+                const initialProgress1 = 0.05;
+                const initialProgress2 = 0.09;
+
+                function createInfiniteScroll(container, initialProgress) {
+                    updateCycleWidth();
+                    const initialX = -(cycleWidth * initialProgress);
+                    gsap.set(container, { x: initialX });
+
+                    let scrollAnimation = gsap.to(container, {
+                        x: `-=${cycleWidth}`,
+                        duration: 60,
+                        ease: "none",
+                        repeat: -1,
+                        onUpdate: () => {
+                            const currentX = gsap.getProperty(container, "x");
+                            if (currentX <= -cycleWidth) {
+                                gsap.set(container, { x: currentX + cycleWidth });
+                            }
+                        }
+                    });
+
+                    container.addEventListener('mouseenter', () => scrollAnimation.pause());
+                    container.addEventListener('mouseleave', () => scrollAnimation.play());
+                    Draggable.create(container, {
+                        type: "x",
+                        inertia: true,
+                        dragResistance: 0.2,
+                        onDragStart: function () {
+                            scrollAnimation.pause();
+                        },
+                        onDrag: function () {
+                            let currentX = this.x;
+                            if (currentX > 0) {
+                                currentX = currentX - cycleWidth;
+                            }
+                            gsap.set(container, { x: currentX });
+                        },
+                        onDragEnd: function () {
+                            const currentX = gsap.getProperty(container, "x");
+                            if (currentX > 0) {
+                                gsap.set(container, { x: currentX - cycleWidth });
+                            }
+                            scrollAnimation.progress((-currentX % cycleWidth) / cycleWidth - initialProgress);
+                        }
+                    });
+
+                    return scrollAnimation;
+                }
+
+                let scroll1 = createInfiniteScroll(scrollContainer1, initialProgress1);
+                let scroll2 = createInfiniteScroll(scrollContainer2, initialProgress2);
+
+                window.addEventListener('resize', () => {
+                    updateCycleWidth();
+                    scroll1.kill();
+                    scroll2.kill();
+                    scroll1 = createInfiniteScroll(scrollContainer1, initialProgress1);
+                    scroll2 = createInfiniteScroll(scrollContainer2, initialProgress2);
+                });
+            </script>
+
+        </section>
+
+        <section class="w-full pt-[170px] py-[200px] z-10 relative px-[24px]">
+            <div
+                class="max-w-[1440px] mx-auto text-primary font-suisse-regular flex flex-col items-center bg-[#E4F2EC] px-[80px] h-[348px]">
+                <p class="text-[#071414] text-center text-[28px] leading-normal tracking-[-0.28px] pt-[100px]">Create a
+                    more efficient work environment<br />with your own personal AI agents now</p>
+                <a href="#"
+                    class="text-[14px] mt-[30px] mb-[114px] px-[30px] py-[14px] bg-[#071414] text-white rounded-full flex items-center">Try
+                    Swal AI
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                        <mask id="mask0_2643_2924" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                            width="21" height="20">
+                            <rect x="0.5" width="20" height="20" fill="white" />
+                        </mask>
+                        <g mask="url(#mask0_2643_2924)">
+                            <path
+                                d="M5.74521 14.7035L4.875 13.8333L13.0754 5.625H5.62021V4.375H15.2035V13.9583H13.9535V6.50313L5.74521 14.7035Z"
+                                fill="#E6FDFC" />
+                        </g>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <div class="bg-[#DCEDFE] h-[800px] bottom-0 left-0 flex w-full overflow-hidden">
+            <div class="bg-[#DCEDFE] w-full max-w-[1440px] mx-auto relative flex justify-between text-primary"
+                style="z-index: 1;">
+                <div class="flex flex-col px-[24px] py-[155px]" style="z-index: 2;">
+                    <p class="text-[16px]">Next Contents</p>
+                    <p class="text-[60px] font-oceanic-book mt-[110px]">Home</p>
+                    <a href="/" class="arrow-button mt-[40px] font-suisse-regular">Read More</a>
+                </div>
+                <div class="absolute inset-0 bg-[#DCEDFE] pointer-events-none"
+                    style="mix-blend-mode: color; z-index: 1;"></div>
+                <video src="/video/horse.mp4" autoplay loop muted playsinline
+                    class="w-[858px] h-[800px] pr-[200px] flex-shrink-0 relative mix-blend-darken"
+                    style="z-index: 0; transform: scale(1) scaleX(-1);"></video>
+            </div>
+        </div>
+    </main>
+    <footer class="w-full bottom-0 left-0 right-0 z-[100] h-[485px] bg-[#071511] min-w-[1440px]">
+        <div class="h-full max-w-[1440px] mx-auto">
+            <div class="h-full grid grid-cols-4 gap-[40px] font-suisse-regular">
+                <div
+                    class="flex flex-col justify-between gap-[24px] border-l border-[#273131] pl-[24px] pt-[92px] pb-[37px]">
+                    <a href="/">
+                        <img src="/img/logo_w.png" alt="Swal" class="w-[95px] h-auto">
+                    </a>
+                    <p class="text-[#6D8786] text-[14px] leading-[27px] font-suisse-book">
+                        © 2024 Swal AI Studio
+                    </p>
+                </div>
+                <div class="flex border-l border-[#273131] pl-[24px]"></div>
+                <div
+                    class="flex flex-col gap-[12px] text-[18px] pt-[92px] pb-[37px] border-l border-[#273131] pl-[24px]">
+                    <p class="text-[#E6FDFC] leading-[27px]">Company</p>
+                    <ul class="flex flex-col text-[#6D8786] leading-[40px]">
+                        <li><a href="#" class="hover:text-[#E6FDFC]">About us</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">Blog</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">Documentation</a></li>
+                        <li><a href="https://wrtn.io" target="_blank" class="hover:text-[#E6FDFC]">wrtn.io</a></li>
+                    </ul>
+                </div>
+                <div
+                    class="flex flex-col gap-[12px] text-[18px] pt-[92px] pb-[37px] border-l border-r border-[#273131] pl-[24px]">
+                    <p class="text-[#E6FDFC] leading-[27px]">Social</p>
+                    <ul class="flex flex-col text-[#6D8786] leading-[40px]">
+                        <li><a href="#" class="hover:text-[#E6FDFC]">Instagram</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">GitHub</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">Discord</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">X</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            const lenis = new Lenis({
+                autoRaf: true,
+            });
+
+            const darkColor = '#071511';
+            const whiteColor = '#FFFFFF';
+
+            document.addEventListener('mousemove', (e) => {
+                const x = e.clientX / window.innerWidth;
+                const y = e.clientY / window.innerHeight;
+
+                document.querySelectorAll("#section2 img").forEach((img, index) => {
+                    const multiplier = (index + 1) * 10;
+                    gsap.to(img, {
+                        x: (x - 0.5) * multiplier,
+                        y: (y - 0.5) * multiplier,
+                        duration: 0.5,
+                        ease: "power2.out"
+                    });
+                });
+            });
+            $(window).scroll(function () {
+                const section2Top = $('#section2').offset().top - 80;
+                const section3Top = $('#section3').offset().top - 180;
+                const scrollTop = $(window).scrollTop();
+                const offset = 140;
+                if (scrollTop >= section2Top - offset && scrollTop < section3Top - offset) {
+
+                    let progress = Math.pow((scrollTop - (section2Top - offset)) / ((section3Top - offset) - (section2Top - offset)), 0.5);
+
+                    const finalStates = [
+                        { width: "124px", marginLeft: "0px", marginTop: "0px", borderRadius: "20px" },
+                        { width: "190px", marginLeft: "960px", marginTop: "-1100px", borderRadius: "11px" },
+                        { width: "344px", marginLeft: "-1100px", marginTop: "190px", borderRadius: "20px" },
+                        { width: "344px", marginLeft: "980px", marginTop: "1030px", borderRadius: "20px" },
+                        { width: "576px", marginLeft: "2200px", marginTop: "-200px", borderRadius: "33px" },
+                        { width: "400px", marginLeft: "-1500px", marginTop: "-1500px", borderRadius: "26.4px" }
+                    ];
+
+                    $("#section2 img").each((index, element) => {
+                        const finalState = finalStates[index];
+                        const currentValues = {};
+
+                        Object.keys(finalState).forEach(prop => {
+                            const finalValue = parseInt(finalState[prop]);
+                            currentValues[prop] = `${finalValue * progress}px`;
+                        });
+
+                        gsap.to(element, {
+                            ...currentValues,
+                            duration: 0.1,
+                            ease: "none",
+                            overwrite: true
+                        });
+                    });
+                }
+
+                if (scrollTop >= section2Top && scrollTop < section3Top) {
+                    $('body').css({
+                        'backgroundColor': darkColor,
+                        'transition': 'background-color 0.5s ease'
+                    }).addClass('dark-mode');
+                } else {
+                    $('body').css({
+                        'backgroundColor': whiteColor,
+                        'transition': 'background-color 0.5s ease'
+                    }).removeClass('dark-mode');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

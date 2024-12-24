@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swal</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/output.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Draggable.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        .primary,
+        .secondary {
+            transition: all 0.5s ease;
+        }
+
+        .dark-mode .primary {
+            color: #E6FDFC;
+        }
+
+        .dark-mode .secondary {
+            color: #6D8786;
+            opacity: 1;
+        }
+
+        #section2 img {
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        #section2.visible img {
+            opacity: 1;
+        }
+
+        .swiper-slide {
+            width: 75vw;
+            overflow: hidden;
+            transition: transform 0.6s ease, box-shadow 0.6s ease;
+            transform: translateY(100px) !important;
+        }
+
+        .swiper-slide-active {
+            transform: translateY(0) !important;
+        }
+
+        .tab-hover,
+        .tab-background {
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col items-center">
+    <nav class="w-full fixed top-0 left-0 right-0 z-[100] transition-all duration-300 nav-white" id="mainNav">
+        <div
+            class="flex justify-between items-center max-w-[1440px] mx-auto h-[70px] px-[24px] text-[14px] font-suisse-medium">
+            <div class="flex gap-[60px] uppercase items-center tracking-[1.4px]">
+                <a href="/">
+                    <img src="/img/logo.png" alt="Swal" class="min-w-[95px] max-w-[95px] h-auto block" id="logoImg" />
+                </a>
+                <a href="/" class="nav-link">Home</a>
+                <a href="/ecosystem" class="nav-link">AI Ecosystem</a>
+                <a href="/use-cases" class="nav-link">Use Cases</a>
+            </div>
+            <a href="#"
+                class="bg-primary w-[122px] h-[46px] rounded-full text-white flex items-center justify-center font-suisse-regular"
+                id="startBtn">Get started</a>
+        </div>
+    </nav>
+    <main class="w-full min-w-[1440px]">
+        <!-- <main class="w-full"> -->
+        <section class="w-full mt-[70px] pt-[80px] pb-[120px] text-center z-20 relative" id="section1">
+            <div class="flex flex-col gap-[20px]">
+                <h1 class="text-[60px] font-oceanic-book text-primary leading-[60px] tracking-[-0.6px]">AI Ecosystem
+                </h1>
+                <p class="font-suisse-regular text-[16px] text-primary opacity-60">By integrating AI action agents
+                    directly into the workflow creation process,<br />
+                    Studio Pro empowers individuals and organizations to automate tasks, streamline operations, and
+                    focus on what matters most.</p>
+            </div>
+            <div class="w-full max-w-[1440px] mx-auto">
+                <div class="h-[800px] bg-[#081511] rounded-[20px] mt-[80px] mx-[24px] flex items-center justify-center">
+                    <video src="/video/circle_pattern.mp4" autoplay loop muted playsinline
+                        class="w-auto h-full"></video>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full z-10 relative min-h-[800px]" id="section2">
+            <div class="relative">
+                <img src="/img/ecosystem-bg.png" alt="Swal" class="w-full h-auto">
+                <div
+                    class="absolute top-0 pt-[120px] left-0 right-0 flex flex-col gap-[16px] text-center text-white animate-section">
+                    <p class="text-[60px] font-oceanic-book text-[#071511] text-center tracking-[-0.6px]">An
+                        Ever-Growing Ecosystem<br />
+                        to Make the Impossible Possible</p>
+                    <p class="text-[#071511] text-center font-suisse-regular text-[18px] leading-[27px] opacity-40">The
+                        ecosystem is built on swal studio pro, store, and connector, each of which<br />
+                        will significantly improve your productivity and change your lifecycle.</p>
+                </div>
+            </div>
+        </section>
+        <section class="w-full z-10 relative py-[140px] px-[24px] text-center bg-white overflow-hidden" id="section3">
+            <div class="w-full justify-center flex">
+                <div
+                    class="group p-[8px] flex overflow-hidden rounded-full border border-forest/5 font-heading leading-none relative">
+                    <div class="tab-hover absolute bg-gray-100 rounded-full transition-all duration-300 opacity-0 translate-x-0 translate-y-0"
+                        style="width: 0; height: 49px;"></div>
+                    <div class="tab-background absolute bg-forest rounded-full transition-all duration-300 translate-x-0 translate-y-0"
+                        style="width: 0; height: 49px;"></div>
+
+                    <button type="button" aria-label="Tab 0" data-tab="0"
+                        class="tab-btn relative rounded-full px-[24px] py-[16px] transition-colors duration-300">
+                        <div class="relative z-10">Swal Studio Pro</div>
+                    </button>
+                    <button type="button" aria-label="Tab 1" data-tab="1"
+                        class="tab-btn relative rounded-full px-[24px] py-[16px] transition-colors duration-300">
+                        <div class="relative z-10">Swal Store</div>
+                    </button>
+                    <button type="button" aria-label="Tab 2" data-tab="2"
+                        class="tab-btn relative rounded-full px-[24px] py-[16px] transition-colors duration-300">
+                        <div class="relative z-10">Swal Connecter</div>
+                    </button>
+                </div>
+            </div>
+            <div class="cards w-full mt-[40px] flex justify-center relative">
+                <div class="swiper-container w-full">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div
+                                class="w-[75vw] aspect-[1200/680] bg-[#F7F7F4] rounded-[24px] flex-shrink-0 flex flex-row p-[30px] gap-[20px] items-center">
+                                <div class="w-1/2 text-left px-[50px]">
+                                    <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal">Intuitive &
+                                        Engaged</p>
+                                    <p class="text-[#071511] font-suisse-regular text-[32px] leading-normal mt-[16px]">
+                                        Easily
+                                        create AI Apps
+                                        with a conversational
+                                        no-code interface</p>
+                                    <p
+                                        class="text-[#071511] font-suisse-regular text-[16px] leading-normal mt-[20px] opacity-60">
+                                        Even without any development experience, anyone can easily create or execute
+                                        their
+                                        own
+                                        AI
+                                        service with the Studio Autonomous Agent.</p>
+                                    <a href="#" class="arrow-button mt-[100px]">Try Now</a>
+                                </div>
+                                <div class="w-1/2 h-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden">
+                                    <video src="/video/test.mp4" autoplay loop muted playsinline
+                                        class="w-full h-full object-cover"></video>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="w-[75vw] aspect-[1200/680] bg-[#F7F7F4] rounded-[24px] flex-shrink-0 flex flex-row p-[30px] gap-[20px] items-center">
+                                <div class="w-1/2 text-left px-[50px]">
+                                    <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal">Intuitive &
+                                        Engaged</p>
+                                    <p class="text-[#071511] font-suisse-regular text-[32px] leading-normal mt-[16px]">
+                                        Easily
+                                        create AI Apps
+                                        with a conversational
+                                        no-code interface</p>
+                                    <p
+                                        class="text-[#071511] font-suisse-regular text-[16px] leading-normal mt-[20px] opacity-60">
+                                        Even without any development experience, anyone can easily create or execute
+                                        their
+                                        own
+                                        AI
+                                        service with the Studio Autonomous Agent.</p>
+                                    <a href="#" class="arrow-button mt-[100px]">Try Now</a>
+                                </div>
+                                <div class="w-1/2 h-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden">
+                                    <video src="/video/circle_pattern.mp4" autoplay loop muted playsinline
+                                        class="w-full h-full object-cover"></video>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div
+                                class="w-[75vw] aspect-[1200/680] bg-[#F7F7F4] rounded-[24px] flex-shrink-0 flex flex-row p-[30px] gap-[20px] items-center">
+                                <div class="w-1/2 text-left px-[50px]">
+                                    <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal">Intuitive &
+                                        Engaged</p>
+                                    <p class="text-[#071511] font-suisse-regular text-[32px] leading-normal mt-[16px]">
+                                        Easily
+                                        create AI Apps
+                                        with a conversational
+                                        no-code interface</p>
+                                    <p
+                                        class="text-[#071511] font-suisse-regular text-[16px] leading-normal mt-[20px] opacity-60">
+                                        Even without any development experience, anyone can easily create or execute
+                                        their
+                                        own
+                                        AI
+                                        service with the Studio Autonomous Agent.</p>
+                                    <a href="#" class="arrow-button mt-[100px]">Try Now</a>
+                                </div>
+                                <div class="w-1/2 h-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden">
+                                    <video src="/video/wave.mp4" autoplay loop muted playsinline
+                                        class="w-full h-full object-cover"></video>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script>
+            $(document).ready(function () {
+                const $tabBtns = $('.tab-btn');
+                const $background = $('.tab-background');
+                const $hoverBg = $('.tab-hover');
+
+                let swiper;
+
+                function initSwiper() {
+                    swiper = new Swiper('.swiper-container', {
+                        centeredSlides: true,
+                        slidesPerView: 'auto',
+                        spaceBetween: 40,
+                        loop: false,
+                        mousewheel: {
+                            forceToAxis: true
+                        },
+                        on: {
+                            slideChange: function () {
+                                const realIndex = this.realIndex;
+                                setActiveTab($tabBtns.eq(realIndex));
+                            }
+                        }
+                    });
+                }
+
+                initSwiper();
+                setActiveTab($tabBtns.first());
+
+                $tabBtns.hover(
+                    function () {
+                        if (!$(this).hasClass('active')) {
+                            const width = $(this).outerWidth();
+                            const left = $(this).position().left - 8;
+                            $hoverBg.css({
+                                width: width + 'px',
+                                transform: `translateX(${left}px)`,
+                                opacity: 1
+                            });
+                        }
+                    },
+                    function () {
+                        $hoverBg.css('opacity', 0);
+                    }
+                );
+
+                // 탭 클릭 시 해당 슬라이드로 이동
+                $tabBtns.click(function () {
+                    $hoverBg.css('opacity', 0);
+                    const index = $(this).data('tab');
+                    swiper.slideToLoop(index, 600);
+                });
+
+                function setActiveTab($btn) {
+                    $tabBtns.removeClass('active text-[#E6FDFC]');
+                    $btn.addClass('active text-[#E6FDFC]');
+
+                    const width = $btn.outerWidth();
+                    const left = $btn.position().left - 8;
+
+                    $background.css({
+                        width: width + 'px',
+                        transform: `translateX(${left}px)`
+                    });
+                }
+            });
+        </script>
+        <section class="w-full bg-white pt-[56px] pb-[150px] z-10 relative px-[24px]">
+            <div
+                class="max-w-[1440px] mx-auto text-primary font-suisse-regular flex items-center gap-[40px] bg-[#F5DFF5] px-[80px] h-[348px]">
+                <div class="flex flex-col flex-1">
+                    <p class="text-[28px] text-[#071414]">Simplify Workflow, Boost Creativity</p>
+                    <p class="text-[16px] mt-[8px]">
+                        Studio Pro empowers individuals and organizations to automate tasks,<br />streamline operations,
+                        and focus on what matters most.
+                    </p>
+                    <a href="#" class="text-[16px] pt-[40px] underline underline-offset-auto">Learn about Swal
+                        Studio</a>
+                </div>
+                <div class="flex-1">
+                    <video class="w-[658px] h-[371px] rounded-[20px]" autoplay loop muted playsinline
+                        style="mix-blend-mode: exclusion;">
+                        <source src="/video/wave.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+        <div class="bg-[#E6FDFC] h-[800px] bottom-0 left-0 flex w-full overflow-hidden">
+            <div class="bg-[#E6FDFC] w-full max-w-[1440px] mx-auto relative flex justify-between text-primary"
+                style="z-index: 1;">
+                <div class="flex flex-col px-[24px] py-[155px]" style="z-index: 2;">
+                    <p class="text-[16px]">Next Contents</p>
+                    <p class="text-[60px] font-oceanic-book mt-[110px]">Use Cases</p>
+                    <a href="/use-cases" class="arrow-button mt-[40px] font-suisse-regular">Read More</a>
+                </div>
+                <div class="absolute inset-0 bg-[#E6FDFC] pointer-events-none"
+                    style="mix-blend-mode: color; z-index: 1;"></div>
+                <video src="/video/face_w.mp4" autoplay loop muted playsinline
+                    class="w-[858px] h-[800px] pr-[200px] flex-shrink-0 relative mix-blend-darken"
+                    style="z-index: 0; transform: scale(1) scaleX(-1);"></video>
+            </div>
+        </div>
+    </main>
+    <footer class="w-full bottom-0 left-0 right-0 z-[100] h-[485px] bg-[#071511] min-w-[1440px]">
+        <div class="h-full max-w-[1440px] mx-auto">
+            <div class="h-full grid grid-cols-4 gap-[40px] font-suisse-regular">
+                <div
+                    class="flex flex-col justify-between gap-[24px] border-l border-[#273131] pl-[24px] pt-[92px] pb-[37px]">
+                    <a href="/">
+                        <img src="/img/logo_w.png" alt="Swal" class="w-[95px] h-auto">
+                    </a>
+                    <p class="text-[#6D8786] text-[14px] leading-[27px] font-suisse-book">
+                        © 2024 Swal AI Studio
+                    </p>
+                </div>
+                <div class="flex border-l border-[#273131] pl-[24px]"></div>
+                <div
+                    class="flex flex-col gap-[12px] text-[18px] pt-[92px] pb-[37px] border-l border-[#273131] pl-[24px]">
+                    <p class="text-[#E6FDFC] leading-[27px]">Company</p>
+                    <ul class="flex flex-col text-[#6D8786] leading-[40px]">
+                        <li><a href="#" class="hover:text-[#E6FDFC]">About us</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">Blog</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">Documentation</a></li>
+                        <li><a href="https://wrtn.io" target="_blank" class="hover:text-[#E6FDFC]">wrtn.io</a></li>
+                    </ul>
+                </div>
+                <div
+                    class="flex flex-col gap-[12px] text-[18px] pt-[92px] pb-[37px] border-l border-r border-[#273131] pl-[24px]">
+                    <p class="text-[#E6FDFC] leading-[27px]">Social</p>
+                    <ul class="flex flex-col text-[#6D8786] leading-[40px]">
+                        <li><a href="#" class="hover:text-[#E6FDFC]">Instagram</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">GitHub</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">Discord</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">X</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            const lenis = new Lenis({
+                autoRaf: true,
+            });
+
+            const changedColor = '#E0E1DE';
+            const defaultColor = '#FFFFFF';
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        $('body').css({
+                            'backgroundColor': changedColor,
+                            'transition': 'background-color 0.5s ease'
+                        }).addClass('dark-mode');
+
+                        setTimeout(() => {
+                            $('#section2').addClass('visible');
+                        }, 400);
+                    } else {
+                        $('body').css({
+                            'backgroundColor': defaultColor,
+                            'transition': 'background-color 0.5s ease'
+                        }).removeClass('dark-mode');
+                    }
+                });
+            }, {
+                threshold: 0
+            });
+
+            observer.observe(document.querySelector('#section2'));
+
+
+            const observer2 = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        if ($(entry.target).hasClass('animate-section')) {
+                            gsap.fromTo(entry.target,
+                                {
+                                    opacity: 0,
+                                    y: 50
+                                },
+                                {
+                                    opacity: 1,
+                                    y: 0,
+                                    duration: 0.8,
+                                }
+                            );
+                            observer2.unobserve(entry.target);
+                        }
+                    }
+                });
+            }, {
+                threshold: 0.3,
+            });
+
+            $('.animate-section').each(function () {
+                observer2.observe(this);
+            });
+        });
+    </script>
+</body>
+
+</html>
