@@ -53,9 +53,14 @@
     <main class="w-full">
         <!-- <main class="w-full"> -->
         <section class="w-full h-screen relative z-10 bg-black" id="heroSection">
-            <video src="/video/main_f.mp4" autoplay muted loop playsinline
-                class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-[2000ms]">
-            </video>
+            <video
+              src="/video/main_f.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+              class="w-full h-full object-cover absolute top-0 left-0"
+            ></video>
             <script>
                 document.addEventListener('DOMContentLoaded', () => {
                     const video = document.querySelector('video');
@@ -64,8 +69,8 @@
                     }, 500);
                 });
             </script>
-            <div class="absolute w-full left-0 py-[80px] z-10 mix-blend-difference md:bottom-0 top-1/2 md:top-auto -translate-y-1/2 md:translate-y-0 font-suisse-regular">
-                <div class="max-w-[1440px] mx-auto px-[24px]">
+            <div class="absolute w-full left-0 md:py-[80px] z-10 mix-blend-difference md:bottom-0 top-1/2 md:top-auto -translate-y-1/2 md:translate-y-0 font-suisse-regular">
+                <div class="max-w-[1440px] mx-auto px-[16px] md:px-[24px]">
                     <h1 class="text-[32px] leading-[38px] text-[#5FC3BB]">
                         Meet swal.ai,<br />Intelligent Action API
                     </h1>
@@ -78,7 +83,7 @@
         </section>
         <section class="w-full bg-white pt-[155px] pb-[176px] z-10 relative">
             <div
-                class="max-w-[1440px] mx-auto px-[24px] text-primary font-suisse-regular flex flex-col animate-section">
+                class="max-w-[1440px] mx-auto px-[16px] md:px-[24px] text-primary font-suisse-regular flex flex-col animate-section">
                 <p class="text-[16px]">How it works</p>
                 <p class="text-[32px] leading-[38px] mt-[16px] splitting">
                     Unchain your potential<br />with swal.ai
@@ -432,7 +437,7 @@
                 });
             </script>
         </section>
-        <section class="w-full bg-white pt-[170px] pb-[74px] z-10 relative px-[24px]">
+        <section class="w-full bg-white pt-[170px] pb-[74px] z-10 relative px-[16px] md:px-[24px]">
             <div
                 class="max-w-[1440px] mx-auto text-primary font-suisse-regular flex items-center gap-[40px] bg-[#E6FDFC] px-[80px] h-[348px]">
                 <div class="flex flex-col flex-1">
@@ -453,7 +458,7 @@
         </section>
         <div class="w-full relative z-10">
             <section class="w-full bg-white py-[195px] font-suisse-regular text-primary">
-                <div class="max-w-[1440px] mx-auto px-[24px]">
+                <div class="max-w-[1440px] mx-auto px-[16px] md:px-[24px]">
                     <p class="text-[32px]">Lastest articles</p>
                     <div class="flex gap-[20px] pt-[40px]">
                         <article
@@ -567,7 +572,7 @@
         <div class="bg-[#E8E8DC] h-[800px] sticky bottom-0 left-0 flex w-full overflow-hidden z-0">
             <div class="bg-[#E8E8DC] w-full max-w-[1440px] mx-auto relative flex justify-between text-primary"
                 style="z-index: 1;">
-                <div class="flex flex-col px-[24px] py-[155px]" style="z-index: 2;">
+                <div class="flex flex-col px-[16px] md:px-[24px] py-[155px]" style="z-index: 2;">
                     <p class="text-[16px]">Next Contents</p>
                     <p class="text-[60px] font-oceanic-book mt-[110px]">AI Ecosystem</p>
                     <a href="/ecosystem" class="arrow-button mt-[40px] font-suisse-regular">Read More</a>

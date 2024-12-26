@@ -1295,6 +1295,11 @@ video {
     padding-right: 24px;
   }
 
+  .md\:py-\[80px\] {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
   .md\:pt-\[92px\] {
     padding-top: 92px;
   }
