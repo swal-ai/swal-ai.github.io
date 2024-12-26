@@ -32,15 +32,15 @@
 <body class="flex flex-col items-center bg-black">
     <nav class="w-full fixed top-0 left-0 right-0 z-[100] transition-all duration-300" id="mainNav">
         <div
-            class="flex justify-between items-center max-w-[1440px] mx-auto h-[70px] px-[24px] text-[14px] font-suisse-medium">
-            <div class="flex gap-[60px] uppercase items-center tracking-[1.4px]">
+            class="flex justify-between items-center max-w-[1440px] mx-auto h-[70px] px-[16px] md:px-[24px] text-[14px] font-suisse-medium">
+            <div class="gap-[60px] uppercase items-center tracking-[1.4px] flex">
                 <a href="/">
                     <img src="/img/logo_w.png" alt="swal.ai"
                         class="min-w-[95px] max-w-[95px] h-auto block" id="logoImg" />
                 </a>
-                <a href="/" class="nav-link">Home</a>
-                <a href="/ecosystem" class="nav-link">AI Ecosystem</a>
-                <a href="/use-cases" class="nav-link">Use Cases</a>
+                <a href="/" class="nav-link hidden md:flex">Home</a>
+                <a href="/ecosystem" class="nav-link hidden md:flex">AI Ecosystem</a>
+                <a href="/use-cases" class="nav-link hidden md:flex">Use Cases</a>
             </div>
         </div>
     </nav>
@@ -50,7 +50,7 @@
             style="right: calc((100vw - 1440px) / 2 + 24px);"
             id="startBtn">Get started</a>
     </div>
-    <main class="w-full min-w-[1440px]">
+    <main class="w-full">
         <!-- <main class="w-full"> -->
         <section class="w-full h-screen relative z-10 bg-black" id="heroSection">
             <video src="/video/main_f.mp4" autoplay muted loop playsinline
@@ -64,7 +64,7 @@
                     }, 500);
                 });
             </script>
-            <div class="absolute w-full bottom-0 left-0 py-[80px] z-10 mix-blend-difference">
+            <div class="absolute w-full left-0 py-[80px] z-10 mix-blend-difference md:bottom-0 top-1/2 md:top-auto -translate-y-1/2 md:translate-y-0 font-suisse-regular">
                 <div class="max-w-[1440px] mx-auto px-[24px]">
                     <h1 class="text-[32px] leading-[38px] text-[#5FC3BB]">
                         Meet swal.ai,<br />Intelligent Action API
@@ -580,7 +580,7 @@
             </div>
         </div>
     </main>
-    <footer class="w-full bottom-0 left-0 right-0 z-[100] h-[485px] bg-[#071511] min-w-[1440px]">
+    <footer class="w-full bottom-0 left-0 right-0 z-[100] h-[485px] bg-[#071511]">
         <div class="h-full max-w-[1440px] mx-auto">
             <div class="h-full grid grid-cols-4 gap-[40px] font-suisse-regular">
                 <div
