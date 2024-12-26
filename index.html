@@ -53,14 +53,9 @@
     <main class="w-full">
         <!-- <main class="w-full"> -->
         <section class="w-full h-screen relative z-10 bg-black" id="heroSection">
-            <video
-              src="/video/main_f.mp4"
-              autoplay
-              muted
-              loop
-              playsinline
-              class="w-full h-full object-cover absolute top-0 left-0"
-            ></video>
+            <video src="/video/main_f.mp4" autoplay muted loop playsinline
+                class="w-full h-full object-cover absolute top-0 left-0 opacity-0 transition-opacity duration-[2000ms]">
+            </video>
             <script>
                 document.addEventListener('DOMContentLoaded', () => {
                     const video = document.querySelector('video');
