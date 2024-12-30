@@ -42,8 +42,28 @@
                 <a href="/ecosystem" class="nav-link hidden md:flex">AI Ecosystem</a>
                 <a href="/use-cases" class="nav-link hidden md:flex">Use Cases</a>
             </div>
+            <div class="md:hidden">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </div>
     </nav>
+    <div class="mobile-menu md:hidden">
+        <div class="flex flex-col h-full px-[20px] pt-[70px] pb-[20px] font-suisse-medium text-[14px]">
+            <div class="flex-1 uppercase tracking-[1.4px]">
+                <div class="flex flex-col text-primary">
+                    <a href="/ecosystem" class="h-[70px] border-b border-[#DFE3E3] flex items-center">AI Ecosystem</a>
+                    <a href="/use-cases" class="h-[70px] border-b border-[#DFE3E3] flex items-center">Use Cases</a>
+                </div>
+            </div>
+            <div class="mt-auto">
+                <a href="#" class="w-full h-[46px] rounded-full bg-primary text-white flex items-center justify-center">Get Started</a>
+            </div>
+        </div>
+    </div>
     <div class="max-w-[1440px] w-full mx-auto relative">
         <a href="#"
             class="fixed top-[12px] z-[100] bg-secondary w-[122px] h-[46px] rounded-full text-[#081511] flex items-center justify-center text-[14px] font-suisse-regular"
@@ -582,9 +602,9 @@
     </main>
     <footer class="w-full bottom-0 left-0 right-0 z-[100] h-auto md:h-[485px] bg-[#071511]">
         <div class="h-full max-w-[1440px] mx-auto">
-            <div class="h-full grid grid-cols-1 md:grid-cols-4 gap-[40px] font-suisse-regular">
+            <div class="h-full grid grid-cols-1 md:grid-cols-4 gap-[20px] md:gap-[40px] font-suisse-regular px-[16px] md:px-0">
                 <div
-                    class="flex flex-col justify-between gap-[24px] border-l border-[#273131] pl-[24px] pt-[92px] pb-[37px]">
+                    class="flex flex-col justify-between gap-[24px] md:border-l border-[#273131] md:pl-[24px] pt-[60px] md:pt-[92px] md:pb-[37px]">
                     <a href="/">
                         <img src="/img/logo_w.png" alt="swal.ai" class="w-[95px] h-auto">
                     </a>
@@ -592,9 +612,9 @@
                         © 2024 swal.ai
                     </p>
                 </div>
-                <div class="hidden md:flex border-l border-[#273131] pl-[24px]"></div>
+                <div class="hidden md:flex border-l border-[#273131] md:pl-[24px]"></div>
                 <div
-                    class="flex flex-col gap-[12px] text-[18px] pt-[40px] md:pt-[92px] pb-[37px] border-l border-[#273131] pl-[24px]">
+                    class="flex flex-col gap-[12px] text-[18px] pt-[40px] md:pt-[92px] md:pb-[37px] md:border-l border-[#273131] md:pl-[24px]">
                     <p class="text-[#E6FDFC] leading-[27px]">Company</p>
                     <ul class="flex flex-col text-[#6D8786] leading-[40px]">
                         <li><a href="#" class="hover:text-[#E6FDFC]">About us</a></li>
@@ -603,8 +623,10 @@
                         <li><a href="https://wrtn.io" target="_blank" class="hover:text-[#E6FDFC]">wrtn.io</a></li>
                     </ul>
                 </div>
+
+                <div class="md:hidden border-b border-[#273131] px-[20px]"></div>
                 <div
-                    class="flex flex-col gap-[12px] text-[18px] pt-[40px] md:pt-[92px] pb-[37px] border-l md:border-r border-[#273131] pl-[24px]">
+                    class="flex flex-col gap-[12px] text-[18px] md:pt-[92px] md:pb-[37px] md:border-l md:border-r border-[#273131] md:pl-[24px]">
                     <p class="text-[#E6FDFC] leading-[27px]">Social</p>
                     <ul class="flex flex-col text-[#6D8786] leading-[40px]">
                         <li><a href="#" class="hover:text-[#E6FDFC]">Instagram</a></li>
@@ -613,6 +635,10 @@
                         <li><a href="#" class="hover:text-[#E6FDFC]">X</a></li>
                     </ul>
                 </div>
+                <div class="md:hidden border-b border-[#273131]"></div>
+                <p class="md:hidden text-[#6D8786] text-[14px] leading-[27px] font-suisse-book pb-[80px]">
+                    © 2024 swal.ai
+                </p>
             </div>
         </div>
     </footer>
@@ -627,7 +653,6 @@
             const lenis = new Lenis({
                 autoRaf: true,
             });
-
             let lastScrollTop = 0;
 
             $(window).scroll(function () {
@@ -636,7 +661,6 @@
                 const scrollPosition = $(window).scrollTop();
                 const st = $(this).scrollTop();
 
-                // Handle nav background color change
                 if (scrollPosition < heroBottom) {
                     $nav.addClass("nav-transparent")
                         .removeClass("nav-white");
@@ -646,18 +670,12 @@
                         .removeClass("nav-transparent");
                     $logoImg.attr("src", "/img/logo.png");
                 }
-
-                // if (st > lastScrollTop && st > navHeight) {
-                //     $nav.addClass('nav-hidden');
-                // } else {
-                //     $nav.removeClass('nav-hidden');
-                // }
-                // lastScrollTop = st;
             });
 
             $(window).trigger("scroll");
         });
     </script>
+    <script src="js/header.js"></script>
 </body>
 
 </html>

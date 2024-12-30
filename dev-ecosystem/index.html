@@ -59,21 +59,41 @@
 <body class="flex flex-col items-center">
     <nav class="w-full fixed top-0 left-0 right-0 z-[100] transition-all duration-300 nav-white" id="mainNav">
         <div
-            class="flex justify-between items-center max-w-[1440px] mx-auto h-[70px] px-[24px] text-[14px] font-suisse-medium">
+            class="flex justify-between items-center mx-auto h-[70px] px-[16px] md:px-[24px] text-[14px] font-suisse-medium">
             <div class="flex gap-[60px] uppercase items-center tracking-[1.4px]">
                 <a href="/">
                     <img src="/img/logo.png" alt="swal.ai" class="min-w-[95px] max-w-[95px] h-auto block" id="logoImg" />
                 </a>
-                <a href="/" class="nav-link">Home</a>
-                <a href="/ecosystem" class="nav-link">AI Ecosystem</a>
-                <a href="/use-cases" class="nav-link">Use Cases</a>
+                <a href="/" class="nav-link hidden md:flex">Home</a>
+                <a href="/ecosystem" class="nav-link hidden md:flex">AI Ecosystem</a>
+                <a href="/use-cases" class="nav-link hidden md:flex">Use Cases</a>
+            </div>
+            <div class="md:hidden">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
             <a href="#"
-                class="bg-primary w-[122px] h-[46px] rounded-full text-white flex items-center justify-center font-suisse-regular"
+                class="bg-primary w-[122px] h-[46px] rounded-full text-white items-center justify-center font-suisse-regular hidden md:flex"
                 id="startBtn">Get started</a>
         </div>
     </nav>
-    <main class="w-full min-w-[1440px]">
+    <div class="mobile-menu md:hidden">
+        <div class="flex flex-col h-full px-[20px] pt-[70px] pb-[20px] font-suisse-medium text-[14px]">
+            <div class="flex-1 uppercase tracking-[1.4px]">
+                <div class="flex flex-col text-primary">
+                    <a href="/ecosystem" class="h-[70px] border-b border-[#DFE3E3] flex items-center">AI Ecosystem</a>
+                    <a href="/use-cases" class="h-[70px] border-b border-[#DFE3E3] flex items-center">Use Cases</a>
+                </div>
+            </div>
+            <div class="mt-auto">
+                <a href="#" class="w-full h-[46px] rounded-full bg-primary text-white flex items-center justify-center">Get Started</a>
+            </div>
+        </div>
+    </div>
+    <main class="w-full">
         <!-- <main class="w-full"> -->
         <section class="w-full mt-[70px] pt-[80px] pb-[120px] text-center z-20 relative" id="section1">
             <div class="flex flex-col gap-[20px]">
@@ -317,21 +337,22 @@
             </div>
         </div>
     </main>
-    <footer class="w-full bottom-0 left-0 right-0 z-[100] h-[485px] bg-[#071511] min-w-[1440px]">
+   
+    <footer class="w-full bottom-0 left-0 right-0 h-auto md:h-[485px] bg-[#071511]">
         <div class="h-full max-w-[1440px] mx-auto">
-            <div class="h-full grid grid-cols-4 gap-[40px] font-suisse-regular">
+            <div class="h-full grid grid-cols-1 md:grid-cols-4 gap-[20px] md:gap-[40px] font-suisse-regular px-[16px] md:px-0">
                 <div
-                    class="flex flex-col justify-between gap-[24px] border-l border-[#273131] pl-[24px] pt-[92px] pb-[37px]">
+                    class="flex flex-col justify-between gap-[24px] md:border-l border-[#273131] md:pl-[24px] pt-[60px] md:pt-[92px] md:pb-[37px]">
                     <a href="/">
                         <img src="/img/logo_w.png" alt="swal.ai" class="w-[95px] h-auto">
                     </a>
-                    <p class="text-[#6D8786] text-[14px] leading-[27px] font-suisse-book">
+                    <p class="text-[#6D8786] text-[14px] leading-[27px] font-suisse-book hidden md:block">
                         © 2024 swal.ai
                     </p>
                 </div>
-                <div class="flex border-l border-[#273131] pl-[24px]"></div>
+                <div class="hidden md:flex border-l border-[#273131] md:pl-[24px]"></div>
                 <div
-                    class="flex flex-col gap-[12px] text-[18px] pt-[92px] pb-[37px] border-l border-[#273131] pl-[24px]">
+                    class="flex flex-col gap-[12px] text-[18px] pt-[40px] md:pt-[92px] md:pb-[37px] md:border-l border-[#273131] md:pl-[24px]">
                     <p class="text-[#E6FDFC] leading-[27px]">Company</p>
                     <ul class="flex flex-col text-[#6D8786] leading-[40px]">
                         <li><a href="#" class="hover:text-[#E6FDFC]">About us</a></li>
@@ -340,8 +361,10 @@
                         <li><a href="https://wrtn.io" target="_blank" class="hover:text-[#E6FDFC]">wrtn.io</a></li>
                     </ul>
                 </div>
+
+                <div class="md:hidden border-b border-[#273131] px-[20px]"></div>
                 <div
-                    class="flex flex-col gap-[12px] text-[18px] pt-[92px] pb-[37px] border-l border-r border-[#273131] pl-[24px]">
+                    class="flex flex-col gap-[12px] text-[18px] md:pt-[92px] md:pb-[37px] md:border-l md:border-r border-[#273131] md:pl-[24px]">
                     <p class="text-[#E6FDFC] leading-[27px]">Social</p>
                     <ul class="flex flex-col text-[#6D8786] leading-[40px]">
                         <li><a href="#" class="hover:text-[#E6FDFC]">Instagram</a></li>
@@ -350,6 +373,10 @@
                         <li><a href="#" class="hover:text-[#E6FDFC]">X</a></li>
                     </ul>
                 </div>
+                <div class="md:hidden border-b border-[#273131]"></div>
+                <p class="md:hidden text-[#6D8786] text-[14px] leading-[27px] font-suisse-book pb-[80px]">
+                    © 2024 swal.ai
+                </p>
             </div>
         </div>
     </footer>
@@ -415,6 +442,7 @@
             });
         });
     </script>
+    <script src="/js/header.js"></script>
 </body>
 
 </html>
