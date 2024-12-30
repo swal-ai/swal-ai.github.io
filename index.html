@@ -36,6 +36,7 @@
 
         .swiper-slide-active {
         }
+        
     </style>
 </head>
 
@@ -61,8 +62,13 @@
             </div>
         </div>
     </nav>
+    <div class="max-w-[1440px] w-full mx-auto relative hidden md:block">
+        <a href="#"
+            class="fixed top-[12px] z-[100] bg-secondary w-[122px] h-[46px] rounded-full text-[#081511] flex items-center justify-center text-[14px] font-suisse-regular"
+            style="right: max(24px, calc((100vw - 1440px) / 2 + 24px));" id="startBtn">Get started</a>
+    </div>
     <div class="mobile-menu md:hidden">
-        <div class="flex flex-col h-full px-[20px] pt-[70px] pb-[20px] font-suisse-medium text-[14px]">
+        <div class="flex flex-col h-[100dvh] px-[20px] pt-[70px] pb-[20px] font-suisse-medium text-[14px]">
             <div class="flex-1 uppercase tracking-[1.4px]">
                 <div class="flex flex-col text-primary">
                     <a href="/ecosystem" class="h-[70px] border-b border-[#DFE3E3] flex items-center">AI Ecosystem</a>
@@ -75,11 +81,6 @@
                     Started</a>
             </div>
         </div>
-    </div>
-    <div class="max-w-[1440px] w-full mx-auto relative">
-        <a href="#"
-            class="fixed top-[12px] z-[100] bg-secondary w-[122px] h-[46px] rounded-full text-[#081511] flex items-center justify-center text-[14px] font-suisse-regular"
-            style="right: calc((100vw - 1440px) / 2 + 24px);" id="startBtn">Get started</a>
     </div>
     <main class="w-full">
         <!-- <main class="w-full"> -->
@@ -139,8 +140,7 @@
             </h1>
             <p
                 class="text-[18px] text-[#767676] font-suisse-regular mt-[16px] leading-[27px] text-center px-[16px] md:px-[24px]">
-                swal.ai enables all to be free from repetitive tasks and work<br />
-                efficiently across different jobs and environments
+                swal.ai enables all to be free from repetitive tasks and work<span class="hidden md:inline"><br /></span> efficiently across different jobs and environments
             </p>
 
             <a href="/use-cases" class="arrow-button mt-[24px] font-suisse-regular">More Use Cases</a>
@@ -603,7 +603,7 @@
                 </div>
             </section>
         </div>
-        <div class="bg-[#E8E8DC] sticky bottom-0 left-0 flex w-full overflow-hidden z-0">
+        <div class="bg-[#E8E8DC] md:sticky bottom-0 left-0 flex w-full overflow-hidden z-0 md:h-[800px]">
             <div class="bg-[#E8E8DC] w-full max-w-[1440px] mx-auto relative flex flex-col md:flex-row justify-between text-primary"
                 style="z-index: 1;">
                 <div class="flex flex-col px-[16px] md:px-[24px] pt-[80px] pb-[38px] md:py-[155px]" style="z-index: 2;">
@@ -619,6 +619,7 @@
                         class="w-full h-full relative mix-blend-darken object-cover md:object-contain"
                         style="z-index: 0; transform: scale(0.99);"></video>
                 </div>
+
             </div>
         </div>
     </main>
