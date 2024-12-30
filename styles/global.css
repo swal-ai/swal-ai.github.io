@@ -69,10 +69,9 @@
 #mainNav.nav-transparent {
     background-color: transparent;
     color: #E6FDFC;
-}
-
-#mainNav.nav-transparent {
     mix-blend-mode: difference;
+    transition: transform 0.3s ease-in-out;
+
 }
 
 .nav-white #startBtn {

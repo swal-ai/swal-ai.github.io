@@ -12,6 +12,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Draggable.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
     <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <style>
         .splitting .word {
             display: inline-block;
@@ -26,6 +28,14 @@
         .splitting .word.visible {
             opacity: 1;
         }
+
+        .swiper-slide {
+            overflow: hidden;
+            transition: transform 0.6s ease, box-shadow 0.6s ease;
+        }
+
+        .swiper-slide-active {
+        }
     </style>
 </head>
 
@@ -35,8 +45,8 @@
             class="flex justify-between items-center max-w-[1440px] mx-auto h-[70px] px-[16px] md:px-[24px] text-[14px] font-suisse-medium">
             <div class="gap-[60px] uppercase items-center tracking-[1.4px] flex">
                 <a href="/">
-                    <img src="/img/logo_w.png" alt="swal.ai"
-                        class="min-w-[95px] max-w-[95px] h-auto block" id="logoImg" />
+                    <img src="/img/logo_w.png" alt="swal.ai" class="min-w-[95px] max-w-[95px] h-auto block"
+                        id="logoImg" />
                 </a>
                 <a href="/" class="nav-link hidden md:flex">Home</a>
                 <a href="/ecosystem" class="nav-link hidden md:flex">AI Ecosystem</a>
@@ -60,15 +70,16 @@
                 </div>
             </div>
             <div class="mt-auto">
-                <a href="#" class="w-full h-[46px] rounded-full bg-primary text-white flex items-center justify-center">Get Started</a>
+                <a href="#"
+                    class="w-full h-[46px] rounded-full bg-primary text-white flex items-center justify-center">Get
+                    Started</a>
             </div>
         </div>
     </div>
     <div class="max-w-[1440px] w-full mx-auto relative">
         <a href="#"
             class="fixed top-[12px] z-[100] bg-secondary w-[122px] h-[46px] rounded-full text-[#081511] flex items-center justify-center text-[14px] font-suisse-regular"
-            style="right: calc((100vw - 1440px) / 2 + 24px);"
-            id="startBtn">Get started</a>
+            style="right: calc((100vw - 1440px) / 2 + 24px);" id="startBtn">Get started</a>
     </div>
     <main class="w-full">
         <!-- <main class="w-full"> -->
@@ -84,7 +95,8 @@
                     }, 500);
                 });
             </script>
-            <div class="absolute w-full left-0 md:py-[80px] z-10 mix-blend-difference md:bottom-0 top-1/2 md:top-auto -translate-y-1/2 md:translate-y-0 font-suisse-regular">
+            <div
+                class="absolute w-full left-0 md:py-[80px] z-10 mix-blend-difference md:bottom-0 top-1/2 md:top-auto -translate-y-1/2 md:translate-y-0 font-suisse-regular">
                 <div class="max-w-[1440px] mx-auto px-[16px] md:px-[24px]">
                     <h1 class="text-[32px] leading-[38px] text-[#5FC3BB]">
                         Meet swal.ai,<br />Intelligent Action API
@@ -96,7 +108,7 @@
                 </div>
             </div>
         </section>
-        <section class="w-full bg-white pt-[155px] pb-[176px] z-10 relative">
+        <section class="w-full bg-white pt-[100px] md:pt-[155px] pb-[100px] md:pb-[176px] z-10 relative">
             <div
                 class="max-w-[1440px] mx-auto px-[16px] md:px-[24px] text-primary font-suisse-regular flex flex-col animate-section">
                 <p class="text-[16px]">How it works</p>
@@ -113,24 +125,27 @@
                     <a href="#" class="arrow-button mt-[24px] font-suisse-regular">Our Products</a>
                 </div>
 
-                <div class="overflow-hidden rounded-[20px] mt-[60px]">
+                <div class="overflow-hidden rounded-[20px] mt-[40px] md:mt-[60px]">
                     <img src="/img/main_1.png" alt="Main image"
-                        class="w-full h-auto transform scale-110 transition-all duration-700 hover:scale-100">
+                        class="w-full h-[300px] md:h-auto object-cover transform scale-110 transition-all duration-700 hover:scale-100">
                 </div>
 
             </div>
         </section>
-        <section class="w-full bg-white py-[140px] flex flex-col items-center  z-10 relative">
-            <h1 class="text-[60px] text-[#071414] font-oceanic-book leading-normal">
+        <section class="w-full bg-white py-[60px] md:py-[140px] flex flex-col items-center z-10 relative">
+            <h1
+                class="text-[50px] md:text-[60px] text-[#071414] font-oceanic-book md:leading-normal leading-[52px] text-center">
                 Tool for Everyone
             </h1>
-            <p class="text-[18px] text-[#767676] font-suisse-regular mt-[16px] leading-[27px] text-center">
+            <p
+                class="text-[18px] text-[#767676] font-suisse-regular mt-[16px] leading-[27px] text-center px-[16px] md:px-[24px]">
                 swal.ai enables all to be free from repetitive tasks and work<br />
                 efficiently across different jobs and environments
             </p>
 
             <a href="/use-cases" class="arrow-button mt-[24px] font-suisse-regular">More Use Cases</a>
-            <div class="w-full flex pt-[87px] overflow-hidden">
+     
+            <div class="hidden md:flex w-full pt-[87px] overflow-hidden">
                 <div class="flex gap-[20px]" id="scrollContainer">
                     <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
                         <img src="/img/tool1.png" alt="Main image" class="w-full h-full rounded-[40px]">
@@ -453,8 +468,8 @@
             </script>
         </section>
         <section class="w-full bg-white pt-[170px] pb-[74px] z-10 relative px-[16px] md:px-[24px]">
-            <div
-                class="max-w-[1440px] mx-auto text-primary font-suisse-regular flex items-center gap-[40px] bg-[#E6FDFC] px-[80px] h-[348px]">
+            <div class="max-w-[1440px] mx-auto text-primary font-suisse-regular flex flex-col md:flex-row items-center
+                gap-[40px] bg-[#E6FDFC] px-[40px] md:px-[80px] md:h-[348px] pt-[100px] md:pt-0">
                 <div class="flex flex-col flex-1">
                     <p class="text-[28px] text-[#071414]">Simplify Workflow, Boost Creativity</p>
                     <p class="text-[16px] mt-[8px]">
@@ -463,8 +478,8 @@
                     </p>
                     <a href="#" class="text-[16px] pt-[40px] underline underline-offset-auto">Learn about swal.ai</a>
                 </div>
-                <div class="flex-1">
-                    <video class="w-[658px] h-[371px] rounded-[20px]" autoplay loop muted playsinline
+                <div class="flex-1 pb-[40px] md:pb-0">
+                    <video class="w-full md:w-[658px] h-auto md:h-[371px] rounded-[20px]" autoplay loop muted playsinline
                         style="mix-blend-mode: exclusion;">
                         <source src="/video/wave.mp4" type="video/mp4">
                     </video>
@@ -472,15 +487,16 @@
             </div>
         </section>
         <div class="w-full relative z-10">
-            <section class="w-full bg-white py-[195px] font-suisse-regular text-primary">
+            <section class="w-full bg-white py-[52px] pb-[100px] md:py-[195px] font-suisse-regular text-primary">
                 <div class="max-w-[1440px] mx-auto px-[16px] md:px-[24px]">
                     <p class="text-[32px]">Lastest articles</p>
-                    <div class="flex gap-[20px] pt-[40px]">
+                    <div class="flex flex-col md:flex-row gap-[20px] pt-[40px]">
                         <article
-                            class="w-full bg-white flex flex-col gap-[24px] min-h-[395px] max-h-[395px] justify-between">
-                            <a class="flex flex-col gap-[24px]">
+                            class="w-full bg-white flex flex-col gap-[24px] md:min-h-[395px] md:max-h-[395px] justify-between">
+                            <a class="flex flex-col gap-[24px] pb-[32px] md:pb-0">
                                 <div class="overflow-hidden">
-                                    <img src="/img/article1.png" alt="Article image" draggable="false" oncontextmenu="return false;"
+                                    <img src="/img/article1.png" alt="Article image" draggable="false"
+                                        oncontextmenu="return false;"
                                         class="w-full h-auto transform scale-110 transition-transform duration-300 hover:scale-100 blur-[25px]">
                                 </div>
                                 <p
@@ -498,10 +514,11 @@
                             </p>
                         </article>
                         <article
-                            class="w-full bg-white flex flex-col gap-[24px] min-h-[395px] max-h-[395px] justify-between">
-                            <a class="flex flex-col gap-[24px]">
+                            class="w-full bg-white flex flex-col gap-[24px] md:min-h-[395px] md:max-h-[395px] justify-between">
+                            <a class="flex flex-col gap-[24px] pb-[32px] md:pb-0">
                                 <div class="overflow-hidden">
-                                    <img src="/img/article2.png" alt="Article image" draggable="false" oncontextmenu="return false;"
+                                    <img src="/img/article2.png" alt="Article image" draggable="false"
+                                        oncontextmenu="return false;"
                                         class="w-full h-auto transform scale-110 transition-transform duration-300 hover:scale-100 blur-[25px]">
                                 </div>
                                 <p
@@ -519,10 +536,11 @@
                             </p>
                         </article>
                         <article
-                            class="w-full bg-white flex flex-col gap-[24px] min-h-[395px] max-h-[395px] justify-between">
-                            <a class="flex flex-col gap-[24px]">
+                            class="w-full bg-white flex flex-col gap-[24px] md:min-h-[395px] md:max-h-[395px] justify-between">
+                            <a class="flex flex-col gap-[24px] pb-[32px] md:pb-0">
                                 <div class="overflow-hidden">
-                                    <img src="/img/article3.png" alt="Article image" draggable="false" oncontextmenu="return false;"
+                                    <img src="/img/article3.png" alt="Article image" draggable="false"
+                                        oncontextmenu="return false;"
                                         class="w-full h-auto transform scale-110 transition-transform duration-300 hover:scale-100 blur-[25px]">
                                 </div>
                                 <p
@@ -540,10 +558,11 @@
                             </p>
                         </article>
                         <article
-                            class="w-full bg-white flex flex-col gap-[24px] min-h-[395px] max-h-[395px] justify-between">
-                            <a class="flex flex-col gap-[24px]">
+                            class="w-full bg-white flex flex-col gap-[24px] md:min-h-[395px] md:max-h-[395px] justify-between">
+                            <a class="flex flex-col gap-[24px] pb-[32px] md:pb-0">
                                 <div class="overflow-hidden">
-                                    <img src="/img/article4.png" alt="Article image" draggable="false" oncontextmenu="return false;"
+                                    <img src="/img/article4.png" alt="Article image" draggable="false"
+                                        oncontextmenu="return false;"
                                         class="w-full h-auto transform scale-110 transition-transform duration-300 hover:scale-100">
                                 </div>
                                 <p
@@ -567,7 +586,7 @@
                                     const targetDate = new Date(element.dataset.date);
                                     const timeDiff = targetDate - today;
                                     const daysLeft = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
-                                    
+
                                     if (daysLeft < 0) {
                                         const daysAgo = Math.abs(daysLeft);
                                         element.textContent = `${daysAgo} DAYS AGO`;
@@ -584,25 +603,29 @@
                 </div>
             </section>
         </div>
-        <div class="bg-[#E8E8DC] h-[800px] sticky bottom-0 left-0 flex w-full overflow-hidden z-0">
-            <div class="bg-[#E8E8DC] w-full max-w-[1440px] mx-auto relative flex justify-between text-primary"
+        <div class="bg-[#E8E8DC] sticky bottom-0 left-0 flex w-full overflow-hidden z-0">
+            <div class="bg-[#E8E8DC] w-full max-w-[1440px] mx-auto relative flex flex-col md:flex-row justify-between text-primary"
                 style="z-index: 1;">
-                <div class="flex flex-col px-[16px] md:px-[24px] py-[155px]" style="z-index: 2;">
+                <div class="flex flex-col px-[16px] md:px-[24px] pt-[80px] pb-[38px] md:py-[155px]" style="z-index: 2;">
                     <p class="text-[16px]">Next Contents</p>
-                    <p class="text-[60px] font-oceanic-book mt-[110px]">AI Ecosystem</p>
+                    <p class="text-[50px] md:text-[60px] font-oceanic-book mt-[20px] md:mt-[110px]">AI Ecosystem</p>
                     <a href="/ecosystem" class="arrow-button mt-[40px] font-suisse-regular">Read More</a>
                 </div>
                 <div class="absolute inset-0 bg-[#E8E8DC] pointer-events-none"
                     style="mix-blend-mode: color; z-index: 1;"></div>
-                <video src="/video/circle.mp4" autoplay loop muted playsinline
-                    class="w-[720px] h-[907px] mt-[-54px] pl-[62px] flex-shrink-0 relative mix-blend-darken"
-                    style="z-index: 0; transform: scale(0.99);"></video>
+                <div class="relative w-full md:w-[720px] h-auto md:h-[907px] md:mt-[-54px] md:pl-[62px] flex-shrink-0">
+                    <div class="absolute h-[69px] inset-0 bg-gradient-to-b from-[#E8E8DC] to-transparent z-[1]"></div>
+                    <video src="/video/circle.mp4" autoplay loop muted playsinline
+                        class="w-full h-full relative mix-blend-darken object-cover md:object-contain"
+                        style="z-index: 0; transform: scale(0.99);"></video>
+                </div>
             </div>
         </div>
     </main>
     <footer class="w-full bottom-0 left-0 right-0 z-[100] h-auto md:h-[485px] bg-[#071511]">
         <div class="h-full max-w-[1440px] mx-auto">
-            <div class="h-full grid grid-cols-1 md:grid-cols-4 gap-[20px] md:gap-[40px] font-suisse-regular px-[16px] md:px-0">
+            <div
+                class="h-full grid grid-cols-1 md:grid-cols-4 gap-[20px] md:gap-[40px] font-suisse-regular px-[16px] md:px-0">
                 <div
                     class="flex flex-col justify-between gap-[24px] md:border-l border-[#273131] md:pl-[24px] pt-[60px] md:pt-[92px] md:pb-[37px]">
                     <a href="/">
