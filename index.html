@@ -34,9 +34,9 @@
             transition: transform 0.6s ease, box-shadow 0.6s ease;
         }
 
-        .swiper-slide-active {
+        .swiper-slide-active .text-area {
+            opacity: 1;
         }
-        
     </style>
 </head>
 
@@ -140,11 +140,180 @@
             </h1>
             <p
                 class="text-[18px] text-[#767676] font-suisse-regular mt-[16px] leading-[27px] text-center px-[16px] md:px-[24px]">
-                swal.ai enables all to be free from repetitive tasks and work<span class="hidden md:inline"><br /></span> efficiently across different jobs and environments
+                swal.ai enables all to be free from repetitive tasks and work<span
+                    class="hidden md:inline"><br /></span> efficiently across different jobs and environments
             </p>
 
             <a href="/use-cases" class="arrow-button mt-[24px] font-suisse-regular">More Use Cases</a>
-     
+            <div class="swiper-container flex md:hidden pt-[50px] pb-[20px] w-full">
+                <div class="swiper-wrapper">
+                    <!-- Use Case 01 -->
+                    <div class="swiper-slide">
+                        <div class="relative h-auto shrink-0 group">
+                            <img src="/img/tool1.png" alt="Main image" class="w-full h-full rounded-[30px]">
+                            <div
+                                class="text-area opacity-0 absolute inset-0 transition-opacity duration-500 rounded-[30px] backdrop-blur-[75px] flex items-center justify-center">
+                                <div class="flex flex-col items-center gap-[12px] text-[14px] px-[8px]">
+                                    <p
+                                        class="px-[12px] py-[8px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] transition-all">
+                                        Use Case 01
+                                    </p>
+                                    <p class="text-[#E6FDFC] font-suisse-regular text-center">
+                                        Dividing a service by age and gender to create targeted strategies was
+                                        time-consuming. Now, the agent analyzes popular content for each group and
+                                        drafts
+                                        strategies. This automation has drastically reduced our working hours.
+                                    </p>
+                                    <p class="text-[#E6FDFC] text-[14px] font-suisse-regular text-center opacity-60">
+                                        Michael<br />Head of Startup Service Operations
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Use Case 02 -->
+                    <div class="swiper-slide">
+                        <div class="relative h-auto shrink-0 group">
+                            <img src="/img/tool2.png" alt="Main image" class="w-full h-full rounded-[30px]">
+                            <div
+                                class="text-area opacity-0 absolute inset-0 transition-opacity duration-500 rounded-[30px] backdrop-blur-[75px] flex items-center justify-center">
+                                <div class="flex flex-col items-center gap-[12px] text-[14px] px-[8px]">
+                                    <p
+                                        class="px-[12px] py-[8px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] transition-all">
+                                        Use Case 02
+                                    </p>
+                                    <p class="text-[#E6FDFC] font-suisse-regular text-center">
+                                        Data research starts with collecting extensive materials. A verbal request now
+                                        organizes information by media, revolutionizing work for planners and marketers.
+                                        This innovation lets them focus on what truly matters.
+                                    </p>
+                                    <p class="text-[#E6FDFC] text-[14px] font-suisse-regular text-center opacity-60">
+                                        Henry<br />Corporate Researcher
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Use Case 03 -->
+                    <div class="swiper-slide">
+                        <div class="relative h-auto shrink-0 group">
+                            <img src="/img/tool3.png" alt="Main image" class="w-full h-full rounded-[30px]">
+                            <div
+                                class="text-area opacity-0 absolute inset-0 transition-opacity duration-500 rounded-[30px] backdrop-blur-[75px] flex items-center justify-center">
+                                <div class="flex flex-col items-center gap-[12px] text-[14px] px-[8px]">
+                                    <p
+                                        class="px-[12px] py-[8px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] transition-all">
+                                        Use Case 03
+                                    </p>
+                                    <p class="text-[#E6FDFC] font-suisse-regular text-center">
+                                        Small business owners often struggle with writing ads. By inputting a product
+                                        name
+                                        and selling points, an automated workflow generates expert advertising copy.
+                                        This
+                                        solution helps those without the know-how or direction create effective
+                                        promotions.
+                                    </p>
+                                    <p class="text-[#E6FDFC] text-[14px] font-suisse-regular text-center opacity-60">
+                                        Sarah<br />Marketing Platform Product Owner (PO)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Use Case 04 -->
+                    <div class="swiper-slide">
+                        <div class="relative h-auto shrink-0 group">
+                            <img src="/img/tool4.png" alt="Main image" class="w-full h-full rounded-[30px]">
+                            <div
+                                class="text-area opacity-0 absolute inset-0 transition-opacity duration-500 rounded-[30px] backdrop-blur-[75px] flex items-center justify-center">
+                                <div class="flex flex-col items-center gap-[12px] text-[14px] px-[8px]">
+                                    <p
+                                        class="px-[12px] py-[8px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] transition-all">
+                                        Use Case 04
+                                    </p>
+                                    <p class="text-[#E6FDFC] font-suisse-regular text-center">
+                                        Linking lecture materials allows the agent to analyze, diagram concepts, and
+                                        attach
+                                        them to the document. Setting this as a weekly workflow eliminates the need for
+                                        repetitive copy-pasting, simplifying lecture preparation.
+                                    </p>
+                                    <p class="text-[#E6FDFC] text-[14px] font-suisse-regular text-center opacity-60">
+                                        Will<br />Language Teacher
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Use Case 05 -->
+                    <div class="swiper-slide">
+                        <div class="relative h-auto shrink-0 group">
+                            <img src="/img/tool5.png" alt="Main image" class="w-full h-full rounded-[30px]">
+                            <div
+                                class="text-area opacity-0 absolute inset-0 transition-opacity duration-500 rounded-[30px] backdrop-blur-[75px] flex items-center justify-center">
+                                <div class="flex flex-col items-center gap-[12px] text-[14px] px-[8px]">
+                                    <p
+                                        class="px-[12px] py-[8px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] transition-all">
+                                        Use Case 05
+                                    </p>
+                                    <p class="text-[#E6FDFC] font-suisse-regular text-center">
+                                        Designing services for children required collecting papers, images, and reviews
+                                        from
+                                        various platforms. Now, the agent gathers everything, performs sentiment
+                                        analysis,
+                                        and compiles it into a document. This convenience lets me focus on creating
+                                        results.
+                                    </p>
+                                    <p class="text-[#E6FDFC] text-[14px] font-suisse-regular text-center opacity-60">
+                                        Sophia<br />UX Designer
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Use Case 06 -->
+                    <div class="swiper-slide">
+                        <div class="relative h-auto shrink-0 group">
+                            <img src="/img/tool6.png" alt="Main image" class="w-full h-full rounded-[30px]">
+                            <div
+                                class="text-area opacity-0 absolute inset-0 transition-opacity duration-500 rounded-[30px] backdrop-blur-[75px] flex items-center justify-center">
+                                <div class="flex flex-col items-center gap-[12px] text-[14px] px-[8px]">
+                                    <p
+                                        class="px-[12px] py-[8px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] transition-all">
+                                        Use Case 06
+                                    </p>
+                                    <p class="text-[#E6FDFC] font-suisse-regular text-center">
+                                        In IT, researching new technologies requires comparing papers, articles, and
+                                        reviews. This tool goes beyond summarizing search results, providing deep
+                                        insights
+                                        into trends, making it invaluable for comprehensive understanding.
+                                    </p>
+                                    <p class="text-[#E6FDFC] text-[14px] font-suisse-regular text-center opacity-60">
+                                        Emily<br />AI Developer
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <script>
+                let swiper = new Swiper('.swiper-container', {
+                    centeredSlides: true,
+                    slidesPerView: 1.2,
+                    spaceBetween: 20,
+                    loop: true,
+                    mousewheel: {
+                        forceToAxis: true
+                    }
+                });
+            </script>
+
             <div class="hidden md:flex w-full pt-[87px] overflow-hidden">
                 <div class="flex gap-[20px]" id="scrollContainer">
                     <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
@@ -467,7 +636,7 @@
                 });
             </script>
         </section>
-        <section class="w-full bg-white pt-[170px] pb-[74px] z-10 relative px-[16px] md:px-[24px]">
+        <section class="w-full bg-white pt-[20px] md:pt-[170px] pb-[74px] z-10 relative px-[16px] md:px-[24px]">
             <div class="max-w-[1440px] mx-auto text-primary font-suisse-regular flex flex-col md:flex-row items-center
                 gap-[40px] bg-[#E6FDFC] px-[40px] md:px-[80px] md:h-[348px] pt-[100px] md:pt-0">
                 <div class="flex flex-col flex-1">
@@ -479,8 +648,8 @@
                     <a href="#" class="text-[16px] pt-[40px] underline underline-offset-auto">Learn about swal.ai</a>
                 </div>
                 <div class="flex-1 pb-[40px] md:pb-0">
-                    <video class="w-full md:w-[658px] h-auto md:h-[371px] rounded-[20px]" autoplay loop muted playsinline
-                        style="mix-blend-mode: exclusion;">
+                    <video class="w-full md:w-[658px] h-auto md:h-[371px] rounded-[20px]" autoplay loop muted
+                        playsinline style="mix-blend-mode: exclusion;">
                         <source src="/video/wave.mp4" type="video/mp4">
                     </video>
                 </div>
