@@ -37,12 +37,17 @@
         #section2.visible img {
             opacity: 1;
         }
-
         .swiper-slide {
             width: 75vw;
             overflow: hidden;
             transition: transform 0.6s ease, box-shadow 0.6s ease;
             transform: translateY(100px) !important;
+        }
+
+        @media (max-width: 768px) {
+            .swiper-slide {
+                transform: translateY(60px) !important;
+            }
         }
 
         .swiper-slide-active {
@@ -81,7 +86,7 @@
         </div>
     </nav>
     <div class="mobile-menu md:hidden">
-        <div class="flex flex-col h-full px-[20px] pt-[70px] pb-[20px] font-suisse-medium text-[14px]">
+        <div class="flex flex-col h-[100dvh] px-[20px] pt-[70px] pb-[20px] font-suisse-medium text-[14px]">
             <div class="flex-1 uppercase tracking-[1.4px]">
                 <div class="flex flex-col text-primary">
                     <a href="/ecosystem" class="h-[70px] border-b border-[#DFE3E3] flex items-center">AI Ecosystem</a>
@@ -95,39 +100,39 @@
     </div>
     <main class="w-full">
         <!-- <main class="w-full"> -->
-        <section class="w-full mt-[70px] pt-[80px] pb-[120px] text-center z-20 relative" id="section1">
-            <div class="flex flex-col gap-[20px]">
-                <h1 class="text-[60px] font-oceanic-book text-primary leading-[60px] tracking-[-0.6px]">AI Ecosystem
+        <section class="w-full mt-[70px] pt-[60px] md:pt-[80px] pb-[78px] md:pb-[120px] text-center z-20 relative" id="section1">
+            <div class="flex flex-col gap-[32px] md:gap-[20px] px-[16px]">
+                <h1 class="text-[50px] md:text-[60px] font-oceanic-book text-primary leading-[60px] tracking-[-0.6px]">AI Ecosystem
                 </h1>
                 <p class="font-suisse-regular text-[16px] text-primary opacity-60">By integrating AI action agents
-                    directly into the workflow creation process,<br />
+                    directly into the workflow creation process,<span class="hidden md:inline"><br /></span>
                     Swal AI empowers individuals and organizations to automate tasks, streamline operations, and
                     focus on what matters most.</p>
             </div>
             <div class="w-full max-w-[1440px] mx-auto">
-                <div class="h-[800px] bg-[#081511] rounded-[20px] mt-[80px] mx-[24px] flex items-center justify-center">
+                <div class="aspect-square md:aspect-auto md:h-[800px] bg-[#081511] rounded-[20px] mt-[40px] md:mt-[80px] mx-[16px] md:mx-[24px] flex items-center justify-center">
                     <video src="/video/circle_pattern.mp4" autoplay loop muted playsinline
                         class="w-auto h-full"></video>
                 </div>
             </div>
         </section>
 
-        <section class="w-full z-10 relative min-h-[800px]" id="section2">
+        <section class="w-full z-10 relative" id="section2">
             <div class="relative">
-                <img src="/img/ecosystem-bg.png" alt="Swal AI" class="w-full h-auto">
+                <img src="/img/ecosystem-bg.png" alt="Swal AI" class="pt-[280px] md:pt-0 h-[900px] w-auto md:w-full md:h-auto object-cover">
                 <div
-                    class="absolute top-0 pt-[120px] left-0 right-0 flex flex-col gap-[16px] text-center text-white animate-section">
-                    <p class="text-[60px] font-oceanic-book text-[#071511] text-center tracking-[-0.6px]">An
-                        Ever-Growing Ecosystem<br />
+                    class="absolute top-0 pt-[120px] left-0 right-0 flex flex-col gap-[16px] text-center text-white animate-section px-[16px]">
+                    <p class="text-[40px] md:text-[60px] font-oceanic-book text-[#071511] text-center tracking-[-0.6px]">An
+                        Ever-Growing Ecosystem <span class="hidden md:inline"><br /></span>
                         to Make the Impossible Possible</p>
-                    <p class="text-[#071511] text-center font-suisse-regular text-[18px] leading-[27px] opacity-40">The
-                        ecosystem is built on Swal AI, store, and connector, each of which<br />
+                    <p class="text-[#071511] text-center font-suisse-regular text-[18px] leading-[27px] opacity-40 px-[16px]">The
+                        ecosystem is built on Swal AI, store, and connector, each of which <span class="hidden md:inline"><br /></span>
                         will significantly improve your productivity and change your lifecycle.</p>
                 </div>
             </div>
         </section>
-        <section class="w-full z-10 relative py-[140px] px-[24px] text-center bg-white overflow-hidden" id="section3">
-            <div class="w-full justify-center flex">
+        <section class="w-full z-10 relative py-[80px] md:py-[140px] px-[24px] text-center bg-white overflow-hidden" id="section3">
+            <div class="w-full justify-center hidden md:flex">
                 <div
                     class="group p-[8px] flex overflow-hidden rounded-full border border-forest/5 font-heading leading-none relative">
                     <div class="tab-hover absolute bg-gray-100 rounded-full transition-all duration-300 opacity-0 translate-x-0 translate-y-0"
@@ -150,29 +155,22 @@
                 </div>
             </div>
             <div class="cards w-full mt-[40px] flex justify-center relative">
-                <div class="swiper-container w-full">
+                <div class="hidden md:block swiper-container w-full">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div
-                                class="w-[75vw] aspect-[1200/680] bg-[#F7F7F4] rounded-[24px] flex-shrink-0 flex flex-row p-[30px] gap-[20px] items-center">
-                                <div class="w-1/2 text-left px-[50px]">
+                                class="w-[75vw] aspect-[1200/680] bg-[#F7F7F4] rounded-[24px] flex-shrink-0 flex md:flex-row flex-col pt-[60px] md:pt-[30px] p-[16px] md:p-[30px] gap-[20px] items-center">
+                                <div class="md:w-1/2 w-full text-left md:px-[50px] px-[20px]">
                                     <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal">Intuitive &
                                         Engaged</p>
-                                    <p class="text-[#071511] font-suisse-regular text-[32px] leading-normal mt-[16px]">
-                                        Easily
-                                        create AI Apps
-                                        with a conversational
-                                        no-code interface</p>
+                                    <p class="text-[#071511] font-suisse-regular text-[26px] md:text-[32px] leading-normal mt-[16px]">
+                                        Easily create AI Apps with a conversational no-code interface</p>
                                     <p
                                         class="text-[#071511] font-suisse-regular text-[16px] leading-normal mt-[20px] opacity-60">
-                                        Even without any development experience, anyone can easily create or execute
-                                        their
-                                        own
-                                        AI
-                                        service with the Studio Autonomous Agent.</p>
-                                    <a href="#" class="arrow-button mt-[100px]">Try Now</a>
+                                        Even without any development experience, anyone can easily create or execute their own AI service with the Studio Autonomous Agent.</p>
+                                    <a href="#" class="arrow-button mt-[20px] md:mt-[100px]">Try Now</a>
                                 </div>
-                                <div class="w-1/2 h-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden">
+                                <div class="mt-[20px] md:mt-0 md:w-1/2 md:h-full w-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden">
                                     <video src="/video/test.mp4" autoplay loop muted playsinline
                                         class="w-full h-full object-cover"></video>
                                 </div>
@@ -180,25 +178,19 @@
                         </div>
                         <div class="swiper-slide">
                             <div
-                                class="w-[75vw] aspect-[1200/680] bg-[#F7F7F4] rounded-[24px] flex-shrink-0 flex flex-row p-[30px] gap-[20px] items-center">
-                                <div class="w-1/2 text-left px-[50px]">
-                                    <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal">Intuitive &
-                                        Engaged</p>
-                                    <p class="text-[#071511] font-suisse-regular text-[32px] leading-normal mt-[16px]">
-                                        Easily
-                                        create AI Apps
-                                        with a conversational
-                                        no-code interface</p>
+                                class="w-[75vw] aspect-[1200/680] bg-[#F7F7F4] rounded-[24px] flex-shrink-0 flex md:flex-row flex-col pt-[60px] md:pt-[30px] p-[16px] md:p-[30px] gap-[20px] items-center">
+                                <div class="md:w-1/2 w-full text-left md:px-[50px] px-[20px]">
+                                    <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal">Intergrated</p>
+                                    <p class="text-[#071511] font-suisse-regular text-[26px] md:text-[32px] leading-normal mt-[16px]">
+                                        Easily integrate with 
+                                        external services 
+                                        and data</p>
                                     <p
                                         class="text-[#071511] font-suisse-regular text-[16px] leading-normal mt-[20px] opacity-60">
-                                        Even without any development experience, anyone can easily create or execute
-                                        their
-                                        own
-                                        AI
-                                        service with the Studio Autonomous Agent.</p>
-                                    <a href="#" class="arrow-button mt-[100px]">Try Now</a>
+                                        Seamlessly integrate with a diverse range of external external services and data connectors from our Developer Center and Connector Hub to craft powerful and unique AI Apps. Furthermore, share your creations with the community to tap into the power of global collective intelligence, positioning yourself at the forefront of innovation.</p>
+                                    <a href="#" class="arrow-button mt-[20px] md:mt-[100px]">Try Now</a>
                                 </div>
-                                <div class="w-1/2 h-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden">
+                                <div class="mt-[20px] md:mt-0 md:w-1/2 md:h-full w-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden">
                                     <video src="/video/circle_pattern.mp4" autoplay loop muted playsinline
                                         class="w-full h-full object-cover"></video>
                                 </div>
@@ -206,29 +198,83 @@
                         </div>
                         <div class="swiper-slide">
                             <div
-                                class="w-[75vw] aspect-[1200/680] bg-[#F7F7F4] rounded-[24px] flex-shrink-0 flex flex-row p-[30px] gap-[20px] items-center">
-                                <div class="w-1/2 text-left px-[50px]">
-                                    <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal">Intuitive &
-                                        Engaged</p>
-                                    <p class="text-[#071511] font-suisse-regular text-[32px] leading-normal mt-[16px]">
-                                        Easily
-                                        create AI Apps
-                                        with a conversational
-                                        no-code interface</p>
+                                class="w-[75vw] aspect-[1200/680] bg-[#F7F7F4] rounded-[24px] flex-shrink-0 flex md:flex-row flex-col pt-[60px] md:pt-[30px] p-[16px] md:p-[30px] gap-[20px] items-center">
+                                <div class="md:w-1/2 w-full text-left md:px-[50px] px-[20px]">
+                                    <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal">Shareable</p>
+                                    <p class="text-[#071511] font-suisse-regular text-[26px] md:text-[32px] leading-normal mt-[16px]">
+                                        Enable to share
+                                        created AI Apps 
+                                        and APIs</p>
                                     <p
                                         class="text-[#071511] font-suisse-regular text-[16px] leading-normal mt-[20px] opacity-60">
-                                        Even without any development experience, anyone can easily create or execute
-                                        their
-                                        own
-                                        AI
-                                        service with the Studio Autonomous Agent.</p>
-                                    <a href="#" class="arrow-button mt-[100px]">Try Now</a>
+                                        Register and showcase your custom-made artifacts and APIs directly in a store that attracts a variety of users.</p>
+                                    <a href="#" class="arrow-button mt-[20px] md:mt-[100px]">Try Now</a>
                                 </div>
-                                <div class="w-1/2 h-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden">
+                                <div class="mt-[20px] md:mt-0 md:w-1/2 md:h-full w-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden">
                                     <video src="/video/wave.mp4" autoplay loop muted playsinline
                                         class="w-full h-full object-cover"></video>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile View -->
+                <div class="md:hidden flex flex-col gap-[20px] w-full">
+                    <div class="w-full bg-[#F7F7F4] rounded-[24px] flex flex-col pt-[60px] p-[16px] gap-[20px]">
+                        <div class="w-full text-left px-[20px]">
+                            <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal">Intuitive & Engaged</p>
+                            <p class="text-[#071511] font-suisse-regular text-[26px] leading-normal mt-[16px]">
+                                Easily create AI Apps with a conversational no-code interface</p>
+                            <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal mt-[20px] opacity-60">
+                                Even without any development experience, anyone can easily create or execute their own AI service with the Studio Autonomous Agent.</p>
+                            <a href="#" class="w-full h-[46px] border border-[#002424] rounded-full flex items-center justify-center gap-1 text-[14px] mt-[20px]">
+                                <span class="translate-y-[-1px]">Try Now</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-colors">
+                                    <path d="M16.627 12.75H4.5V11.25H16.627L10.9308 5.55375L12 4.5L19.5 12L12 19.5L10.9308 18.4462L16.627 12.75Z" fill="currentColor"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="w-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden mt-[20px]">
+                            <video src="/video/test.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+                        </div>
+                    </div>
+
+                    <div class="w-full bg-[#F7F7F4] rounded-[24px] flex flex-col pt-[60px] p-[16px] gap-[20px]">
+                        <div class="w-full text-left px-[20px]">
+                            <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal">Intergrated</p>
+                            <p class="text-[#071511] font-suisse-regular text-[26px] leading-normal mt-[16px]">
+                                Easily integrate with external services and data</p>
+                            <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal mt-[20px] opacity-60">
+                                Seamlessly integrate with a diverse range of external external services and data connectors from our Developer Center and Connector Hub to craft powerful and unique AI Apps. Furthermore, share your creations with the community to tap into the power of global collective intelligence, positioning yourself at the forefront of innovation.</p>
+                                <a href="#" class="w-full h-[46px] border border-[#002424] rounded-full flex items-center justify-center gap-1 text-[14px] mt-[20px]">
+                                    <span class="translate-y-[-1px]">Try Now</span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-colors">
+                                        <path d="M16.627 12.75H4.5V11.25H16.627L10.9308 5.55375L12 4.5L19.5 12L12 19.5L10.9308 18.4462L16.627 12.75Z" fill="currentColor"/>
+                                    </svg>
+                                </a>
+                        </div>
+                        <div class="w-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden mt-[20px]">
+                            <video src="/video/circle_pattern.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+                        </div>
+                    </div>
+
+                    <div class="w-full bg-[#F7F7F4] rounded-[24px] flex flex-col pt-[60px] p-[16px] gap-[20px]">
+                        <div class="w-full text-left px-[20px]">
+                            <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal">Shareable</p>
+                            <p class="text-[#071511] font-suisse-regular text-[26px] leading-normal mt-[16px]">
+                                Enable to share created AI Apps and APIs</p>
+                            <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal mt-[20px] opacity-60">
+                                Register and showcase your custom-made artifacts and APIs directly in a store that attracts a variety of users.</p>
+                            <a href="#" class="w-full h-[46px] border border-[#002424] rounded-full flex items-center justify-center gap-1 text-[14px] mt-[20px]">
+                                <span class="translate-y-[-1px]">Try Now</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-colors">
+                                    <path d="M16.627 12.75H4.5V11.25H16.627L10.9308 5.55375L12 4.5L19.5 12L12 19.5L10.9308 18.4462L16.627 12.75Z" fill="currentColor"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="w-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden mt-[20px]">
+                            <video src="/video/wave.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
                         </div>
                     </div>
                 </div>
@@ -248,6 +294,14 @@
                         centeredSlides: true,
                         slidesPerView: 'auto',
                         spaceBetween: 40,
+                        breakpoints: {
+                            320: {
+                                spaceBetween: 20
+                            },
+                            768: {
+                                spaceBetween: 40
+                            }
+                        },
                         loop: false,
                         mousewheel: {
                             forceToAxis: true
@@ -281,7 +335,7 @@
                     }
                 );
 
-                // 탭 클릭 시 해당 슬라이드로 이동
+                // 탭 클릭 시 해당 슬라이드로 이동 
                 $tabBtns.click(function () {
                     $hoverBg.css('opacity', 0);
                     const index = $(this).data('tab');
@@ -300,40 +354,50 @@
                         transform: `translateX(${left}px)`
                     });
                 }
+
+                // 스크롤 이벤트 발생 시 위치 재계산
+                $(window).resize(function() {
+                    if($('.active').length) {
+                        setActiveTab($('.active'));
+                    }
+                });
             });
         </script>
-        <section class="w-full bg-white pt-[56px] pb-[150px] z-10 relative px-[24px]">
+        <section class="w-full bg-white pb-[80px] md:pt-[56px] md:pb-[150px] z-10 relative px-[16px] md:px-[24px]">
             <div
-                class="max-w-[1440px] mx-auto text-primary font-suisse-regular flex items-center gap-[40px] bg-[#F5DFF5] px-[80px] h-[348px]">
+                class="max-w-[1440px] mx-auto text-primary font-suisse-regular flex flex-col md:flex-row items-center gap-[40px] bg-[#F5DFF5] px-[40px] md:px-[80px] pt-[100px] py-[30px] md:pt-0 md:py-0 md:h-[348px] h-auto">
                 <div class="flex flex-col flex-1">
                     <p class="text-[28px] text-[#071414]">Simplify Workflow, Boost Creativity</p>
                     <p class="text-[16px] mt-[8px]">
-                        Swal AI empowers individuals and organizations to automate tasks,<br />streamline operations,
-                        and focus on what matters most.
+                        Swal AI empowers individuals and organizations to automate tasks,<br class="hidden md:block" />
+                        streamline operations, and focus on what matters most.
                     </p>
-                    <a href="#" class="text-[16px] pt-[40px] underline underline-offset-auto">Learn about Swal AI</a>
+                    <a href="#" class="text-[16px] pt-[40px] underline underline-offset-auto">Learn about Swal Studio</a>
                 </div>
-                <div class="flex-1">
-                    <video class="w-[658px] h-[371px] rounded-[20px]" autoplay loop muted playsinline
+                <div class="flex-1 mt-[20px] md:mt-0">
+                    <video class="w-full md:w-[658px] h-auto md:h-[371px] rounded-[20px]" autoplay loop muted playsinline
                         style="mix-blend-mode: exclusion;">
                         <source src="/video/wave.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
         </section>
-        <div class="bg-[#E6FDFC] h-[800px] bottom-0 left-0 flex w-full overflow-hidden">
-            <div class="bg-[#E6FDFC] w-full max-w-[1440px] mx-auto relative flex justify-between text-primary"
+        <div class="bg-[#E6FDFC] h-auto md:h-[800px] bottom-0 left-0 flex w-full overflow-hidden">
+            <div class="bg-[#E6FDFC] w-full max-w-[1440px] mx-auto relative flex flex-col md:flex-row justify-between text-primary"
                 style="z-index: 1;">
-                <div class="flex flex-col px-[24px] py-[155px]" style="z-index: 2;">
+                <div class="flex flex-col px-[24px] py-[60px] md:py-[155px]" style="z-index: 2;">
                     <p class="text-[16px]">Next Contents</p>
-                    <p class="text-[60px] font-oceanic-book mt-[110px]">Use Cases</p>
+                    <p class="text-[40px] md:text-[60px] font-oceanic-book mt-[40px] md:mt-[110px]">Use Cases</p>
                     <a href="/use-cases" class="arrow-button mt-[40px] font-suisse-regular">Read More</a>
                 </div>
                 <div class="absolute inset-0 bg-[#E6FDFC] pointer-events-none"
                     style="mix-blend-mode: color; z-index: 1;"></div>
+                <div class="relative w-full md:w-[858px] h-auto md:h-[800px] md:pl-[200px] flex-shrink-0">
+                    <div class="md:hidden absolute h-[69px] inset-0 bg-gradient-to-b from-[#E6FDFC] to-transparent z-[1]"></div>
                 <video src="/video/face_w.mp4" autoplay loop muted playsinline
-                    class="w-[858px] h-[800px] pr-[200px] flex-shrink-0 relative mix-blend-darken"
+                    class="w-full h-auto flex-shrink-0 relative mix-blend-darken"
                     style="z-index: 0; transform: scale(1) scaleX(-1);"></video>
+                </div>
             </div>
         </div>
     </main>
