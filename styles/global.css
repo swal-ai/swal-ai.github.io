@@ -187,3 +187,29 @@ body.menu-open {
     top: 7px;
     transform: rotate(-45deg);
 }
+
+.tag {
+    display: inline-flex;
+    padding: 7px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    text-align: center;
+    color: rgba(0, 36, 36, 0.6);
+    background-color: #F4F4F4;
+}
+
+.tag-news {
+    background-color: #F5EFE1;
+}
+
+.tag-all {
+    background-color: #E8E8DC;
+}
+
+.tag-interview {
+    background-color: #E6F3FD;
+}
+
+.tag-article {
+    background-color: #E3F7F5;
+}
