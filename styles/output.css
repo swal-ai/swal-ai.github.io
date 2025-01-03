@@ -2331,6 +2331,10 @@ video {
     line-height: 1.5;
   }
 
+  .md\:leading-\[32px\] {
+    line-height: 32px;
+  }
+
   .md\:opacity-40 {
     opacity: 0.4;
   }

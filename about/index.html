@@ -79,9 +79,9 @@
                     class="w-1/4 text-left text-primary font-oceanic-book text-[50px] md:text-[60px] tracking-[-0.6px]">
                     About
                 </div>
-                <div class="w-full md:w-3/4 flex flex-col justify-between items-start">
+                <div class="w-full md:w-3/4 flex flex-col justify-between items-start animate-section">
                     <p
-                        class="text-[#071511] font-suisse-regular text-[26px] md:text-[32px] tracking-[-0.32px] pt-[40px] pb-[20px] md:pt-[32px] md:pb-[32px] max-w-[600px] text-left">
+                        class="text-[#071511] font-suisse-regular text-[26px] md:text-[32px] leading-[32px] md:leading-normal tracking-[-0.32px] pt-[40px] pb-[20px] md:pt-[32px] md:pb-[32px] max-w-[600px] text-left">
                         Create a more efficient work environment
                         with your personal AI agents</p>
                     <div class="w-full h-[320px] md:h-auto">
@@ -112,7 +112,7 @@
             </div>
         </section>
 
-        <section class="w-full max-w-[1440px] mx-auto px-[16px] md:px-[24px]">
+        <section class="w-full max-w-[1440px] mx-auto px-[16px] md:px-[24px] animate-section">
             <p class="text-black font-suisse-regular text-[16px] font-normal leading-normal">Our Value</p>
             <p class="text-[#002424] text-left font-suisse-regular text-[32px] font-normal leading-[38px] mt-[16px]">Bring AGI Close to People</p>
             <p class="text-[#071511] text-left font-suisse-regular text-[16px] md:text-[18px] font-normal md:leading-[27px] opacity-60 md:opacity-40 mt-[24px] md:mt-[36px]">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </p>
@@ -259,11 +259,37 @@
     </footer>
 
     <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if ($(entry.target).hasClass('animate-section')) {
+                        gsap.fromTo(entry.target,
+                            {
+                                opacity: 0,
+                                y: 50
+                            },
+                            {
+                                opacity: 1,
+                                y: 0,
+                                duration: 0.8,
+                            }
+                        );
+                        observer.unobserve(entry.target);
+                    }
+                }
+            });
+        }, {
+            threshold: 0.3,
+        });
+
         $(document).ready(function () {
             const lenis = new Lenis({
                 autoRaf: true,
             });
 
+            $('.animate-section').each(function () {
+                observer.observe(this);
+            });
         });
     </script>
     <script src="/js/header.js"></script>
