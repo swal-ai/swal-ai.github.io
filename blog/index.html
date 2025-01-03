@@ -72,19 +72,21 @@
     <main class="w-full">
         <!-- <main class="w-full"> -->
         <section
-            class="w-full px-[24px] mt-[70px] pt-[60px] md:pt-[80px] pb-[236px] text-center z-20 relative max-w-[1440px] mx-auto"
+            class="w-full px-[16px] md:px-[24px] mt-[60px] md:mt-[70px] pt-[60px] md:pt-[80px] pb-[100px] md:pb-[236px] text-center z-20 relative max-w-[1440px] mx-auto"
             id="section1">
-            <div class="w-full flex">
-                <div class="w-1/4 text-left text-primary font-oceanic-book text-[60px] tracking-[-0.6px]">
+            <div class="w-full flex flex-col md:flex-row">
+                <div class="w-1/4 text-left text-primary font-oceanic-book text-[50px] md:text-[60px] tracking-[-0.6px] mb-[40px] md:mb-0">
                     Blog
                 </div>
-                <div class="w-3/4 flex flex-col justify-between items-start">
-                    <img src="/img/blog.png" alt="blog" class="w-full h-auto">
-                    <span class="tag tag-news w-fit mt-[48px]">News</span>
-                    <h1 class="mt-[36px] text-[#071511] font-suisse-regular text-[36px] tracking-[-0.36px]">Introducing:
+                <div class="w-full md:w-3/4 flex flex-col justify-between items-start">
+                    <div class="w-full h-[320px] md:h-auto">
+                        <img src="/img/blog.png" alt="blog" class="w-full h-full md:h-auto object-cover rounded-[16px] md:rounded-none">
+                    </div>
+                    <span class="tag tag-news w-fit mt-[32px] md:mt-[48px]">News</span>
+                    <h1 class="mt-[24px] md:mt-[36px] text-[#071511] font-suisse-regular text-[32px] md:text-[36px] tracking-[-0.36px]">Introducing:
                         Swal Ai</h1>
                     <p
-                        class="text-[#071511] mt-[40px] font-suisse-regular text-[18px] leading-[27px] text-left opacity-40">
+                        class="text-[#071511] mt-[24px] md:mt-[40px] font-suisse-regular text-[18px] leading-[27px] text-left opacity-60 md:opacity-40 line-clamp-[6] md:line-clamp-[4]">
                         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
                         Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
                         mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
@@ -96,14 +98,14 @@
             </div>
         </section>
 
-        <section class="w-full max-w-[1440px] mx-auto">
-            <div class="flex gap-[12px] pb-[60px]">
+        <section class="w-full max-w-[1440px] mx-auto px-[16px] md:px-[24px]">
+            <div class="flex gap-[10px] md:gap-[12px] pb-[60px]">
                 <span class="tag tag-all w-fit mt-[48px] cursor-pointer">All</span>
                 <span class="tag w-fit mt-[48px] cursor-pointer">Article</span>
                 <span class="tag w-fit mt-[48px] cursor-pointer">Interview</span>
                 <span class="tag w-fit mt-[48px] cursor-pointer">News</span>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-y-[100px] gap-x-[12px]">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-y-[20px] md:gap-y-[100px] gap-x-[12px]">
                 <article
                     class="w-full bg-white flex flex-col gap-[24px] md:min-h-[395px] md:max-h-[395px] justify-between">
                     <a class="flex flex-col gap-[24px] pb-[32px] md:pb-0">
@@ -372,36 +374,11 @@
                     </p>
                 </article>
             </div>
-            <div class="flex justify-center mt-[65px]">
+            <div class="flex justify-center mt-[65px] mb-[100px] md:mb-[150px]">
                 <a href="#" class="text-[rgba(0,36,36,0.6)] bg-[#F7F7F4] hover:bg-[#E8E8DC] rounded-full font-suisse-regular text-[14px] inline-flex h-[46px] px-[24px] py-[14px] justify-center items-center gap-[4px] flex-shrink-0 transition-colors duration-300">View More</a>
             </div>
         </section>
 
-
-        <section class="w-full md:pt-[170px] py-[80px] md:py-[200px] z-10 relative px-[24px]">
-            <div
-                class="max-w-[1440px] mx-auto text-primary font-suisse-regular flex flex-col items-center bg-[#E4F2EC] px-[40px] md:px-[80px] md:h-[348px]">
-                <p
-                    class="text-[#071414] text-center text-[26px] md:text-[28px] leading-normal tracking-[-0.28px] pt-[120px] md:pt-[100px]">
-                    Create a
-                    more efficient work environment<br />with your own personal AI agents now</p>
-                <a href="#"
-                    class="text-[14px] mt-[30px] mb-[120px] md:mb-[114px] px-[30px] py-[14px] bg-[#071414] text-white rounded-full flex items-center">Try
-                    Swal AI
-                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
-                        <mask id="mask0_2643_2924" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
-                            width="21" height="20">
-                            <rect x="0.5" width="20" height="20" fill="white" />
-                        </mask>
-                        <g mask="url(#mask0_2643_2924)">
-                            <path
-                                d="M5.74521 14.7035L4.875 13.8333L13.0754 5.625H5.62021V4.375H15.2035V13.9583H13.9535V6.50313L5.74521 14.7035Z"
-                                fill="#E6FDFC" />
-                        </g>
-                    </svg>
-                </a>
-            </div>
-        </section>
         <div class="bg-[#DCEDFE] h-auto md:h-[800px] bottom-0 left-0 flex w-full overflow-hidden">
             <div class="bg-[#DCEDFE] w-full max-w-[1440px] mx-auto relative flex flex-col md:flex-row justify-between text-primary"
                 style="z-index: 1;">
@@ -473,75 +450,6 @@
                 autoRaf: true,
             });
 
-            const darkColor = '#071511';
-            const whiteColor = '#FFFFFF';
-
-            document.addEventListener('mousemove', (e) => {
-                const x = e.clientX / window.innerWidth;
-                const y = e.clientY / window.innerHeight;
-
-                document.querySelectorAll("#section2 img").forEach((img, index) => {
-                    const multiplier = (index + 1) * 10;
-                    gsap.to(img, {
-                        x: (x - 0.5) * multiplier,
-                        y: (y - 0.5) * multiplier,
-                        duration: 0.5,
-                        ease: "power2.out"
-                    });
-                });
-            });
-            $(window).scroll(function () {
-                const section2Top = $(window).width() >= 768 ? $('#section2').offset().top - 80 : $('#section2').offset().top - 420;
-                const section3Top = $(window).width() >= 768 ? $('#section3').offset().top - 180 : $('#section3').offset().top - 560;
-                const scrollTop = $(window).scrollTop();
-                const offset = 140;
-                if (scrollTop >= section2Top - offset && scrollTop < section3Top - offset) {
-
-                    let progress = Math.pow((scrollTop - (section2Top - offset)) / ((section3Top - offset) - (section2Top - offset)), 0.5);
-
-                    if ($(window).width() < 768) {
-                        progress = progress * 0.5;
-                    }
-
-                    const finalStates = [
-                        { width: "124px", marginLeft: "0px", marginTop: "0px", borderRadius: "20px" },
-                        { width: "190px", marginLeft: "960px", marginTop: "-1100px", borderRadius: "11px" },
-                        { width: "344px", marginLeft: "-1100px", marginTop: "190px", borderRadius: "20px" },
-                        { width: "344px", marginLeft: "980px", marginTop: "1030px", borderRadius: "20px" },
-                        { width: "576px", marginLeft: "2200px", marginTop: "-200px", borderRadius: "33px" },
-                        { width: "400px", marginLeft: "-1500px", marginTop: "-1500px", borderRadius: "26.4px" }
-                    ];
-
-                    $("#section2 img").each((index, element) => {
-                        const finalState = finalStates[index];
-                        const currentValues = {};
-
-                        Object.keys(finalState).forEach(prop => {
-                            const finalValue = parseInt(finalState[prop]);
-                            currentValues[prop] = `${finalValue * progress}px`;
-                        });
-
-                        gsap.to(element, {
-                            ...currentValues,
-                            duration: 0.1,
-                            ease: "none",
-                            overwrite: true
-                        });
-                    });
-                }
-
-                if (scrollTop >= section2Top && scrollTop < section3Top) {
-                    $('body').css({
-                        'backgroundColor': darkColor,
-                        'transition': 'background-color 0.5s ease'
-                    }).addClass('dark-mode');
-                } else {
-                    $('body').css({
-                        'backgroundColor': whiteColor,
-                        'transition': 'background-color 0.5s ease'
-                    }).removeClass('dark-mode');
-                }
-            });
         });
     </script>
     <script src="/js/header.js"></script>
