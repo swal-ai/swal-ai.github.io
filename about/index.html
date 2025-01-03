@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swal AI</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/output.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Draggable.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <style>
+        .primary,
+        .secondary {
+            transition: all 0.5s ease;
+        }
+
+        .dark-mode .primary {
+            color: #E6FDFC;
+        }
+
+        .dark-mode .secondary {
+            color: #6D8786;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body class="flex flex-col items-center">
+    <nav class="w-full fixed top-0 left-0 right-0 z-[100] transition-all duration-300 nav-white" id="mainNav">
+        <div
+            class="flex justify-between items-center max-w-[1440px] mx-auto h-[70px] px-[16px] md:px-[24px] text-[14px] font-suisse-medium">
+            <div class="flex gap-[60px] uppercase items-center tracking-[1.4px]">
+                <a href="/">
+                    <img src="/img/logo.png" alt="Swal AI" class="min-w-[95px] max-w-[95px] h-auto block"
+                        id="logoImg" />
+                </a>
+                <a href="/" class="nav-link hidden md:flex">Home</a>
+                <a href="/ecosystem" class="nav-link hidden md:flex">AI Ecosystem</a>
+                <a href="/use-cases" class="nav-link hidden md:flex">Use Cases</a>
+            </div>
+            <div class="md:hidden">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <a href="#"
+                class="bg-primary w-[122px] h-[46px] rounded-full text-white items-center justify-center font-suisse-regular hidden md:flex"
+                id="startBtn">Get started</a>
+        </div>
+    </nav>
+    <div class="mobile-menu md:hidden">
+        <div class="flex flex-col h-[100dvh] px-[20px] pt-[70px] pb-[20px] font-suisse-medium text-[14px]">
+            <div class="flex-1 uppercase tracking-[1.4px]">
+                <div class="flex flex-col text-primary">
+                    <a href="/ecosystem" class="h-[70px] border-b border-[#DFE3E3] flex items-center">AI Ecosystem</a>
+                    <a href="/use-cases" class="h-[70px] border-b border-[#DFE3E3] flex items-center">Use Cases</a>
+                </div>
+            </div>
+            <div class="mt-auto">
+                <a href="#"
+                    class="w-full h-[46px] rounded-full bg-primary text-white flex items-center justify-center">Get
+                    Started</a>
+            </div>
+        </div>
+    </div>
+    <main class="w-full">
+        <!-- <main class="w-full"> -->
+        <section
+            class="w-full px-[16px] md:px-[24px] mt-[60px] md:mt-[70px] pt-[60px] md:pt-[80px] pb-[100px] md:pb-[236px] text-center z-20 relative max-w-[1440px] mx-auto"
+            id="section1">
+            <div class="w-full flex flex-col md:flex-row">
+                <div
+                    class="w-1/4 text-left text-primary font-oceanic-book text-[50px] md:text-[60px] tracking-[-0.6px]">
+                    About
+                </div>
+                <div class="w-full md:w-3/4 flex flex-col justify-between items-start">
+                    <p
+                        class="text-[#071511] font-suisse-regular text-[26px] md:text-[32px] tracking-[-0.32px] pt-[40px] pb-[20px] md:pt-[32px] md:pb-[32px] max-w-[600px] text-left">
+                        Create a more efficient work environment
+                        with your personal AI agents</p>
+                    <div class="w-full h-[320px] md:h-auto">
+                        <img src="/img/about.png" alt="blog"
+                            class="w-full h-full md:h-auto object-cover rounded-[16px] md:rounded-none">
+                    </div>
+                    <p class="text-[#071511] mt-[24px] md:mt-[36px] font-suisse-regular text-[16px] md:text-[18px] md:leading-[27px] text-left opacity-60 md:opacity-40">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+                        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu</p>
+                    <p class="text-black font-suisse-regular text-[16px] font-normal leading-normal mt-[150px] md:mt-[236px] ">Our Story</p>
+                    <h1
+                        class="text-[#071511] font-suisse-regular text-[32px] md:text-[36px] tracking-[-0.36px] mt-[16px]">
+                        Swal AI from Wrtn Technology</h1>
+                    <p
+                        class="text-[#071511] mt-[24px] md:mt-[36px] font-suisse-regular text-[16px] md:text-[18px] md:leading-[27px] text-left opacity-60 md:opacity-40">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                        Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+                        mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa
+                        quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo,
+                        rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend
+                        tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, </p>
+
+                    <a href="https://wrtn.io" target="_blank" class="arrow-button mt-[24px] md:mt-[42px] font-suisse-regular">Visit Now</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full max-w-[1440px] mx-auto px-[16px] md:px-[24px]">
+            <p class="text-black font-suisse-regular text-[16px] font-normal leading-normal">Our Value</p>
+            <p class="text-[#002424] font-suisse-regular text-[32px] font-normal leading-[38px] mt-[16px]">Bring AGI Close to People</p>
+            <p class="text-[#071511] font-suisse-regular text-[16px] md:text-[18px] font-normal md:leading-[27px] opacity-60 md:opacity-40 mt-[24px] md:mt-[36px]">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. </p>
+            <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-[16px] md:gap-[32px] mt-[60px]">
+                <p class="text-[#002424] font-suisse-regular text-[28px] leading-[32px] block md:hidden">Swal AI makes<br />work more easy</p>
+                <div class="relative group mb-[24px] md:mb-0">
+                    <img src="/img/about-p1.png" alt="about" class="w-full h-auto object-cover rounded-[16px]">
+                    <img src="/img/plus-circle.png" alt="plus" class="w-[28px] h-[28px] md:w-[40px] md:h-[40px] absolute top-[16px] md:top-[40px] right-[16px] md:right-[40px] group-hover:opacity-0 transition-opacity duration-300">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-[28px] md:p-[54px] md:items-start md:justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30 backdrop-blur-[115px] rounded-[16px]">
+                        <p class="hidden md:block text-[#E6FDFC] text-[16px] font-suisse-regular leading-[24px] transform translate-y-[-20px] group-hover:translate-y-0 transition-transform duration-300">Our Value 1</p>
+                        <p class="hidden md:block text-[#E6FDFC] text-[32px] font-suisse-regular leading-[32px] mt-[16px] transform translate-y-[-20px] group-hover:translate-y-0 transition-transform duration-300">Swal AI makes<br />work more easy</p>
+                        <p class="text-[#E6FDFC] text-[18px] md:text-[20px] font-suisse-regular leading-[24px] opacity-60 md:mt-auto transform translate-y-[20px] group-hover:translate-y-0 transition-transform duration-300">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Your agent delivers delightful and personalized conversations. 
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-[#002424] font-suisse-regular text-[28px] leading-[32px] block md:hidden">Work with autonomy and<br />accountability</p>
+                <div class="relative group mb-[24px] md:mb-0">
+                    <img src="/img/about-p2.png" alt="about" class="w-full h-auto object-cover rounded-[16px]">
+                    <img src="/img/plus-circle.png" alt="plus" class="w-[28px] h-[28px] md:w-[40px] md:h-[40px] absolute top-[16px] md:top-[40px] right-[16px] md:right-[40px] group-hover:opacity-0 transition-opacity duration-300">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-[28px] md:p-[54px] md:items-start md:justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30 backdrop-blur-[115px] rounded-[16px]">
+                        <p class="hidden md:block text-[#E6FDFC] text-[16px] font-suisse-regular leading-[24px] transform translate-y-[-20px] group-hover:translate-y-0 transition-transform duration-300">Our Value 2</p>
+                        <p class="hidden md:block text-[#E6FDFC] text-[32px] font-suisse-regular leading-[32px] mt-[16px] transform translate-y-[-20px] group-hover:translate-y-0 transition-transform duration-300">Work with autonomy and<br />accountability</p>
+                        <p class="text-[#E6FDFC] text-[18px] md:text-[20px] font-suisse-regular leading-[24px] opacity-60 md:mt-auto transform translate-y-[20px] group-hover:translate-y-0 transition-transform duration-300">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Your agent delivers delightful and personalized conversations. 
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-[#002424] font-suisse-regular text-[28px] leading-[32px] block md:hidden">We're a culture that<br />grows together</p>
+                <div class="relative group mb-[24px] md:mb-0">
+                    <img src="/img/about-p3.png" alt="about" class="w-full h-auto object-cover rounded-[16px]">
+                    <img src="/img/plus-circle.png" alt="plus" class="w-[28px] h-[28px] md:w-[40px] md:h-[40px] absolute top-[16px] md:top-[40px] right-[16px] md:right-[40px] group-hover:opacity-0 transition-opacity duration-300">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-[28px] md:p-[54px] md:items-start md:justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30 backdrop-blur-[115px] rounded-[16px]">
+                        <p class="hidden md:block text-[#E6FDFC] text-[16px] font-suisse-regular leading-[24px] transform translate-y-[-20px] group-hover:translate-y-0 transition-transform duration-300">Our Value 3</p>
+                        <p class="hidden md:block text-[#E6FDFC] text-[32px] font-suisse-regular leading-[32px] mt-[16px] transform translate-y-[-20px] group-hover:translate-y-0 transition-transform duration-300">We're a culture that<br />grows together</p>
+                        <p class="text-[#E6FDFC] text-[18px] md:text-[20px] font-suisse-regular leading-[24px] opacity-60 md:mt-auto transform translate-y-[20px] group-hover:translate-y-0 transition-transform duration-300">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Your agent delivers delightful and personalized conversations. 
+                        </p>
+                    </div>
+                </div>
+
+                <p class="text-[#002424] font-suisse-regular text-[28px] leading-[32px] block md:hidden">Information is<br />open to anyone</p>
+                <div class="relative group">
+                    <img src="/img/about-p4.png" alt="about" class="w-full h-auto object-cover rounded-[16px]">
+                    <img src="/img/plus-circle.png" alt="plus" class="w-[28px] h-[28px] md:w-[40px] md:h-[40px] absolute top-[16px] md:top-[40px] right-[16px] md:right-[40px] group-hover:opacity-0 transition-opacity duration-300">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-[28px] md:p-[54px] md:items-start md:justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/30 backdrop-blur-[115px] rounded-[16px]">
+                        <p class="hidden md:block text-[#E6FDFC] text-[16px] font-suisse-regular leading-[24px] transform translate-y-[-20px] group-hover:translate-y-0 transition-transform duration-300">Our Value 4</p>
+                        <p class="hidden md:block text-[#E6FDFC] text-[32px] font-suisse-regular leading-[32px] mt-[16px] transform translate-y-[-20px] group-hover:translate-y-0 transition-transform duration-300">Information is<br />open to anyone</p>
+                        <p class="text-[#E6FDFC] text-[18px] md:text-[20px] font-suisse-regular leading-[24px] opacity-60 md:mt-auto transform translate-y-[20px] group-hover:translate-y-0 transition-transform duration-300">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Your agent delivers delightful and personalized conversations. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full md:pt-[170px] py-[100px] md:py-[200px] z-10 relative px-[24px]">
+            <div
+                class="max-w-[1440px] mx-auto text-primary font-suisse-regular flex flex-col items-center bg-[#E4F2EC] px-[40px] md:px-[80px] md:h-[348px]">
+                <p class="text-[#071414] text-center text-[26px] md:text-[28px] leading-normal tracking-[-0.28px] pt-[120px] md:pt-[100px]">Create a
+                    more efficient work environment<br />with your own personal AI agents now</p>
+                <a href="#"
+                    class="text-[14px] mt-[30px] mb-[120px] md:mb-[114px] px-[30px] py-[14px] bg-[#071414] text-white rounded-full flex items-center">Try
+                    Swal AI
+                    <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                        <mask id="mask0_2643_2924" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0"
+                            width="21" height="20">
+                            <rect x="0.5" width="20" height="20" fill="white" />
+                        </mask>
+                        <g mask="url(#mask0_2643_2924)">
+                            <path
+                                d="M5.74521 14.7035L4.875 13.8333L13.0754 5.625H5.62021V4.375H15.2035V13.9583H13.9535V6.50313L5.74521 14.7035Z"
+                                fill="#E6FDFC" />
+                        </g>
+                    </svg>
+                </a>
+            </div>
+        </section>
+        <div class="bg-[#DCEDFE] h-auto md:h-[800px] bottom-0 left-0 flex w-full overflow-hidden">
+            <div class="bg-[#DCEDFE] w-full max-w-[1440px] mx-auto relative flex flex-col md:flex-row justify-between text-primary"
+                style="z-index: 1;">
+                <div class="flex flex-col px-[24px] py-[60px] md:py-[155px]" style="z-index: 2;">
+                    <p class="text-[16px]">Next Contents</p>
+                    <p class="text-[40px] md:text-[60px] font-oceanic-book mt-[40px] md:mt-[110px]">Home</p>
+                    <a href="/" class="arrow-button mt-[40px] font-suisse-regular">Read More</a>
+                </div>
+                <div class="absolute inset-0 bg-[#DCEDFE] pointer-events-none"
+                    style="mix-blend-mode: color; z-index: 1;"></div>
+                <div class="relative w-full md:w-[858px] h-auto md:h-[800px] md:pl-[200px] flex-shrink-0">
+                    <div
+                        class="md:hidden absolute h-[69px] inset-0 bg-gradient-to-b from-[#DCEDFE] to-transparent z-[1]">
+                    </div>
+                    <video src="/video/person.mp4" autoplay loop muted playsinline
+                        class="w-full h-auto flex-shrink-0 relative mix-blend-darken"
+                        style="z-index: 0; transform: scale(1) scaleX(-1);"></video>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="w-full bottom-0 left-0 right-0 h-auto md:h-[485px] bg-[#071511]">
+        <div class="h-full max-w-[1440px] mx-auto">
+            <div
+                class="h-full grid grid-cols-1 md:grid-cols-4 gap-[20px] md:gap-[40px] font-suisse-regular px-[16px] md:px-0">
+                <div
+                    class="flex flex-col justify-between gap-[24px] md:border-l border-[#273131] md:pl-[24px] pt-[60px] md:pt-[92px] md:pb-[37px]">
+                    <a href="/">
+                        <img src="/img/logo_w.png" alt="swal.ai" class="w-[95px] h-auto">
+                    </a>
+                    <p class="text-[#6D8786] text-[14px] leading-[27px] font-suisse-book hidden md:block">
+                        © 2024 swal.ai
+                    </p>
+                </div>
+                <div class="hidden md:flex border-l border-[#273131] md:pl-[24px]"></div>
+                <div
+                    class="flex flex-col gap-[12px] text-[18px] pt-[40px] md:pt-[92px] md:pb-[37px] md:border-l border-[#273131] md:pl-[24px]">
+                    <p class="text-[#E6FDFC] leading-[27px]">Company</p>
+                    <ul class="flex flex-col text-[#6D8786] leading-[40px]">
+                        <li><a href="/about" class="hover:text-[#E6FDFC]">About us</a></li>
+                        <li><a href="/blog" class="hover:text-[#E6FDFC]">Blog</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">Documentation</a></li>
+                        <li><a href="https://wrtn.io" target="_blank" class="hover:text-[#E6FDFC]">wrtn.io</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:hidden border-b border-[#273131] px-[20px]"></div>
+                <div
+                    class="flex flex-col gap-[12px] text-[18px] md:pt-[92px] md:pb-[37px] md:border-l md:border-r border-[#273131] md:pl-[24px]">
+                    <p class="text-[#E6FDFC] leading-[27px]">Social</p>
+                    <ul class="flex flex-col text-[#6D8786] leading-[40px]">
+                        <li><a href="#" class="hover:text-[#E6FDFC]">Instagram</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">GitHub</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">Discord</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">X</a></li>
+                    </ul>
+                </div>
+                <div class="md:hidden border-b border-[#273131]"></div>
+                <p class="md:hidden text-[#6D8786] text-[14px] leading-[27px] font-suisse-book pb-[80px]">
+                    © 2024 swal.ai
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            const lenis = new Lenis({
+                autoRaf: true,
+            });
+
+        });
+    </script>
+    <script src="/js/header.js"></script>
+</body>
+
+</html>
