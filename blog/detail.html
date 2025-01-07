@@ -281,12 +281,15 @@
 
                                 shareText.textContent = 'Link copied!';
                                 shareIcon.style.opacity = '0';
+                                shareIcon.style.display = 'none';
                                 shareButton.style.backgroundColor = '#071414';
                                 shareText.style.color = '#FFFFFF';
                                 setTimeout(() => {
                                     shareText.textContent = 'Share this post';
-                                    shareIcon.style.opacity = '1';
-                                    shareIcon.style.transform = 'scale(1)';
+                                    shareIcon.style.display = 'block';
+                                    setTimeout(() => {
+                                        shareIcon.style.opacity = '1';
+                                    }, 10);
                                     shareButton.style.backgroundColor = '';
                                     shareText.style.color = '';
                                 }, 3000);
