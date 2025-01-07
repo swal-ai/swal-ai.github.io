@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Swal AI</title>
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/output.css" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/Draggable.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.18/dist/lenis.css">
+    <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+    <style>
+        .primary,
+        .secondary {
+            transition: all 0.5s ease;
+        }
+
+        .dark-mode .primary {
+            color: #E6FDFC;
+        }
+
+        .dark-mode .secondary {
+            color: #6D8786;
+            opacity: 1;
+        }
+
+        .content-wrap img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 16px;
+            padding: 40px 0;
+        }
+
+        .content-wrap h1 {
+            padding: 60px 0 20px;
+            text-align: left;
+            color: #071511;
+            font-family: 'SuisseIntl-Regular';
+            font-size: 32px;
+            font-weight: normal;
+            letter-spacing: -0.4px;
+        }
+
+        .content-wrap p {
+            color: #071511;
+            font-weight: 400;
+            font-size: 20px;
+            font-family: 'SuisseIntl-Regular';
+            text-align: left;
+            opacity: 0.6;
+        }
+
+        @media (min-width: 768px) {
+            .content-wrap {
+                padding: 100px 0;
+            }
+
+            .content-wrap img {
+                height: auto;
+                border-radius: 0;
+            }
+
+            .content-wrap h1 {
+                padding: 100px 0 40px;
+                font-size: 40px;
+            }
+
+            .content-wrap p {
+                opacity: 0.4;
+            }
+        }
+    </style>
+</head>
+
+<body class="flex flex-col items-center">
+    <nav class="w-full fixed top-0 left-0 right-0 z-[100] transition-all duration-300 nav-white" id="mainNav">
+        <div
+            class="flex justify-between items-center max-w-[1440px] mx-auto h-[70px] px-[16px] md:px-[24px] text-[14px] font-suisse-medium">
+            <div class="flex gap-[60px] uppercase items-center tracking-[1.4px]">
+                <a href="/">
+                    <img src="/img/logo.png" alt="Swal AI" class="min-w-[95px] max-w-[95px] h-auto block"
+                        id="logoImg" />
+                </a>
+                <a href="/" class="nav-link hidden md:flex">Home</a>
+                <a href="/ecosystem" class="nav-link hidden md:flex">AI Ecosystem</a>
+                <a href="/use-cases" class="nav-link hidden md:flex">Use Cases</a>
+            </div>
+            <div class="md:hidden">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <a href="#"
+                class="bg-primary w-[122px] h-[46px] rounded-full text-white items-center justify-center font-suisse-regular hidden md:flex"
+                id="startBtn">Get started</a>
+        </div>
+    </nav>
+    <div class="mobile-menu md:hidden">
+        <div class="flex flex-col h-[100dvh] px-[20px] pt-[70px] pb-[20px] font-suisse-medium text-[14px]">
+            <div class="flex-1 uppercase tracking-[1.4px]">
+                <div class="flex flex-col text-primary">
+                    <a href="/ecosystem" class="h-[70px] border-b border-[#DFE3E3] flex items-center">AI Ecosystem</a>
+                    <a href="/use-cases" class="h-[70px] border-b border-[#DFE3E3] flex items-center">Use Cases</a>
+                </div>
+            </div>
+            <div class="mt-auto">
+                <a href="#"
+                    class="w-full h-[46px] rounded-full bg-primary text-white flex items-center justify-center">Get
+                    Started</a>
+            </div>
+        </div>
+    </div>
+    <main class="w-full">
+        <!-- <main class="w-full"> -->
+        <section
+            class="w-full px-[16px] md:px-[24px] mt-[60px] md:mt-[70px] pt-[60px] md:pt-[80px] pb-[100px] md:pb-[236px] text-center z-20 relative max-w-[1440px] mx-auto"
+            id="section1">
+            <div class="w-full flex flex-col md:flex-row">
+                <div class="w-1/4 text-left mb-[40px] md:mb-0 sticky top-[100px] h-fit">
+                    <ul
+                        class="menu hidden md:block duration-300 w-3/4 space-y-[8px] text-[#071511] font-suisse-regular text-[15px] font-normal leading-normal tracking-[-0.15px] opacity-0">
+                    </ul>
+                </div>
+                <div class="w-full md:w-3/4 flex flex-col justify-between items-start animate-section">
+                    <span class="tag tag-news w-fit">News</span>
+                    <h1
+                        class="w-full md:w-5/6 mt-[24px] text-left text-[#071511] font-suisse-regular text-[40px] font-normal leading-normal tracking-[-0.4px]">
+                        Create a more efficient work environment
+                        with your personal AI agents</h1>
+                    <p
+                        class="text-[#939393] font-suisse-regular text-[16px] font-medium leading-[28px] tracking-[1.6px] uppercase pt-[24px]">
+                        New York , 6 Jan , 2025</p>
+
+                    <!-- CONTENT -->
+                    <div class="content-wrap">
+                        <div>
+                            <img src="/img/blog.png" alt="blog">
+                        </div>
+                        <h1>Every company needs an agent</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                            ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+                            consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+                            arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu
+                            pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
+                            vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                            enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.<br><br>
+
+                            Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
+                            ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
+                            Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
+                            adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id,
+                            lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis
+                            faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed
+                            fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget
+                            bibendum sodales, augue velit cursus nunc,
+                        </p>
+                        <h1>Meet Swal.AI , the conversational AI platform for businesses</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                            ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+                            consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+                            arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu
+                            pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
+                            vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,
+                            enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.<br><br>
+
+                            Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
+                            ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
+                            Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
+                            adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id,
+                            lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis
+                            faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed
+                            fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget
+                            bibendum sodales, augue velit cursus nunc,
+                        </p>
+                        <h1>Partner with us</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                            Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                            ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla
+                            consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+                            arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.<br><br>
+
+                            Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
+                            elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+                            consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a,
+                            tellus.<br><br>
+
+                            Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
+                            ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus.
+                            Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
+                            adipiscing sem neque sed ipsum.<br><br>
+
+                            Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante
+                            tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam
+                            sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh.
+                            Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus
+                            nunc,
+                        </p>
+                    </div>
+
+                    <script>
+                        $(document).ready(function () {
+                            const $menu = $('.menu');
+                            const $h1Elements = $('.content-wrap h1');
+
+                            $h1Elements.each(function (index) {
+                                const $li = $('<li>');
+                                const $h1 = $(this);
+                                $li.text($h1.text());
+                                $li.addClass('opacity-40 hover:opacity-100 cursor-pointer transition-opacity');
+                                $li.click(function() {
+                                    $('html, body').animate({
+                                        scrollTop: $h1.offset().top - 40
+                                    }, 600);
+                                });
+                                $menu.append($li);
+                            });
+
+                            $(window).scroll(function () {
+                                const scrollPosition = $(window).scrollTop();
+                                let activeH1Found = false;
+
+                                if ($h1Elements.first().offset().top - $(window).scrollTop() <= 100) {
+                                    $menu.css('opacity', '1');
+                                } else {
+                                    $menu.css('opacity', '0');
+                                }
+
+                                $h1Elements.each(function (index) {
+                                    const $menuItem = $menu.children().eq(index);
+                                    const h1Position = $(this).offset().top - $(window).scrollTop();
+                                    const $nextH1 = $h1Elements.eq(index + 1);
+                                    const nextH1Position = $nextH1.length ? $nextH1.offset().top - $(window).scrollTop() : Infinity;
+
+                                    if (h1Position <= 100 && nextH1Position > 100) {
+                                        $menuItem.removeClass('opacity-40');
+                                        activeH1Found = true;
+                                    } else {
+                                        $menuItem.addClass('opacity-40');
+                                    }
+                                });
+                            });
+                        });
+                    </script>
+                    <div>
+                        <a
+                            class="cursor-pointer w-[164px] text-left h-[46px] border border-[#002424] rounded-full flex items-center justify-center gap-1 text-[14px] mt-[20px] py-[14px] pl-[20px] pr-[16px] share-button hover:bg-[#071414] hover:text-white group">
+                            <span class="share-text translate-y-[-1px]">Share this post</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24"
+                                fill="none" class="share-icon">
+                                <mask id="mask0_4062_2758" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0"
+                                    y="0" width="25" height="24">
+                                    <rect x="0.5" width="24" height="24" fill="#D9D9D9" />
+                                </mask>
+                                <g mask="url(#mask0_4062_2758)">
+                                    <path
+                                        d="M14.8671 16.0522L12.2018 18.7175C11.3139 19.6054 10.2442 20.0493 8.99263 20.0493C7.74117 20.0495 6.67155 19.6056 5.78378 18.7179C4.896 17.8301 4.45206 16.7604 4.45194 15.5087C4.45171 14.2568 4.89553 13.187 5.78342 12.2991L8.44868 9.63383L9.50934 10.6945L6.84408 13.3598C6.25023 13.9536 5.95336 14.6698 5.95348 15.5083C5.95348 16.3469 6.25035 17.0631 6.84408 17.6568C7.43782 18.2506 8.154 18.5474 8.99263 18.5474C9.83114 18.5476 10.5473 18.2507 11.1412 17.6568L13.8064 14.9916L14.8671 16.0522ZM10.3796 15.182L9.31896 14.1213L14.6223 8.81801L15.6829 9.87867L10.3796 15.182ZM16.5532 14.3661L15.4925 13.3055L18.1578 10.6402C18.7516 10.0464 19.0485 9.33019 19.0484 8.49168C19.0484 7.65305 18.7515 6.93687 18.1578 6.34314C17.5641 5.7494 16.8479 5.45253 16.0092 5.45253C15.1707 5.45242 14.4546 5.74928 13.8607 6.34314L11.1954 9.0084L10.1348 7.94774L12.8 5.28248C13.6879 4.39459 14.7577 3.95064 16.0092 3.95064C17.2607 3.95052 18.3303 4.39435 19.2181 5.28212C20.1059 6.1699 20.5498 7.23963 20.5499 8.49133C20.5502 9.74314 20.1063 10.813 19.2185 11.7009L16.5532 14.3661Z"
+                                        fill="currentColor" />
+                                </g>
+                            </svg>
+                        </a>
+                        <script>
+                            document.querySelector('.share-button').addEventListener('click', function (e) {
+                                e.preventDefault();
+
+                                navigator.clipboard.writeText(window.location.href);
+
+                                const shareText = document.querySelector('.share-text');
+                                const shareIcon = document.querySelector('.share-icon');
+                                const shareButton = document.querySelector('.share-button');
+
+                                shareText.textContent = 'Link copied!';
+                                shareIcon.style.opacity = '0';
+                                shareButton.style.backgroundColor = '#071414';
+                                shareText.style.color = '#FFFFFF';
+                                setTimeout(() => {
+                                    shareText.textContent = 'Share this post';
+                                    shareIcon.style.opacity = '1';
+                                    shareIcon.style.transform = 'scale(1)';
+                                    shareButton.style.backgroundColor = '';
+                                    shareText.style.color = '';
+                                }, 3000);
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="w-full max-w-[1440px] mx-auto px-[16px] md:px-[24px] pb-[130px]">
+            <div class="flex gap-[10px] md:gap-[12px] pb-[30px]">
+                <p
+                    class="text-[#071511] font-suisse-regular text-[32px] md:text-[40px] font-normal leading-normal tracking-[-0.4px]">
+                    Related News</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-y-[20px] md:gap-y-[100px] gap-x-[12px]">
+                <article
+                    class="w-full bg-white flex flex-col gap-[24px] md:min-h-[395px] md:max-h-[395px] justify-between">
+                    <a class="flex flex-col gap-[24px] pb-[32px] md:pb-0">
+                        <div class="overflow-hidden">
+                            <img src="/img/article5.png" alt="Article image" draggable="false"
+                                oncontextmenu="return false;"
+                                class="w-full h-auto transform scale-110 transition-transform duration-300 hover:scale-100">
+                        </div>
+                        <p class="tag tag-news w-fit">
+                            News</p>
+                        <p class="text-[18px] line-clamp-2">Swal, 2024 App of the Year
+                            in Google Play</p>
+                    </a>
+                    <p
+                        class="date font-suisse-medium text-[12px] uppercase border-b border-[#E3E3E3] pb-[10px] tracking-[1.2px]">
+                        <span class="text-[#8B8B8B]">
+                            13 jan, 2025 |
+                        </span>
+                        <span class="days-left" data-date="2024-04-02">
+                            34 days ago
+                        </span>
+                    </p>
+                </article>
+                <article
+                    class="w-full bg-white flex flex-col gap-[24px] md:min-h-[395px] md:max-h-[395px] justify-between">
+                    <a class="flex flex-col gap-[24px] pb-[32px] md:pb-0">
+                        <div class="overflow-hidden">
+                            <img src="/img/article2.png" alt="Article image" draggable="false"
+                                oncontextmenu="return false;"
+                                class="w-full h-auto transform scale-110 transition-transform duration-300 hover:scale-100">
+                        </div>
+                        <p class="tag tag-interview w-fit">
+                            Interview</p>
+                        <p class="text-[18px] line-clamp-2">Saved two hours every day, 14 hours a week, just checking my
+                            email.</p>
+                    </a>
+                    <p
+                        class="date font-suisse-medium text-[12px] uppercase border-b border-[#E3E3E3] pb-[10px] tracking-[1.2px]">
+                        <span class="text-[#8B8B8B]">
+                            1 dec, 2024 |
+                        </span>
+                        <span class="days-left" data-date="2024-04-02">
+                            18 days ago
+                        </span>
+                    </p>
+                </article>
+                <article
+                    class="w-full bg-white flex flex-col gap-[24px] md:min-h-[395px] md:max-h-[395px] justify-between">
+                    <a class="flex flex-col gap-[24px] pb-[32px] md:pb-0">
+                        <div class="overflow-hidden">
+                            <img src="/img/article3.png" alt="Article image" draggable="false"
+                                oncontextmenu="return false;"
+                                class="w-full h-auto transform scale-110 transition-transform duration-300 hover:scale-100">
+                        </div>
+                        <p class="tag tag-article w-fit">
+                            Article</p>
+                        <p class="text-[18px] line-clamp-2">Introducing: Swal Ecosystem</p>
+                    </a>
+                    <p
+                        class="date font-suisse-medium text-[12px] uppercase border-b border-[#E3E3E3] pb-[10px] tracking-[1.2px]">
+                        <span class="text-[#8B8B8B]">
+                            6 dec, 2024 |
+                        </span>
+                        <span class="days-left" data-date="2024-04-02">
+                            25 days ago
+                        </span>
+                    </p>
+                </article>
+                <article
+                    class="w-full bg-white flex flex-col gap-[24px] md:min-h-[395px] md:max-h-[395px] justify-between">
+                    <a class="flex flex-col gap-[24px] pb-[32px] md:pb-0">
+                        <div class="overflow-hidden">
+                            <img src="/img/article6.png" alt="Article image" draggable="false"
+                                oncontextmenu="return false;"
+                                class="w-full h-auto transform scale-110 transition-transform duration-300 hover:scale-100">
+                        </div>
+                        <p class="tag tag-news w-fit">
+                            News</p>
+                        <p class="text-[18px] line-clamp-2">Introducing: Swal AI</p>
+                    </a>
+                    <p
+                        class="date font-suisse-medium text-[12px] uppercase border-b border-[#E3E3E3] pb-[10px] tracking-[1.2px]">
+                        <span class="text-[#8B8B8B]">
+                            28 Nov, 2024 |
+                        </span>
+                        <span class="days-left" data-date="2024-04-02">
+                            7 days ago
+                        </span>
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <div class="bg-[#DCEDFE] h-auto md:h-[800px] bottom-0 left-0 flex w-full overflow-hidden">
+            <div class="bg-[#DCEDFE] w-full max-w-[1440px] mx-auto relative flex flex-col md:flex-row justify-between text-primary"
+                style="z-index: 1;">
+                <div class="flex flex-col px-[24px] py-[60px] md:py-[155px]" style="z-index: 2;">
+                    <p class="text-[16px]">Next Contents</p>
+                    <p class="text-[40px] md:text-[60px] font-oceanic-book mt-[40px] md:mt-[110px]">Home</p>
+                    <a href="/" class="arrow-button mt-[40px] font-suisse-regular">Read More</a>
+                </div>
+                <div class="absolute inset-0 bg-[#DCEDFE] pointer-events-none"
+                    style="mix-blend-mode: color; z-index: 1;"></div>
+                <div class="relative w-full md:w-[858px] h-auto md:h-[800px] md:pl-[200px] flex-shrink-0">
+                    <div
+                        class="md:hidden absolute h-[69px] inset-0 bg-gradient-to-b from-[#DCEDFE] to-transparent z-[1]">
+                    </div>
+                    <video src="/video/person.mp4" autoplay loop muted playsinline
+                        class="w-full h-auto flex-shrink-0 relative mix-blend-darken"
+                        style="z-index: 0; transform: scale(1) scaleX(-1);"></video>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="w-full bottom-0 left-0 right-0 h-auto md:h-[485px] bg-[#071511]">
+        <div class="h-full max-w-[1440px] mx-auto">
+            <div
+                class="h-full grid grid-cols-1 md:grid-cols-4 gap-[20px] md:gap-[40px] font-suisse-regular px-[16px] md:px-0">
+                <div
+                    class="flex flex-col justify-between gap-[24px] md:border-l border-[#273131] md:pl-[24px] pt-[60px] md:pt-[92px] md:pb-[37px]">
+                    <a href="/">
+                        <img src="/img/logo_w.png" alt="swal.ai" class="w-[95px] h-auto">
+                    </a>
+                    <p class="text-[#6D8786] text-[14px] leading-[27px] font-suisse-book hidden md:block">
+                        © 2024 swal.ai
+                    </p>
+                </div>
+                <div class="hidden md:flex border-l border-[#273131] md:pl-[24px]"></div>
+                <div
+                    class="flex flex-col gap-[12px] text-[18px] pt-[40px] md:pt-[92px] md:pb-[37px] md:border-l border-[#273131] md:pl-[24px]">
+                    <p class="text-[#E6FDFC] leading-[27px]">Company</p>
+                    <ul class="flex flex-col text-[#6D8786] leading-[40px]">
+                        <li><a href="/about" class="hover:text-[#E6FDFC]">About us</a></li>
+                        <li><a href="/blog" class="hover:text-[#E6FDFC]">Blog</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">Documentation</a></li>
+                        <li><a href="https://wrtn.io" target="_blank" class="hover:text-[#E6FDFC]">wrtn.io</a></li>
+                    </ul>
+                </div>
+
+                <div class="md:hidden border-b border-[#273131] px-[20px]"></div>
+                <div
+                    class="flex flex-col gap-[12px] text-[18px] md:pt-[92px] md:pb-[37px] md:border-l md:border-r border-[#273131] md:pl-[24px]">
+                    <p class="text-[#E6FDFC] leading-[27px]">Social</p>
+                    <ul class="flex flex-col text-[#6D8786] leading-[40px]">
+                        <li><a href="#" class="hover:text-[#E6FDFC]">Instagram</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">GitHub</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">Discord</a></li>
+                        <li><a href="#" class="hover:text-[#E6FDFC]">X</a></li>
+                    </ul>
+                </div>
+                <div class="md:hidden border-b border-[#273131]"></div>
+                <p class="md:hidden text-[#6D8786] text-[14px] leading-[27px] font-suisse-book pb-[80px]">
+                    © 2024 swal.ai
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if ($(entry.target).hasClass('animate-section')) {
+                        gsap.fromTo(entry.target,
+                            {
+                                opacity: 0,
+                                y: 50
+                            },
+                            {
+                                opacity: 1,
+                                y: 0,
+                                duration: 0.8,
+                            }
+                        );
+                        observer.unobserve(entry.target);
+                    }
+                }
+            });
+        }, {
+            threshold: 0.3,
+        });
+
+        $(document).ready(function () {
+            const lenis = new Lenis({
+                autoRaf: true,
+            });
+
+            $('.animate-section').each(function () {
+                observer.observe(this);
+            });
+        });
+    </script>
+    <script src="/js/header.js"></script>
+</body>
+
+</html>
