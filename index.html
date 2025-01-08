@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Swal AI</title>
+    <title>Wrtn Labs</title>
     <link rel="stylesheet" href="/styles/global.css" />
     <link rel="stylesheet" href="/styles/output.css" />
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
@@ -15,19 +15,6 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <style>
-        .splitting .word {
-            display: inline-block;
-            animation: slide-up 1.15s;
-            animation-fill-mode: both;
-            animation-delay: calc(.1s + (.04s * var(--word-index)));
-            position: relative;
-            overflow: hidden;
-            opacity: 0.3;
-        }
-
-        .splitting .word.visible {
-            opacity: 1;
-        }
 
         .swiper-slide {
             overflow: hidden;
@@ -36,6 +23,28 @@
 
         .swiper-slide-active .text-area {
             opacity: 1;
+        }
+
+        .swiper-slide {
+            width: 75vw;
+            overflow: hidden;
+            transition: transform 0.6s ease, box-shadow 0.6s ease;
+            transform: translateY(100px) !important;
+        }
+
+        @media (max-width: 768px) {
+            .swiper-slide {
+                transform: translateY(60px) !important;
+            }
+        }
+
+        .swiper-slide-active {
+            transform: translateY(0) !important;
+        }
+
+        .tab-hover,
+        .tab-background {
+            transition: all 0.3s ease;
         }
     </style>
 </head>
@@ -46,12 +55,9 @@
             class="flex justify-between items-center max-w-[1440px] mx-auto h-[70px] px-[16px] md:px-[24px] text-[14px] font-suisse-medium">
             <div class="gap-[60px] uppercase items-center tracking-[1.4px] flex">
                 <a href="/">
-                    <img src="/img/logo_w.png" alt="Swal AI" class="min-w-[95px] max-w-[95px] h-auto block"
+                    <img src="/img/logo_w_2.png" alt="Wrtn Labs" class="min-w-[120px] max-w-[120px] h-auto block"
                         id="logoImg" />
                 </a>
-                <a href="/" class="nav-link hidden md:flex">Home</a>
-                <a href="/ecosystem" class="nav-link hidden md:flex">AI Ecosystem</a>
-                <a href="/use-cases" class="nav-link hidden md:flex">Use Cases</a>
             </div>
             <div class="md:hidden">
                 <div class="hamburger">
@@ -64,8 +70,8 @@
     </nav>
     <div class="max-w-[1440px] w-full mx-auto relative hidden md:block">
         <a href="#"
-            class="fixed top-[12px] z-[100] bg-secondary w-[122px] h-[46px] rounded-full text-[#081511] flex items-center justify-center text-[14px] font-suisse-regular"
-            style="right: max(24px, calc((100vw - 1440px) / 2 + 24px));" id="startBtn">Get started</a>
+            class="fixed top-[12px] z-[100] bg-secondary h-[46px] rounded-full text-[#081511] flex items-center justify-center text-[14px] font-suisse-regular px-[24px] py-[14px]"
+            style="right: max(24px, calc((100vw - 1440px) / 2 + 24px));" id="startBtn">Open Playground</a>
     </div>
     <div class="mobile-menu md:hidden">
         <div class="flex flex-col h-[100dvh] px-[20px] pt-[70px] pb-[20px] font-suisse-medium text-[14px]">
@@ -97,555 +103,344 @@
                 });
             </script>
             <div
-                class="absolute w-full left-0 md:py-[80px] z-10 mix-blend-difference md:bottom-0 top-1/2 md:top-auto -translate-y-1/2 md:translate-y-0 font-suisse-regular">
-                <div class="max-w-[1440px] mx-auto px-[16px] md:px-[24px]">
-                    <h1 class="text-[32px] leading-[38px] text-[#5FC3BB]">
-                        Meet Swal AI,<br />Intelligent Action API
+                class="absolute w-full h-full left-0 top-0 z-10 mix-blend-difference flex items-center justify-center font-suisse-regular">
+                <div class="max-w-[1440px] mx-auto px-[16px] md:px-[24px] text-center">
+                    <h1 class="text-[64px] leading-[69px] text-[#C36B5F] tracking-[-1.28px] font-suisse-regular font-normal">
+                        The Foundation for<br />
+                        Every Business Agent<br />
+                        wrtn Agent OS
                     </h1>
-                    <p class="text-[#4D4D4D] text-[16px] mt-[8px]">
+                    <p class="text-[19px] text-[#5F4843] mt-[36px] font-suisse-regular font-normal">
                         Create a more efficient work environment<br />with
                         your personal AI agents
                     </p>
                 </div>
             </div>
         </section>
-        <section class="w-full bg-white pt-[100px] md:pt-[155px] pb-[100px] md:pb-[176px] z-10 relative">
+        <section class="w-full bg-white pt-[100px] md:pt-[160px] pb-[100px] z-10 relative">
             <div
-                class="max-w-[1440px] mx-auto px-[16px] md:px-[24px] text-primary font-suisse-regular flex flex-col animate-section">
-                <p class="text-[16px]">How it works</p>
-                <p class="text-[32px] leading-[38px] mt-[16px] splitting">
-                    Unchain your potential<br />with Swal AI
+                class="max-w-[1440px] mx-auto px-[16px] md:px-[24px] text-primary font-suisse-regular flex flex-col">
+                <p class="text-[#002424] font-oceanic-book text-[16px] font-[450]">How it works</p>
+                <p class="text-[#002424] text-[48px] leading-[56px] mt-[16px] splitting font-oceanic-book font-[450]">
+                    Unchain your potential<br />with Wrtn Agent OS
                 </p>
                 <div>
-                    <p class="text-[16px] mt-[24px]">
-                        Using Swal AI, you can easily create and share
-                        your own AI apps and agents<br />through natural
-                        language input and a no-code interface, even without any
-                        knowledge of development.
+                    <p class="text-[#767676] font-suisse-regular text-[18px] leading-[27px] mt-[24px]">
+                        Using Wrtn Agent OS, you can easily create and share your own AI apps and agents<br />
+                        through natural language input and a no-code interface, even without any knowledge of development.
                     </p>
                     <a href="#" class="arrow-button mt-[24px] font-suisse-regular">Our Products</a>
                 </div>
 
                 <div class="overflow-hidden rounded-[20px] mt-[40px] md:mt-[60px]">
-                    <img src="/img/main_1.png" alt="Main image"
-                        class="w-full h-[300px] md:h-auto object-cover transform scale-110 transition-all duration-700 hover:scale-100">
+                    <img src="/img/main_2.png" alt="Main image"
+                        class="w-full h-[300px] md:h-auto object-cover transform scale-105 transition-all duration-700 hover:scale-100">
                 </div>
 
             </div>
         </section>
-        <section class="w-full bg-white py-[60px] md:py-[140px] flex flex-col items-center z-10 relative">
-            <h1
-                class="text-[50px] md:text-[60px] text-[#071414] font-oceanic-book md:leading-normal leading-[52px] text-center">
-                Tool for Everyone
+
+        <section class="w-full z-10 relative py-[80px] md:py-[140px] px-[24px] text-center bg-white overflow-hidden" id="section3">
+
+            <h1 class="text-[#071414] text-center font-oceanic-book text-[48px] font-[450] leading-[56px] tracking-[-0.48px]">
+                Turn Conversations<br />
+                into Conversions
             </h1>
-            <p
-                class="text-[18px] text-[#767676] font-suisse-regular mt-[16px] leading-[27px] text-center px-[16px] md:px-[24px]">
-                Swal AI enables all to be free from repetitive tasks and work<span
-                    class="hidden md:inline"><br /></span> efficiently across different jobs and environments
+            <p class="my-[24px] text-[#767676] text-center font-suisse-regular text-[18px] font-[450] leading-[27px]">
+                Wrtn Agent OS enables all to be free from repetitive tasks and work<br />
+                efficiently across different jobs and environments
             </p>
 
-            <a href="/use-cases" class="arrow-button mt-[24px] font-suisse-regular">More Use Cases</a>
-            <div class="swiper-container flex md:hidden pt-[50px] pb-[20px] w-full overflow-hidden">
-                <div class="swiper-wrapper">
-                    <!-- Use Case 01 -->
-                    <div class="swiper-slide">
-                        <div class="relative h-auto shrink-0 group">
-                            <img src="/img/tool1.png" alt="Main image" class="w-full h-full rounded-[30px]">
-                            <div
-                                class="text-area opacity-0 absolute inset-0 transition-opacity duration-500 rounded-[30px] backdrop-blur-[75px] flex items-center justify-center">
-                                <div class="flex flex-col items-center gap-[12px] text-[14px] px-[16px]">
-                                    <p
-                                        class="px-[12px] py-[8px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] transition-all">
-                                        Use Case 01
-                                    </p>
-                                    <p class="text-[#E6FDFC] font-suisse-regular text-center">
-                                        Dividing a service by age and gender to create targeted strategies was
-                                        time-consuming. Now, the agent analyzes popular content for each group and
-                                        drafts
-                                        strategies. This automation has drastically reduced our working hours.
-                                    </p>
-                                    <p class="text-[#E6FDFC] text-[14px] font-suisse-regular text-center opacity-60">
-                                        Michael<br />Head of Startup Service Operations
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <a href="#" class="arrow-button mt-[24px] font-suisse-regular mb-[88px]">Our Products</a>
+            <div class="w-full justify-center hidden md:flex">
+                <div
+                    class="group p-[8px] flex overflow-hidden rounded-full border border-forest/5 font-heading leading-none relative">
+                    <div class="tab-hover absolute bg-gray-100 rounded-full transition-all duration-300 opacity-0 translate-x-0 translate-y-0"
+                        style="width: 0; height: 49px;"></div>
+                    <div class="tab-background absolute bg-forest rounded-full transition-all duration-300 translate-x-0 translate-y-0"
+                        style="width: 0; height: 49px;"></div>
 
-                    <!-- Use Case 02 -->
-                    <div class="swiper-slide">
-                        <div class="relative h-auto shrink-0 group">
-                            <img src="/img/tool2.png" alt="Main image" class="w-full h-full rounded-[30px]">
-                            <div
-                                class="text-area opacity-0 absolute inset-0 transition-opacity duration-500 rounded-[30px] backdrop-blur-[75px] flex items-center justify-center">
-                                <div class="flex flex-col items-center gap-[12px] text-[14px] px-[16px]">
-                                    <p
-                                        class="px-[12px] py-[8px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] transition-all">
-                                        Use Case 02
-                                    </p>
-                                    <p class="text-[#E6FDFC] font-suisse-regular text-center">
-                                        Data research starts with collecting extensive materials. A verbal request now
-                                        organizes information by media, revolutionizing work for planners and marketers.
-                                        This innovation lets them focus on what truly matters.
-                                    </p>
-                                    <p class="text-[#E6FDFC] text-[14px] font-suisse-regular text-center opacity-60">
-                                        Henry<br />Corporate Researcher
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Use Case 03 -->
-                    <div class="swiper-slide">
-                        <div class="relative h-auto shrink-0 group">
-                            <img src="/img/tool3.png" alt="Main image" class="w-full h-full rounded-[30px]">
-                            <div
-                                class="text-area opacity-0 absolute inset-0 transition-opacity duration-500 rounded-[30px] backdrop-blur-[75px] flex items-center justify-center">
-                                <div class="flex flex-col items-center gap-[12px] text-[14px] px-[16px]">
-                                    <p
-                                        class="px-[12px] py-[8px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] transition-all">
-                                        Use Case 03
-                                    </p>
-                                    <p class="text-[#E6FDFC] font-suisse-regular text-center">
-                                        Small business owners often struggle with writing ads. By inputting a product
-                                        name
-                                        and selling points, an automated workflow generates expert advertising copy.
-                                        This
-                                        solution helps those without the know-how or direction create effective
-                                        promotions.
-                                    </p>
-                                    <p class="text-[#E6FDFC] text-[14px] font-suisse-regular text-center opacity-60">
-                                        Sarah<br />Marketing Platform Product Owner (PO)
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Use Case 04 -->
-                    <div class="swiper-slide">
-                        <div class="relative h-auto shrink-0 group">
-                            <img src="/img/tool4.png" alt="Main image" class="w-full h-full rounded-[30px]">
-                            <div
-                                class="text-area opacity-0 absolute inset-0 transition-opacity duration-500 rounded-[30px] backdrop-blur-[75px] flex items-center justify-center">
-                                <div class="flex flex-col items-center gap-[12px] text-[14px] px-[16px]">
-                                    <p
-                                        class="px-[12px] py-[8px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] transition-all">
-                                        Use Case 04
-                                    </p>
-                                    <p class="text-[#E6FDFC] font-suisse-regular text-center">
-                                        Linking lecture materials allows the agent to analyze, diagram concepts, and
-                                        attach
-                                        them to the document. Setting this as a weekly workflow eliminates the need for
-                                        repetitive copy-pasting, simplifying lecture preparation.
-                                    </p>
-                                    <p class="text-[#E6FDFC] text-[14px] font-suisse-regular text-center opacity-60">
-                                        Will<br />Language Teacher
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Use Case 05 -->
-                    <div class="swiper-slide">
-                        <div class="relative h-auto shrink-0 group">
-                            <img src="/img/tool5.png" alt="Main image" class="w-full h-full rounded-[30px]">
-                            <div
-                                class="text-area opacity-0 absolute inset-0 transition-opacity duration-500 rounded-[30px] backdrop-blur-[75px] flex items-center justify-center">
-                                <div class="flex flex-col items-center gap-[12px] text-[14px] px-[16px]">
-                                    <p
-                                        class="px-[12px] py-[8px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] transition-all">
-                                        Use Case 05
-                                    </p>
-                                    <p class="text-[#E6FDFC] font-suisse-regular text-center">
-                                        Designing services for children required collecting papers, images, and reviews
-                                        from
-                                        various platforms. Now, the agent gathers everything, performs sentiment
-                                        analysis,
-                                        and compiles it into a document. This convenience lets me focus on creating
-                                        results.
-                                    </p>
-                                    <p class="text-[#E6FDFC] text-[14px] font-suisse-regular text-center opacity-60">
-                                        Sophia<br />UX Designer
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Use Case 06 -->
-                    <div class="swiper-slide">
-                        <div class="relative h-auto shrink-0 group">
-                            <img src="/img/tool6.png" alt="Main image" class="w-full h-full rounded-[30px]">
-                            <div
-                                class="text-area opacity-0 absolute inset-0 transition-opacity duration-500 rounded-[30px] backdrop-blur-[75px] flex items-center justify-center">
-                                <div class="flex flex-col items-center gap-[12px] text-[14px] px-[16px]">
-                                    <p
-                                        class="px-[12px] py-[8px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] transition-all">
-                                        Use Case 06
-                                    </p>
-                                    <p class="text-[#E6FDFC] font-suisse-regular text-center">
-                                        In IT, researching new technologies requires comparing papers, articles, and
-                                        reviews. This tool goes beyond summarizing search results, providing deep
-                                        insights
-                                        into trends, making it invaluable for comprehensive understanding.
-                                    </p>
-                                    <p class="text-[#E6FDFC] text-[14px] font-suisse-regular text-center opacity-60">
-                                        Emily<br />AI Developer
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    <button type="button" aria-label="Tab 0" data-tab="0"
+                        class="tab-btn relative rounded-full px-[24px] py-[16px] transition-colors duration-300">
+                        <div class="relative z-10">Action Agent</div>
+                    </button>
+                    <button type="button" aria-label="Tab 1" data-tab="1"
+                        class="tab-btn relative rounded-full px-[24px] py-[16px] transition-colors duration-300">
+                        <div class="relative z-10">Admin</div>
+                    </button>
+                    <button type="button" aria-label="Tab 2" data-tab="2"
+                        class="tab-btn relative rounded-full px-[24px] py-[16px] transition-colors duration-300">
+                        <div class="relative z-10">Connecter</div>
+                    </button>
+                    <button type="button" aria-label="Tab 3" data-tab="3"
+                        class="tab-btn relative rounded-full px-[24px] py-[16px] transition-colors duration-300">
+                        <div class="relative z-10">Builder</div>
+                    </button>
+                    <button type="button" aria-label="Tab 4" data-tab="4"
+                        class="tab-btn relative rounded-full px-[24px] py-[16px] transition-colors duration-300">
+                        <div class="relative z-10">Editor</div>
+                    </button>
                 </div>
             </div>
-            <script>
-                let swiper = new Swiper('.swiper-container', {
-                    centeredSlides: true,
-                    slidesPerView: 1.2,
-                    spaceBetween: 20,
-                    loop: true,
-                    mousewheel: {
-                        forceToAxis: true
-                    }
-                });
-            </script>
-
-            <div class="hidden md:flex w-full pt-[87px] overflow-hidden">
-                <div class="flex gap-[20px]" id="scrollContainer">
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool1.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Use Case 01</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Dividing a service by age and gender to create targeted strategies was
-                                    time-consuming. Now, the agent analyzes popular content for each group and drafts
-                                    strategies. This automation has drastically reduced our working hours.
-                                </p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Michael<br />Head of Startup Service Operations</p>
+            <div class="cards w-full mt-[40px] flex justify-center relative">
+                <div class="hidden md:block swiper-container w-full">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div
+                                class="w-[75vw] aspect-[1200/680] bg-[#F7F7F4] rounded-[24px] flex-shrink-0 flex md:flex-row flex-col pt-[60px] md:pt-[30px] p-[16px] md:p-[30px] gap-[20px] items-center">
+                                <div class="md:w-1/2 w-full text-left md:px-[50px] px-[20px]">
+                                    <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal">Intuitive &
+                                        Engaged</p>
+                                    <p class="text-[#071511] font-suisse-regular text-[26px] md:text-[32px] leading-normal mt-[16px]">
+                                        Easily create AI Apps with a conversational no-code interface</p>
+                                    <p
+                                        class="text-[#071511] font-suisse-regular text-[16px] leading-normal mt-[20px] opacity-60">
+                                        Even without any development experience, anyone can easily create or execute their own AI service with the Studio Autonomous Agent.</p>
+                                    <a href="#" class="arrow-button mt-[20px] md:mt-[100px]">Try Now</a>
+                                </div>
+                                <div class="mt-[20px] md:mt-0 md:w-1/2 md:h-full w-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden">
+                                    <video src="/video/eco1.mp4" autoplay loop muted playsinline
+                                        class="w-full h-full object-cover"></video>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool2.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Use Case 02</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Data research starts with collecting extensive materials. A verbal request now
-                                    organizes information by media, revolutionizing work for planners and marketers.
-                                    This innovation lets them focus on what truly matters.
-                                </p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Henry<br />Corporate Researcher
-                                </p>
+                        <div class="swiper-slide">
+                            <div
+                                class="w-[75vw] aspect-[1200/680] bg-[#F7F7F4] rounded-[24px] flex-shrink-0 flex md:flex-row flex-col pt-[60px] md:pt-[30px] p-[16px] md:p-[30px] gap-[20px] items-center">
+                                <div class="md:w-1/2 w-full text-left md:px-[50px] px-[20px]">
+                                    <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal">Intergrated</p>
+                                    <p class="text-[#071511] font-suisse-regular text-[26px] md:text-[32px] leading-normal mt-[16px]">
+                                        Easily integrate with 
+                                        external services 
+                                        and data</p>
+                                    <p
+                                        class="text-[#071511] font-suisse-regular text-[16px] leading-normal mt-[20px] opacity-60">
+                                        Seamlessly integrate with a diverse range of external external services and data connectors from our Developer Center and Connector Hub to craft powerful and unique AI Apps. Furthermore, share your creations with the community to tap into the power of global collective intelligence, positioning yourself at the forefront of innovation.</p>
+                                    <a href="#" class="arrow-button mt-[20px] md:mt-[100px]">Try Now</a>
+                                </div>
+                                <div class="mt-[20px] md:mt-0 md:w-1/2 md:h-full w-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden">
+                                    <video src="/video/eco2.mp4" autoplay loop muted playsinline
+                                        class="w-full h-full object-cover"></video>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool3.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Use Case 03</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Small business owners often struggle with writing ads. By inputting a product name
-                                    and selling points, an automated workflow generates expert advertising copy. This
-                                    solution helps those without the know-how or direction create effective promotions.
-                                </p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Sarah<br />Marketing Platform Product Owner (PO)</p>
+                        <div class="swiper-slide">
+                            <div
+                                class="w-[75vw] aspect-[1200/680] bg-[#F7F7F4] rounded-[24px] flex-shrink-0 flex md:flex-row flex-col pt-[60px] md:pt-[30px] p-[16px] md:p-[30px] gap-[20px] items-center">
+                                <div class="md:w-1/2 w-full text-left md:px-[50px] px-[20px]">
+                                    <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal">Shareable</p>
+                                    <p class="text-[#071511] font-suisse-regular text-[26px] md:text-[32px] leading-normal mt-[16px]">
+                                        Enable to share
+                                        created AI Apps 
+                                        and APIs</p>
+                                    <p
+                                        class="text-[#071511] font-suisse-regular text-[16px] leading-normal mt-[20px] opacity-60">
+                                        Register and showcase your custom-made artifacts and APIs directly in a store that attracts a variety of users.</p>
+                                    <a href="#" class="arrow-button mt-[20px] md:mt-[100px]">Try Now</a>
+                                </div>
+                                <div class="mt-[20px] md:mt-0 md:w-1/2 md:h-full w-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden">
+                                    <video src="/video/eco3.mp4" autoplay loop muted playsinline
+                                        class="w-full h-full object-cover"></video>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool4.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Use Case 04</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Linking lecture materials allows the agent to analyze, diagram concepts, and attach
-                                    them to the document. Setting this as a weekly workflow eliminates the need for
-                                    repetitive copy-pasting, simplifying lecture preparation.
-                                </p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Will<br />Language Teacher</p>
+                        <div class="swiper-slide">
+                            <div
+                                class="w-[75vw] aspect-[1200/680] bg-[#F7F7F4] rounded-[24px] flex-shrink-0 flex md:flex-row flex-col pt-[60px] md:pt-[30px] p-[16px] md:p-[30px] gap-[20px] items-center">
+                                <div class="md:w-1/2 w-full text-left md:px-[50px] px-[20px]">
+                                    <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal">Shareable</p>
+                                    <p class="text-[#071511] font-suisse-regular text-[26px] md:text-[32px] leading-normal mt-[16px]">
+                                        Enable to share
+                                        created AI Apps 
+                                        and APIs</p>
+                                    <p
+                                        class="text-[#071511] font-suisse-regular text-[16px] leading-normal mt-[20px] opacity-60">
+                                        Register and showcase your custom-made artifacts and APIs directly in a store that attracts a variety of users.</p>
+                                    <a href="#" class="arrow-button mt-[20px] md:mt-[100px]">Try Now</a>
+                                </div>
+                                <div class="mt-[20px] md:mt-0 md:w-1/2 md:h-full w-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden">
+                                    <video src="/video/eco3.mp4" autoplay loop muted playsinline
+                                        class="w-full h-full object-cover"></video>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool5.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Use Case 05</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Designing services for children required collecting papers, images, and reviews from
-                                    various platforms. Now, the agent gathers everything, performs sentiment analysis,
-                                    and compiles it into a document. This convenience lets me focus on creating results.
-                                </p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Sophia<br />UX Designer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool6.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Use Case 06</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    In IT, researching new technologies requires comparing papers, articles, and
-                                    reviews. This tool goes beyond summarizing search results, providing deep insights
-                                    into trends, making it invaluable for comprehensive understanding.
-                                </p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Emily<br />AI Developer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- 반복 -->
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool1.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Use Case 01</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Dividing a service by age and gender to create targeted strategies was
-                                    time-consuming. Now, the agent analyzes popular content for each group and drafts
-                                    strategies. This automation has drastically reduced our working hours.
-                                </p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Michael<br />Head of Startup Service Operations</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool2.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Use Case 02</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Data research starts with collecting extensive materials. A verbal request now
-                                    organizes information by media, revolutionizing work for planners and marketers.
-                                    This innovation lets them focus on what truly matters.
-                                </p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Henry<br />Corporate Researcher
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool3.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Use Case 03</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Small business owners often struggle with writing ads. By inputting a product name
-                                    and selling points, an automated workflow generates expert advertising copy. This
-                                    solution helps those without the know-how or direction create effective promotions.
-                                </p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Sarah<br />Marketing Platform Product Owner (PO)</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool4.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Use Case 04</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Linking lecture materials allows the agent to analyze, diagram concepts, and attach
-                                    them to the document. Setting this as a weekly workflow eliminates the need for
-                                    repetitive copy-pasting, simplifying lecture preparation.
-                                </p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Will<br />Language Teacher</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool5.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Use Case 05</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Designing services for children required collecting papers, images, and reviews from
-                                    various platforms. Now, the agent gathers everything, performs sentiment analysis,
-                                    and compiles it into a document. This convenience lets me focus on creating results.
-                                </p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Sophia<br />UX Designer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="relative w-[470px] h-auto rounded-[40px] shrink-0 group">
-                        <img src="/img/tool6.png" alt="Main image" class="w-full h-full rounded-[40px]">
-                        <div
-                            class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[40px] backdrop-blur-[75px] flex items-center justify-center">
-                            <div class="flex flex-col items-center gap-[16px]">
-                                <p
-                                    class="px-[17px] py-[14px] rounded-[40px] bg-[rgba(0,36,36,0.40)] backdrop-blur-[75px] text-[#E6FDFC] translate-y-[-20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    Use Case 06</p>
-                                <p
-                                    class="text-[#E6FDFC] text-[18px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                                    In IT, researching new technologies requires comparing papers, articles, and
-                                    reviews. This tool goes beyond summarizing search results, providing deep insights
-                                    into trends, making it invaluable for comprehensive understanding.
-                                </p>
-                                <p
-                                    class="text-[#E6FDFC] text-[16px] font-suisse-regular w-[280px] text-center translate-y-[20px] opacity-0 group-hover:translate-y-0 group-hover:opacity-60 transition-all duration-300">
-                                    Emily<br />AI Developer</p>
+                        <div class="swiper-slide">
+                            <div
+                                class="w-[75vw] aspect-[1200/680] bg-[#F7F7F4] rounded-[24px] flex-shrink-0 flex md:flex-row flex-col pt-[60px] md:pt-[30px] p-[16px] md:p-[30px] gap-[20px] items-center">
+                                <div class="md:w-1/2 w-full text-left md:px-[50px] px-[20px]">
+                                    <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal">Shareable</p>
+                                    <p class="text-[#071511] font-suisse-regular text-[26px] md:text-[32px] leading-normal mt-[16px]">
+                                        Enable to share
+                                        created AI Apps 
+                                        and APIs</p>
+                                    <p
+                                        class="text-[#071511] font-suisse-regular text-[16px] leading-normal mt-[20px] opacity-60">
+                                        Register and showcase your custom-made artifacts and APIs directly in a store that attracts a variety of users.</p>
+                                    <a href="#" class="arrow-button mt-[20px] md:mt-[100px]">Try Now</a>
+                                </div>
+                                <div class="mt-[20px] md:mt-0 md:w-1/2 md:h-full w-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden">
+                                    <video src="/video/eco3.mp4" autoplay loop muted playsinline
+                                        class="w-full h-full object-cover"></video>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Mobile View -->
+                <div class="md:hidden flex flex-col gap-[20px] w-full">
+                    <div class="w-full bg-[#F7F7F4] rounded-[24px] flex flex-col pt-[60px] p-[16px] gap-[20px]">
+                        <div class="w-full text-left px-[20px]">
+                            <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal">Intuitive & Engaged</p>
+                            <p class="text-[#071511] font-suisse-regular text-[26px] leading-normal mt-[16px]">
+                                Easily create AI Apps with a conversational no-code interface</p>
+                            <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal mt-[20px] opacity-60">
+                                Even without any development experience, anyone can easily create or execute their own AI service with the Studio Autonomous Agent.</p>
+                            <a href="#" class="w-full h-[46px] border border-[#002424] rounded-full flex items-center justify-center gap-1 text-[14px] mt-[20px]">
+                                <span class="translate-y-[-1px]">Try Now</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-colors">
+                                    <path d="M16.627 12.75H4.5V11.25H16.627L10.9308 5.55375L12 4.5L19.5 12L12 19.5L10.9308 18.4462L16.627 12.75Z" fill="currentColor"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="w-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden mt-[20px]">
+                            <video src="/video/eco1.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+                        </div>
+                    </div>
+
+                    <div class="w-full bg-[#F7F7F4] rounded-[24px] flex flex-col pt-[60px] p-[16px] gap-[20px]">
+                        <div class="w-full text-left px-[20px]">
+                            <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal">Intergrated</p>
+                            <p class="text-[#071511] font-suisse-regular text-[26px] leading-normal mt-[16px]">
+                                Easily integrate with external services and data</p>
+                            <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal mt-[20px] opacity-60">
+                                Seamlessly integrate with a diverse range of external external services and data connectors from our Developer Center and Connector Hub to craft powerful and unique AI Apps. Furthermore, share your creations with the community to tap into the power of global collective intelligence, positioning yourself at the forefront of innovation.</p>
+                                <a href="#" class="w-full h-[46px] border border-[#002424] rounded-full flex items-center justify-center gap-1 text-[14px] mt-[20px]">
+                                    <span class="translate-y-[-1px]">Try Now</span>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-colors">
+                                        <path d="M16.627 12.75H4.5V11.25H16.627L10.9308 5.55375L12 4.5L19.5 12L12 19.5L10.9308 18.4462L16.627 12.75Z" fill="currentColor"/>
+                                    </svg>
+                                </a>
+                        </div>
+                        <div class="w-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden mt-[20px]">
+                            <video src="/video/eco2.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+                        </div>
+                    </div>
+
+                    <div class="w-full bg-[#F7F7F4] rounded-[24px] flex flex-col pt-[60px] p-[16px] gap-[20px]">
+                        <div class="w-full text-left px-[20px]">
+                            <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal">Shareable</p>
+                            <p class="text-[#071511] font-suisse-regular text-[26px] leading-normal mt-[16px]">
+                                Enable to share created AI Apps and APIs</p>
+                            <p class="text-[#071511] font-suisse-regular text-[16px] leading-normal mt-[20px] opacity-60">
+                                Register and showcase your custom-made artifacts and APIs directly in a store that attracts a variety of users.</p>
+                            <a href="#" class="w-full h-[46px] border border-[#002424] rounded-full flex items-center justify-center gap-1 text-[14px] mt-[20px]">
+                                <span class="translate-y-[-1px]">Try Now</span>
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="transition-colors">
+                                    <path d="M16.627 12.75H4.5V11.25H16.627L10.9308 5.55375L12 4.5L19.5 12L12 19.5L10.9308 18.4462L16.627 12.75Z" fill="currentColor"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="w-full aspect-square bg-[#E8E8DC] rounded-[28px] overflow-hidden mt-[20px]">
+                            <video src="/video/eco3.mp4" autoplay loop muted playsinline class="w-full h-full object-cover"></video>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <script>
-                gsap.registerPlugin(Draggable);
-                const scrollContainer = document.getElementById('scrollContainer');
-                const cycleWidth = (470 * 6) + (20 * 6);
-                let currentX = 0;
+        </section>
 
-                let scrollAnimation = gsap.to(scrollContainer, {
-                    x: -cycleWidth,
-                    duration: 60,
-                    ease: "none",
-                    repeat: -1,
-                    modifiers: {
-                        x: (xValue) => {
-                            let x = parseFloat(xValue);
-                            return (x % -cycleWidth) + "px";
-                        }
-                    }
-                });
+        <script>
+            $(document).ready(function () {
+                const $tabBtns = $('.tab-btn');
+                const $background = $('.tab-background');
+                const $hoverBg = $('.tab-hover');
 
-                document.getElementById('scrollContainer').addEventListener('mouseenter', () => {
-                    scrollAnimation.pause();
-                });
-                document.getElementById('scrollContainer').addEventListener('mouseleave', () => {
-                    scrollAnimation.play();
-                });
-                Draggable.create(scrollContainer, {
-                    type: "x",
-                    inertia: true,
-                    dragResistance: 0.2,
-                    onDragStart: function () {
-                        scrollAnimation.pause();
-                    },
-                    onDrag: function () {
-                        currentX = this.x % -cycleWidth;
-                        if (currentX > 0) currentX -= cycleWidth;
-                        gsap.set(scrollContainer, { x: currentX });
-                    },
-                    onDragEnd: function () {
-                        let progress = (-currentX) / cycleWidth;
-                        scrollAnimation.progress(progress);
-                    }
-                });
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            if ($(entry.target).hasClass('animation-title')) {
-                                // $(entry.target).find('.word').addClass('visible');
-                                // observer.unobserve(entry.target);
-                            } else if ($(entry.target).hasClass('animate-section')) {
-                                gsap.fromTo(entry.target,
-                                    {
-                                        opacity: 0,
-                                        y: 50
-                                    },
-                                    {
-                                        opacity: 1,
-                                        y: 0,
-                                        duration: 0.8,
-                                    }
-                                );
-                                observer.unobserve(entry.target);
+                let swiper;
+
+                function initSwiper() {
+                    swiper = new Swiper('.swiper-container', {
+                        centeredSlides: true,
+                        slidesPerView: 'auto',
+                        spaceBetween: 40,
+                        breakpoints: {
+                            320: {
+                                spaceBetween: 20
+                            },
+                            768: {
+                                spaceBetween: 40
+                            }
+                        },
+                        loop: true,
+                        mousewheel: {
+                            forceToAxis: true
+                        },
+                        on: {
+                            slideChange: function () {
+                                const realIndex = this.realIndex;
+                                setActiveTab($tabBtns.eq(realIndex));
                             }
                         }
                     });
-                }, {
-                    threshold: 0.3,
+                }
+
+                initSwiper();
+                setActiveTab($tabBtns.first());
+
+                $tabBtns.hover(
+                    function () {
+                        if (!$(this).hasClass('active')) {
+                            const width = $(this).outerWidth();
+                            const left = $(this).position().left - 8;
+                            $hoverBg.css({
+                                width: width + 'px',
+                                transform: `translateX(${left}px)`,
+                                opacity: 1
+                            });
+                        }
+                    },
+                    function () {
+                        $hoverBg.css('opacity', 0);
+                    }
+                );
+
+                // 탭 클릭 시 해당 슬라이드로 이동 
+                $tabBtns.click(function () {
+                    $hoverBg.css('opacity', 0);
+                    const index = $(this).data('tab');
+                    swiper.slideToLoop(index, 600);
                 });
 
-                $(document).ready(() => {
-                    $('.animate-section').each(function () {
-                        observer.observe(this);
+                function setActiveTab($btn) {
+                    $tabBtns.removeClass('active text-[#E6FDFC]');
+                    $btn.addClass('active text-[#E6FDFC]');
+
+                    const width = $btn.outerWidth();
+                    const left = $btn.position().left - 8;
+
+                    $background.css({
+                        width: width + 'px',
+                        transform: `translateX(${left}px)`
                     });
+                }
+
+                // 스크롤 이벤트 발생 시 위치 재계산
+                $(window).resize(function() {
+                    if($('.active').length) {
+                        setActiveTab($('.active'));
+                    }
                 });
-            </script>
-        </section>
+            });
+        </script>
         <section class="w-full bg-white pt-[20px] md:pt-[170px] pb-[74px] z-10 relative px-[16px] md:px-[24px]">
             <div class="max-w-[1440px] mx-auto text-primary font-suisse-regular flex flex-col md:flex-row items-center
                 gap-[40px] bg-[#E6FDFC] px-[40px] md:px-[80px] md:h-[348px] pt-[100px] md:pt-0">
                 <div class="flex flex-col flex-1">
-                    <p class="text-[28px] text-[#071414]">Simplify Workflow, Boost Creativity</p>
+                    <p class="text-[28px] text-[#071414]">Build an open source ecosystem</p>
                     <p class="text-[16px] mt-[8px]">
-                        Swal Studio empowers individuals and organizations to automate tasks,<br />streamline operations,
-                        and focus on what matters most.
+                        Wrtn Agent OS empowers individuals and organizations to automate tasks,<br />
+                        streamline operations, and focus on what matters most.
                     </p>
-                    <a href="#" class="text-[16px] pt-[40px] underline underline-offset-auto">Learn about Swal Studio</a>
+                    <a href="#" class="text-[16px] pt-[40px] underline underline-offset-auto">Learn about Wrtn Agent OS</a>
                 </div>
                 <div class="flex-1 pb-[40px] md:pb-0">
                     <video class="w-full md:w-[658px] h-auto md:h-[371px] rounded-[20px]" autoplay loop muted
@@ -693,7 +488,8 @@
                                 <p
                                     class="w-fit text-[14px] text-primary opacity-60 px-[12px] py-[7px] bg-[#ECF9F3] inline-flex rounded-[4px]">
                                     Coming soon</p>
-                                <p class="text-[18px] line-clamp-2">Swal AI available for Early Adopters</p>
+                                <p class="text-[18px] line-clamp-2">Wrtn Agent OS available for Early Adopters
+                                </p>
                             </a>
                             <p
                                 class="date font-suisse-medium text-[12px] uppercase border-b border-[#E3E3E3] pb-[10px] tracking-[1.2px]">
@@ -715,7 +511,7 @@
                                 <p
                                     class="w-fit text-[14px] text-primary opacity-60 px-[12px] py-[7px] bg-[#ECF9F3] inline-flex rounded-[4px]">
                                     Coming soon</p>
-                                <p class="text-[18px] line-clamp-2">Meet the Whole New Swal AI</p>
+                                <p class="text-[18px] line-clamp-2">Meet the Whole New Wrtn Agent OS</p>
                             </a>
                             <p
                                 class="date font-suisse-medium text-[12px] uppercase border-b border-[#E3E3E3] pb-[10px] tracking-[1.2px]">
@@ -737,7 +533,7 @@
                                 <p
                                     class="tag tag-news w-fit">
                                     News</p>
-                                <p class="text-[18px] line-clamp-2">Swal AI Beta Release</p>
+                                <p class="text-[18px] line-clamp-2">Wrtn Agent OS Beta Release</p>
                             </a>
                             <p
                                 class="date font-suisse-medium text-[12px] uppercase border-b border-[#E3E3E3] pb-[10px] tracking-[1.2px]">
@@ -776,8 +572,8 @@
             <div class="bg-[#E8E8DC] w-full max-w-[1440px] mx-auto relative flex flex-col md:flex-row justify-between text-primary"
                 style="z-index: 1;">
                 <div class="flex flex-col px-[16px] md:px-[24px] pt-[80px] pb-[38px] md:py-[155px]" style="z-index: 2;">
-                    <p class="text-[16px]">Next Contents</p>
-                    <p class="text-[50px] md:text-[60px] font-oceanic-book mt-[20px] md:mt-[110px]">AI Ecosystem</p>
+                    <p class="text-[16px]">Move to</p>
+                    <p class="text-[50px] md:text-[60px] font-oceanic-book mt-[20px] md:mt-[110px]">wrtn Agent OS</p>
                     <a href="/ecosystem" class="arrow-button mt-[40px] font-suisse-regular">Read More</a>
                 </div>
                 <div class="absolute inset-0 bg-[#E8E8DC] pointer-events-none"
@@ -801,10 +597,10 @@
                 <div
                     class="flex flex-col justify-between gap-[24px] md:border-l border-[#273131] md:pl-[24px] pt-[60px] md:pt-[92px] md:pb-[37px]">
                     <a href="/">
-                        <img src="/img/logo_w.png" alt="swal.ai" class="w-[95px] h-auto">
+                        <img src="/img/logo_w_2.png" alt="Wrtn Labs" class="w-[120px] h-auto">
                     </a>
                     <p class="text-[#6D8786] text-[14px] leading-[27px] font-suisse-book hidden md:block">
-                        © 2024 swal.ai
+                        © 2024 Wrtn Labs
                     </p>
                 </div>
                 <div class="hidden md:flex border-l border-[#273131] md:pl-[24px]"></div>
@@ -816,12 +612,11 @@
                             <li><a href="/about" class="hover:text-[#E6FDFC]">About us</a></li>
                             <li><a href="/blog" class="hover:text-[#E6FDFC]">Blog</a></li>
                             <li><a href="#" class="hover:text-[#E6FDFC]">Documentation</a></li>
-                            <li><a href="https://wrtn.io" target="_blank" class="hover:text-[#E6FDFC]">wrtn.io</a></li>
                         </ul>
                     </div>
-                    <p class="text-[#6D8786] text-[14px] font-suisse-book mt-auto hidden md:block">
+                    <!-- <p class="text-[#6D8786] text-[14px] font-suisse-book mt-auto hidden md:block">
                         <a href="/" class="hover:text-[#E6FDFC]">Privacy</a> | <a href="/" class="hover:text-[#E6FDFC]">Terms of Use</a>
-                    </p>
+                    </p> -->
                 </div>
 
                 <div class="md:hidden border-b border-[#273131] px-[20px]"></div>
@@ -829,7 +624,6 @@
                     class="flex flex-col gap-[12px] text-[18px] md:pt-[92px] md:pb-[37px] md:border-l md:border-r border-[#273131] md:pl-[24px]">
                     <p class="text-[#E6FDFC] leading-[27px]">Social</p>
                     <ul class="flex flex-col text-[#6D8786] leading-[40px]">
-                        <li><a href="#" class="hover:text-[#E6FDFC]">Instagram</a></li>
                         <li><a href="#" class="hover:text-[#E6FDFC]">GitHub</a></li>
                         <li><a href="#" class="hover:text-[#E6FDFC]">Discord</a></li>
                         <li><a href="#" class="hover:text-[#E6FDFC]">X</a></li>
@@ -844,7 +638,7 @@
                     </ul>
                 </div>
                 <p class="md:hidden text-[#6D8786] text-[14px] leading-[27px] font-suisse-book pb-[80px]">
-                    © 2024 swal.ai
+                    © 2024 Wrtn Labs
                 </p>
             </div>
         </div>
@@ -871,11 +665,11 @@
                 if (scrollPosition < heroBottom) {
                     $nav.addClass("nav-transparent")
                         .removeClass("nav-white");
-                    $logoImg.attr("src", "/img/logo_w.png");
+                    $logoImg.attr("src", "/img/logo_w_2.png");
                 } else {
                     $nav.addClass("nav-white")
                         .removeClass("nav-transparent");
-                    $logoImg.attr("src", "/img/logo.png");
+                    $logoImg.attr("src", "/img/logo_2.png");
                 }
             });
 
