@@ -913,10 +913,6 @@ video {
   width: 122px;
 }
 
-.w-\[164px\] {
-  width: 164px;
-}
-
 .w-\[24px\] {
   width: 24px;
 }
@@ -1592,10 +1588,6 @@ video {
   padding-top: 87px;
 }
 
-.pt-\[122px\] {
-  padding-top: 122px;
-}
-
 .text-left {
   text-align: left;
 }
@@ -1925,11 +1917,6 @@ video {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.hover\:bg-\[\#071414\]:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(7 20 20 / var(--tw-bg-opacity, 1));
-}
-
 .hover\:bg-\[\#E8E8DC\]:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(232 232 220 / var(--tw-bg-opacity, 1));
@@ -1940,11 +1927,6 @@ video {
   color: rgb(230 253 252 / var(--tw-text-opacity, 1));
 }
 
-.hover\:text-white:hover {
-  --tw-text-opacity: 1;
-  color: rgb(255 255 255 / var(--tw-text-opacity, 1));
-}
-
 .hover\:opacity-100:hover {
   opacity: 1;
 }
@@ -1952,10 +1934,6 @@ video {
 .group:hover .group-hover\:translate-y-0 {
   --tw-translate-y: 0px;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group:hover .group-hover\:fill-white {
-  fill: #fff;
 }
 
 .group:hover .group-hover\:opacity-0 {
