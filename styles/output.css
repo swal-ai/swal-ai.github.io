@@ -2441,6 +2441,10 @@ video {
     font-size: 64px;
   }
 
+  .md\:text-\[48px\] {
+    font-size: 48px;
+  }
+
   .md\:leading-\[27px\] {
     line-height: 27px;
   }
@@ -2455,6 +2459,10 @@ video {
 
   .md\:leading-\[69px\] {
     line-height: 69px;
+  }
+
+  .md\:leading-\[56px\] {
+    line-height: 56px;
   }
 
   .md\:opacity-40 {
