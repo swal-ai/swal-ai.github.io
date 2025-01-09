@@ -1725,6 +1725,10 @@ video {
   line-height: 1.5;
 }
 
+.leading-\[42px\] {
+  line-height: 42px;
+}
+
 .tracking-\[-0\.15px\] {
   letter-spacing: -0.15px;
 }
@@ -2429,6 +2433,14 @@ video {
     font-size: 60px;
   }
 
+  .md\:text-\[19px\] {
+    font-size: 19px;
+  }
+
+  .md\:text-\[64px\] {
+    font-size: 64px;
+  }
+
   .md\:leading-\[27px\] {
     line-height: 27px;
   }
@@ -2439,6 +2451,10 @@ video {
 
   .md\:leading-normal {
     line-height: 1.5;
+  }
+
+  .md\:leading-\[69px\] {
+    line-height: 69px;
   }
 
   .md\:opacity-40 {
