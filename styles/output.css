@@ -648,6 +648,10 @@ video {
   top: 16px;
 }
 
+.-z-10 {
+  z-index: -10;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -975,16 +979,16 @@ video {
   min-width: 120px;
 }
 
+.min-w-\[820px\] {
+  min-width: 820px;
+}
+
 .min-w-\[870px\] {
   min-width: 870px;
 }
 
 .min-w-\[95px\] {
   min-width: 95px;
-}
-
-.min-w-\[820px\] {
-  min-width: 820px;
 }
 
 .max-w-\[120px\] {
