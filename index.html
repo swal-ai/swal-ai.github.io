@@ -97,11 +97,21 @@
             <script>
                 document.addEventListener('DOMContentLoaded', () => {
                     const video = document.querySelector('video');
+                    let isLoaded = false;
+
                     video.addEventListener('loadeddata', () => {
+                        isLoaded = true;
                         setTimeout(() => {
                             video.style.opacity = '1';
                         }, 300);
                     });
+
+                    // 5초 후에도 로드되지 않았다면 강제로 표시
+                    setTimeout(() => {
+                        if (!isLoaded) {
+                            video.style.opacity = '1';
+                        }
+                    }, 5000);
                 });
             </script>
             <div
