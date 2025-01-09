@@ -811,6 +811,10 @@ video {
   margin-top: 120px;
 }
 
+.mt-\[12px\] {
+  margin-top: 12px;
+}
+
 .line-clamp-2 {
   overflow: hidden;
   display: -webkit-box;
@@ -2064,6 +2068,10 @@ video {
 
   .md\:mt-\[120px\] {
     margin-top: 120px;
+  }
+
+  .md\:mt-\[24px\] {
+    margin-top: 24px;
   }
 
   .md\:line-clamp-\[4\] {
