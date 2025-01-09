@@ -97,9 +97,11 @@
             <script>
                 document.addEventListener('DOMContentLoaded', () => {
                     const video = document.querySelector('video');
-                    setTimeout(() => {
-                        video.style.opacity = '1';
-                    }, 500);
+                    video.addEventListener('loadeddata', () => {
+                        setTimeout(() => {
+                            video.style.opacity = '1';
+                        }, 300);
+                    });
                 });
             </script>
             <div
