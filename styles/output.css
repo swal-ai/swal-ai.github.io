@@ -1729,6 +1729,10 @@ video {
   line-height: 42px;
 }
 
+.leading-\[18px\] {
+  line-height: 18px;
+}
+
 .tracking-\[-0\.15px\] {
   letter-spacing: -0.15px;
 }
@@ -2463,6 +2467,14 @@ video {
 
   .md\:leading-\[56px\] {
     line-height: 56px;
+  }
+
+  .md\:leading-\[21px\] {
+    line-height: 21px;
+  }
+
+  .md\:leading-\[42px\] {
+    line-height: 42px;
   }
 
   .md\:opacity-40 {
